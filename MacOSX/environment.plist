@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>LANG</key>
+    <string>ja_JP.UTF-8</string>
+    <key>PATH</key>
+    <string>/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin</string>
+    <key>MANPATH</key>
+    <string>/usr/local/share/man:/usr/local/man:/usr/share/man:/usr/X11R6/man:/Developer/usr/share/man</string>
+    <key>INFOPATH</key>
+    <string>/usr/local/share/info:/usr/share/info:/Developer/usr/share/info</string>
+</dict>
+</plist>

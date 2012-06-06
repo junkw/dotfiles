@@ -4,5 +4,7 @@
 <dict>
     <key>LANG</key>
     <string>ja_JP.UTF-8</string>
+    <key>LC_ALL</key>
+    <string>ja_JP.UTF-8</string>
 </dict>
 </plist>

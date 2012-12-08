@@ -16,3 +16,11 @@ export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
 export HOMEBREW_KEEP_INFO=1
+
+if [[ -f ~/.nodebrew/nodebrew ]]; then
+    export PATH=$HOME/.nodebrew/current/bin:$PATH
+    nodebrew use stable
+
+    export MANPATH=$HOME/.nodebrew/current/share/man:$MANPATH
+    export NODE_PATH=$HOME/.nodebrew/current/lib/node_modules
+fi

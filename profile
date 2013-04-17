@@ -24,3 +24,7 @@ if [[ -f ~/.nodebrew/nodebrew ]]; then
     export MANPATH=$HOME/.nodebrew/current/share/man:$MANPATH
     export NODE_PATH=$HOME/.nodebrew/current/lib/node_modules
 fi
+
+if [[ -d /usr/texbin ]]; then
+    export PATH=$PATH:/usr/texbin
+fi

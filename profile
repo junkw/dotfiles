@@ -4,7 +4,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X1
 export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man:/Applications/Xcode.app/Contents/Developer/usr/share/man:/opt/X11/share/man
 export INFOPATH=/usr/local/share/info/emacs:/usr/local/share/info:/usr/share/info
 
-export JAVA_HOME=`/usr/libexec/java_home`
+if [ -x /usr/libexec/java_home ]; then
+    export JAVA_HOME=`/usr/libexec/java_home`
+fi
 
 export EDITOR=vim
 export VISUAL=vim

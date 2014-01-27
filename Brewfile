@@ -22,6 +22,5 @@ install aspell --lang=en
 
 tap homebrew/dupes
 tap josegonzalez/homebrew-php
-install php53
 install php-code-sniffer
 install phpdocumentor

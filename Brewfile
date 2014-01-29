@@ -8,6 +8,7 @@ install gpg
 install gnutls
 install html2text
 install imagemagick
+install markdown
 install rsync
 install source-highlight
 install svn

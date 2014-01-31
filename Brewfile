@@ -5,6 +5,7 @@ install doxygen
 install fontforge
 install git
 install gpg
+install gnu-tar
 install gnutls
 install html2text
 install imagemagick

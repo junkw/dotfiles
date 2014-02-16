@@ -22,6 +22,9 @@ install --HEAD offline-imap
 install --HEAD mu --with-emacs
 install aspell --lang=en
 
+tap thoughtbot/formulae
+install gitsh
+
 tap homebrew/dupes
 tap josegonzalez/homebrew-php
 install php-code-sniffer

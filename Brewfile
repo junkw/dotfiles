@@ -15,8 +15,9 @@ install source-highlight
 install svn
 install terminal-notifier
 install the_silver_searcher
-install wget
+install eget
 
+install grep --default-names
 install https://gist.github.com/junkw/5037634/raw/ea3fce204bbf63c5c262192d41a40cd3b599ad63/emacs.rb --cocoa --srgb --with-gnutls
 install --HEAD offline-imap
 install --HEAD mu --with-emacs

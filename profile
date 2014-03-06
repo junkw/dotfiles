@@ -18,6 +18,7 @@ export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
 export HOMEBREW_KEEP_INFO=1
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 if [[ -f ~/.nodebrew/nodebrew ]]; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH

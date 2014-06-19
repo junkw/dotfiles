@@ -17,6 +17,7 @@ export LSCOLORS=DxGxcxdxCxegedabagacad
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
+export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 if [[ -f ~/.nodebrew/nodebrew ]]; then

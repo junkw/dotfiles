@@ -45,7 +45,7 @@ cask install google-drive
 cask install https://gist.githubusercontent.com/junkw/9405386/raw/e08f3e6cf5a6138f1c6c08de94833b864838544f/google-japanese-im.rb
 cask install iterm2-beta
 cask install java
-cask install keyremap4macbook
+cask install karabiner
 cask install mplayerx
 cask install onyx
 cask install https://gist.githubusercontent.com/junkw/9405434/raw/71982a786927114c479c07caaaaa81fe6627a183/qlcolorcode-extra.rb

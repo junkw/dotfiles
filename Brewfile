@@ -43,7 +43,7 @@ cask install dropbox
 cask install google-chrome
 cask install google-drive
 cask install https://gist.githubusercontent.com/junkw/9405386/raw/e08f3e6cf5a6138f1c6c08de94833b864838544f/google-japanese-im.rb
-cask install iterm2-beta
+cask install iterm2
 cask install java
 cask install karabiner
 cask install mplayerx

@@ -1,6 +1,10 @@
 # -*- mode: ruby; coding: utf-8; indent-tabs-mode: nil -*-
 
 
+task :link_aspellconf do
+  sh "ln -s #{Dir.pwd}/aspell.conf ~/.aspell.conf"
+end
+
 task :link_gitconfig do
   sh "ln -s #{Dir.pwd}/gitconfig ~/.gitconfig"
 end
@@ -30,5 +34,5 @@ task :setup_mac do
   end
 end
 
-task :default => [:link_gitconfig, :link_profile, :link_vimrc, :setup_mac]
-task :setup_for_worksite => [:link_gitconfig, :link_offlineimap, :link_profile, :link_vimrc, :setup_mac]
+task :default => [:link_aspellconf, :link_gitconfig, :link_profile, :link_vimrc, :setup_mac]
+task :setup_for_worksite => [:link_aspellconf, :link_gitconfig, :link_offlineimap, :link_profile, :link_vimrc, :setup_mac]

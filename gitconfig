@@ -8,4 +8,4 @@
 [credential]
 	helper = osxkeychain
 [push]
-	default = matching
+	default = simple

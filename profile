@@ -4,10 +4,6 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X1
 export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man:/Applications/Xcode.app/Contents/Developer/usr/share/man:/opt/X11/share/man
 export INFOPATH=/usr/local/share/info/emacs:/usr/local/share/info:/usr/share/info
 
-if [ -x /usr/libexec/java_home ]; then
-    export JAVA_HOME=`/usr/libexec/java_home`
-fi
-
 export EDITOR=vim
 export VISUAL=vim
 
@@ -20,7 +16,11 @@ export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-if [[ -f ~/.nodebrew/nodebrew ]]; then
+if [ -x /usr/libexec/java_home ]; then
+    export JAVA_HOME=$(/usr/libexec/java_home)
+fi
+
+if [ -f ~/.nodebrew/nodebrew ]; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH
     nodebrew use stable
 
@@ -28,6 +28,6 @@ if [[ -f ~/.nodebrew/nodebrew ]]; then
     export NODE_PATH=$HOME/.nodebrew/current/lib/node_modules
 fi
 
-if [[ -d /usr/texbin ]]; then
+if [ -d /usr/texbin ]; then
     export PATH=$PATH:/usr/texbin
 fi

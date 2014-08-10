@@ -15,7 +15,6 @@ install ctags
 install doxygen
 install fontforge
 install git
-install gitsh
 install gnu-tar
 install gnutls
 install grep --default-names

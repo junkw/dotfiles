@@ -31,3 +31,11 @@ fi
 if [ -d /usr/texbin ]; then
     export PATH=$PATH:/usr/texbin
 fi
+
+if [ -d $(brew --prefix)/etc/bash_completion.d ]; then
+    source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+    source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+
+    GIT_PS1_SHOWDIRTYSTATE=true
+    export PS1='\u@\h:\W $(__git_ps1 "[%s]")\$ '
+fi

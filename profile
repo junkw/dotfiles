@@ -37,5 +37,5 @@ if [ -d $(brew --prefix)/etc/bash_completion.d ]; then
     source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 
     GIT_PS1_SHOWDIRTYSTATE=true
-    export PS1='\u@\h:\W $(__git_ps1 "[%s]")\$ '
+    export PS1='\[\033[1;32m\]\u@\h\[\033[00m\]:\[\033[1;34m\]\W \[\033[1;31m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ '
 fi

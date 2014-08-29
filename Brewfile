@@ -29,7 +29,7 @@ install terminal-notifier
 install the_silver_searcher
 install wget
 
-install https://gist.github.com/junkw/5037634/raw/ea3fce204bbf63c5c262192d41a40cd3b599ad63/emacs.rb --cocoa --srgb --with-gnutls
+install emacs --cocoa --japanese --srgb --with-gnutls --with-imagemagick
 
 cask install alfred
 cask install appcleaner

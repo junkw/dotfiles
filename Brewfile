@@ -22,6 +22,7 @@ install gpg
 install html2text
 install imagemagick
 install markdown
+install pandoc
 install rsync
 install source-highlight
 install svn

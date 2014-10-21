@@ -38,7 +38,6 @@ cask install basictex
 cask install betterzipql
 cask install https://gist.githubusercontent.com/junkw/9405373/raw/06d00b0644f701898f2b505fc712dd4c106bb7a7/firefox.rb
 cask install flash
-cask install flip4mac
 cask install dropbox
 cask install google-chrome
 cask install google-drive

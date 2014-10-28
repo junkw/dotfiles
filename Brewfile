@@ -1,7 +1,6 @@
 # Add repository
 tap homebrew/dupes
 tap homebrew/versions
-tap thoughtbot/formulae
 tap josegonzalez/homebrew-php
 tap phinze/cask
 tap caskroom/versions

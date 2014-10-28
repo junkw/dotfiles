@@ -2,6 +2,7 @@
 tap homebrew/dupes
 tap homebrew/versions
 tap josegonzalez/homebrew-php
+tap railwaycat/emacsmacport
 
 # Install packages
 install atool
@@ -27,7 +28,7 @@ install terminal-notifier
 install the_silver_searcher
 install wget
 
-install emacs --cocoa --japanese --srgb --with-gnutls --with-imagemagick
+install emacs-mac --icon-modern --with-gnutls --with-imagemagick --with-xml2
 
 # Add homebrew-cask repository
 tap caskroom/homebrew-versions

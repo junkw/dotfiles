@@ -2,13 +2,11 @@
 tap homebrew/dupes
 tap homebrew/versions
 tap josegonzalez/homebrew-php
-tap phinze/cask
-tap caskroom/versions
 
 # Install packages
 install atool
 install aspell --lang=en
-install brew-cask
+install caskroom/cask/brew-cask
 install cmigemo
 install ctags
 install doxygen
@@ -31,6 +29,10 @@ install wget
 
 install emacs --cocoa --japanese --srgb --with-gnutls --with-imagemagick
 
+# Add homebrew-cask repository
+tap caskroom/homebrew-versions
+
+# Install apps with homebrew-cask
 cask install alfred
 cask install appcleaner
 cask install basictex

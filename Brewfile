@@ -37,12 +37,12 @@ cask install alfred
 cask install appcleaner
 cask install basictex
 cask install betterzipql
-cask install https://gist.githubusercontent.com/junkw/9405373/raw/06d00b0644f701898f2b505fc712dd4c106bb7a7/firefox.rb
+cask install firefox-ja
 cask install flash
 cask install dropbox
 cask install google-chrome
 cask install google-drive
-cask install https://gist.githubusercontent.com/junkw/9405386/raw/e08f3e6cf5a6138f1c6c08de94833b864838544f/google-japanese-im.rb
+cask install google-japanese-ime
 cask install iterm2
 cask install java
 cask install karabiner

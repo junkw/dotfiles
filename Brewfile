@@ -1,7 +1,6 @@
 # Add repository
 tap homebrew/dupes
 tap homebrew/versions
-tap josegonzalez/homebrew-php
 tap railwaycat/emacsmacport
 
 # Install packages

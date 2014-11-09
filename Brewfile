@@ -16,7 +16,6 @@ install fontforge
 install gnu-tar
 install grep --default-names
 install gpg
-install html2text
 install markdown
 install pandoc
 install rsync

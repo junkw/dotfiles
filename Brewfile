@@ -4,20 +4,19 @@ tap homebrew/versions
 tap railwaycat/emacsmacport
 
 # Install packages
+install git
 install atool
 install aspell --lang=en
 install caskroom/cask/brew-cask
 install cmigemo
 install ctags
 install doxygen
+install emacs-mac --icon-modern --with-gnutls --with-imagemagick --with-xml2
 install fontforge
-install git
 install gnu-tar
-install gnutls
 install grep --default-names
 install gpg
 install html2text
-install imagemagick
 install markdown
 install pandoc
 install rsync
@@ -26,8 +25,6 @@ install svn
 install terminal-notifier
 install the_silver_searcher
 install wget
-
-install emacs-mac --icon-modern --with-gnutls --with-imagemagick --with-xml2
 
 # Add homebrew-cask repository
 tap caskroom/homebrew-versions

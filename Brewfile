@@ -39,7 +39,7 @@ cask install dropbox
 cask install google-chrome
 cask install google-drive
 cask install google-japanese-ime
-cask install iterm2
+cask install iterm2-beta
 cask install java
 cask install karabiner
 cask install mplayerx

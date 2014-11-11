@@ -1,30 +1,35 @@
 # -*- mode: ruby; coding: utf-8; indent-tabs-mode: nil -*-
+require 'fileutils'
+
 
 
 task :link_aspellconf do
-  sh "ln -s #{Dir.pwd}/aspell.conf ~/.aspell.conf"
+  FileUtils.ln_sf("#{Dir.pwd}/aspell.conf" "#{Dir.home}/.aspell.conf")
 end
 
 task :link_gitconfig do
-  sh "ln -s #{Dir.pwd}/gitconfig ~/.gitconfig"
+  FileUtils.ln_sf("#{Dir.pwd}/gitconfig" "#{Dir.home}/.gitconfig")
 end
 
 task :link_offlineimap do
-  sh "ln -s #{Dir.pwd}/offlineimap ~/.offlineimap"
-  sh "ln -s ~/Dropbox/etc/offlineimaprc.worksite ~/.offlineimaprc"
+  FileUtils.ln_sf("#{Dir.pwd}/offlineimap" "#{Dir.home}/.offlineimap")
+  FileUtils.ln_sf("#{Dir.home}/Dropbox/etc/offlineimaprc.worksite" "#{Dir.home}/.offlineimaprc")
 end
 
 task :link_profile do
-  sh "ln -s #{Dir.pwd}/profile ~/.profile"
+  FileUtils.ln_sf("#{Dir.pwd}/profile" "#{Dir.home}/.profile")
 end
 
 task :link_vimrc do
-  sh "ln -s #{Dir.pwd}/vimrc ~/.vimrc"
+  FileUtils.ln_sf("#{Dir.pwd}/vimrc" "#{Dir.home}/.vimrc")
 end
 
 task :setup_mac do
   if RUBY_PLATFORM.include?("darwin")
-    sh "mkdir ~/bin ~/Code ~/Documents/org ~/lib"
+    FileUtils.mkdir_p("#{Dir.home}/bin")
+    FileUtils.mkdir_p("#{Dir.home}/Code")
+    FileUtils.mkdir_p("#{Dir.home}/Documents/org")
+    FileUtils.mkdir_p("#{Dir.home}/lib")
     sh "chflags nohidden ~/Library/"
     sh "defaults write com.apple.finder PathBarRootAtHome -bool true"
     sh "defaults write com.apple.finder QLHidePanelOnDeactivate -bool true"
@@ -35,4 +40,3 @@ task :setup_mac do
 end
 
 task :default => [:link_aspellconf, :link_gitconfig, :link_profile, :link_vimrc, :setup_mac]
-task :setup_for_worksite => [:link_aspellconf, :link_gitconfig, :link_offlineimap, :link_profile, :link_vimrc, :setup_mac]

@@ -3,11 +3,15 @@ tap homebrew/dupes
 tap homebrew/versions
 tap railwaycat/emacsmacport
 
-# Install packages
+# Install requirements packages
 install git
+install caskroom/cask/brew-cask
+cask install java
+cask install xquartz
+
+# Install packages
 install atool
 install aspell --lang=en
-install caskroom/cask/brew-cask
 install cmigemo
 install ctags
 install doxygen
@@ -40,7 +44,6 @@ cask install google-chrome
 cask install google-drive
 cask install google-japanese-ime
 cask install iterm2-beta
-cask install java
 cask install karabiner
 cask install mplayerx
 cask install onyx
@@ -52,4 +55,3 @@ cask install quicklook-csv
 cask install quicklook-json
 cask install silverlight
 cask install suspicious-package
-cask install xquartz

@@ -4,24 +4,24 @@ require 'fileutils'
 
 
 task :link_aspellconf do
-  FileUtils.ln_sf("#{Dir.pwd}/aspell.conf" "#{Dir.home}/.aspell.conf")
+  FileUtils.ln_sf("#{Dir.pwd}/aspell.conf", "#{Dir.home}/.aspell.conf")
 end
 
 task :link_gitconfig do
-  FileUtils.ln_sf("#{Dir.pwd}/gitconfig" "#{Dir.home}/.gitconfig")
+  FileUtils.ln_sf("#{Dir.pwd}/gitconfig", "#{Dir.home}/.gitconfig")
 end
 
 task :link_offlineimap do
-  FileUtils.ln_sf("#{Dir.pwd}/offlineimap" "#{Dir.home}/.offlineimap")
-  FileUtils.ln_sf("#{Dir.home}/Dropbox/etc/offlineimaprc.worksite" "#{Dir.home}/.offlineimaprc")
+  FileUtils.ln_sf("#{Dir.pwd}/offlineimap", "#{Dir.home}/.offlineimap")
+  FileUtils.ln_sf("#{Dir.home}/Dropbox/etc/offlineimaprc.worksite", "#{Dir.home}/.offlineimaprc")
 end
 
 task :link_profile do
-  FileUtils.ln_sf("#{Dir.pwd}/profile" "#{Dir.home}/.profile")
+  FileUtils.ln_sf("#{Dir.pwd}/profile", "#{Dir.home}/.profile")
 end
 
 task :link_vimrc do
-  FileUtils.ln_sf("#{Dir.pwd}/vimrc" "#{Dir.home}/.vimrc")
+  FileUtils.ln_sf("#{Dir.pwd}/vimrc", "#{Dir.home}/.vimrc")
 end
 
 task :setup_mac do

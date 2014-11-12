@@ -47,7 +47,7 @@ cask install iterm2-beta
 cask install karabiner
 cask install mplayerx
 cask install onyx
-cask install https://gist.githubusercontent.com/junkw/9405434/raw/71982a786927114c479c07caaaaa81fe6627a183/qlcolorcode-extra.rb
+cask install https://gist.githubusercontent.com/junkw/9405434/raw/1a9251f5d0e6cce2b4d481b2d4af8ababe74cb71/qlcolorcode-extra.rb
 cask install qlimagesize
 cask install qlmarkdown
 cask install qlstephen

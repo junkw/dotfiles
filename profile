@@ -11,7 +11,9 @@ export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
 export LESS='-R'
-export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+if [ -x /usr/local/bin/src-hilite-lesspipe.sh ]; then
+    export LESSOPEN='| src-hilite-lesspipe.sh %s'
+fi
 
 export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"

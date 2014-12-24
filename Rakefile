@@ -16,12 +16,23 @@ task :link_offlineimap do
   FileUtils.ln_sf("#{Dir.home}/Dropbox/etc/offlineimaprc.worksite", "#{Dir.home}/.offlineimaprc")
 end
 
-task :link_profile do
-  FileUtils.ln_sf("#{Dir.pwd}/profile", "#{Dir.home}/.profile")
+task :link_zshrc do
+  FileUtils.ln_sf("#{Dir.pwd}/zlogin", "#{Dir.home}/.zlogin")
+  FileUtils.ln_sf("#{Dir.pwd}/zpreztorc", "#{Dir.home}/.zpreztorc")
+  FileUtils.ln_sf("#{Dir.pwd}/zshenv", "#{Dir.home}/.zshenv")
+  FileUtils.ln_sf("#{Dir.pwd}/zshrc", "#{Dir.home}/.zshrc")
 end
 
 task :link_vimrc do
   FileUtils.ln_sf("#{Dir.pwd}/vimrc", "#{Dir.home}/.vimrc")
+end
+
+task :clone_prezto do
+  sh "git clone --recursive https://github.com/sorin-ionescu/prezto.git #{Dir.home}/.zprezto"
+end
+
+task :clone_antigen do
+  sh "git clone https://github.com/zsh-users/antigen.git #{Dir.home}/.zantigen"
 end
 
 task :setup_mac do
@@ -39,4 +50,10 @@ task :setup_mac do
   end
 end
 
-task :default => [:link_aspellconf, :link_gitconfig, :link_profile, :link_vimrc, :setup_mac]
+task :default => [:link_aspellconf,
+                  :link_gitconfig,
+                  :clone_prezto,
+                  :clone_antigen,
+                  :link_zshrc,
+                  :link_vimrc,
+                  :setup_mac]

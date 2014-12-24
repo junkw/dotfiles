@@ -1,0 +1,30 @@
+# -*- mode: sh; coding: utf-8; indent-tabs-mode: nil -*-
+
+# General
+zstyle ':prezto:*:*' color 'yes'
+zstyle ':prezto:load' pmodule \
+       'environment' \
+       'terminal' \
+       'editor' \
+       'history' \
+       'directory' \
+       'spectrum' \
+       'utility' \
+       'completion' \
+       'prompt' \
+       'helper' \
+       'git' \
+       'ssh' \
+       'syntax-highlighting'
+
+# Editor
+zstyle ':prezto:module:editor' key-bindings 'emacs'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
+
+# Theme
+zstyle ':prezto:module:prompt' theme 'sorin'
+
+# Terminal
+zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+zstyle ':prezto:module:terminal:tab-title' format '%m: %s'

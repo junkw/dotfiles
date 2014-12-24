@@ -2,9 +2,11 @@
 tap homebrew/dupes
 tap homebrew/versions
 tap railwaycat/emacsmacport
+tap peco/peco
 
 # Install requirements packages
 install git
+install zsh --disable-etcdir
 install caskroom/cask/brew-cask
 cask install java
 cask install xquartz
@@ -22,6 +24,7 @@ install grep --default-names
 install gpg
 install markdown
 install pandoc
+install peco
 install rsync
 install source-highlight
 install svn

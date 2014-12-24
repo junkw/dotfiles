@@ -1,0 +1,29 @@
+# -*- mode: org; coding: utf-8 -*-
+
+* My dotfiles
+
+** Requirements
+
+   - Mac OS X Yosemite
+   - Xcode
+   - Homebrew
+
+** Installation
+
+#+BEGIN_SRC sh
+git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
+cd /path/to/local/repo
+rake
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+brew tap homebrew/boneyard
+brew bundle
+rm /Applications/Google\ Chrome.app
+rm /Applications/Firefox.app
+mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app /Applications/
+mv /opt/homebrew-cask/Caskroom/firefox-ja/latest/Firefox.app /Applications/
+defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock
+sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
+chsh -s /usr/local/bin/zsh
+rm -f ~/.zcompdump; compinit
+exit
+#+END_SRC

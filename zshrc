@@ -5,7 +5,7 @@ export EDITOR=vim
 export VISUAL=vim
 
 export LESS='-R'
-if [[ -x /usr/local/bin/src-hilite-lesspipe.sh ]]; then
+if [[ -s /usr/local/bin/src-hilite-lesspipe.sh ]]; then
     export LESSOPEN='| src-hilite-lesspipe.sh %s'
 fi
 

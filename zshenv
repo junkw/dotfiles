@@ -11,27 +11,28 @@ path=({/usr/{local/,},/}bin
       $sudo_path
       /opt/X11/bin(N-/)
       /usr/texbin(N-/)
-      ~/{.nodebrew/current/,}bin(N-/)
+      $HOME/{.nodebrew/current/,}bin(N-/)
       $path)
 
-fpath=($(brew --repository)/Library/Contributions(N-/)
+fpath=(/usr/local/share/zsh/functions(N-/)
+       $(brew --repository)/Library/Contributions(N-/)
        $fpath)
 
 manpath=(/usr/{local/,}share/man
          /Applications/Xcode.app/Contents/Developer/usr/share/man(N-/)
          /opt/X11/share/man(N-/)
-         ~/.nodebrew/current/share/man(N-/)
+         $HOME/.nodebrew/current/share/man(N-/)
          $manpath)
 
 infopath=(/usr/local/share/info{/emacs,}(N-/)
           /usr/share/info)
 
-if [[ -f ~/.nodebrew/nodebrew ]]; then
-    export NODE_PATH=~/.nodebrew/current/lib/node_modules
+if [[ `which nodebrew` ]]; then
+    export NODE_PATH=$HOME/.nodebrew/current/lib/node_modules
 fi
 
-if [[ -x /usr/libexec/java_home ]]; then
-    export JAVA_HOME=$(/usr/libexec/java_home)
+if [[ -s /usr/libexec/java_home ]]; then
+    export JAVA_HOME=`/usr/libexec/java_home`
 fi
 
 # Homebrew

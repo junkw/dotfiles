@@ -13,7 +13,7 @@ cask install xquartz
 
 # Install packages
 install atool
-install aspell --lang=en
+install aspell --with-lang-en
 install cmigemo
 install ctags
 install doxygen

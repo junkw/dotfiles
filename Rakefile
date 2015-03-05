@@ -3,10 +3,6 @@ require 'fileutils'
 
 
 
-task :link_aspellconf do
-  FileUtils.ln_sf("#{Dir.pwd}/aspell.conf", "#{Dir.home}/.aspell.conf")
-end
-
 task :link_gitconfig do
   FileUtils.ln_sf("#{Dir.pwd}/gitconfig", "#{Dir.home}/.gitconfig")
 end
@@ -50,8 +46,7 @@ task :setup_mac do
   end
 end
 
-task :default => [:link_aspellconf,
-                  :link_gitconfig,
+task :default => [:link_gitconfig,
                   :clone_prezto,
                   :clone_antigen,
                   :link_zshrc,

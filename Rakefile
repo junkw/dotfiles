@@ -23,12 +23,19 @@ task :link_vimrc do
   FileUtils.ln_sf("#{Dir.pwd}/vimrc", "#{Dir.home}/.vimrc")
 end
 
+task :clone_antigen do
+  sh "git clone https://github.com/zsh-users/antigen.git #{Dir.home}/.zantigen"
+end
+
 task :clone_prezto do
   sh "git clone --recursive https://github.com/sorin-ionescu/prezto.git #{Dir.home}/.zprezto"
 end
 
-task :clone_antigen do
-  sh "git clone https://github.com/zsh-users/antigen.git #{Dir.home}/.zantigen"
+task :update_hunspell_dict do
+  dictionary_path = "#{Dir.home}/Library/Spelling"
+
+  sh "curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.aff -o #{dictionary_path}/en_US.aff"
+  sh "curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.dic -o #{dictionary_path}/en_US.dic"
 end
 
 task :setup_mac do
@@ -51,4 +58,5 @@ task :default => [:link_gitconfig,
                   :clone_antigen,
                   :link_zshrc,
                   :link_vimrc,
+                  :update_hunspell_dict,
                   :setup_mac]

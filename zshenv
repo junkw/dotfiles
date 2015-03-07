@@ -38,3 +38,7 @@ fi
 # Homebrew
 export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Hunspell
+export DICTIONARY=en_US
+export DICPATH=$HOME/Library/Spelling/

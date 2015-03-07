@@ -3,6 +3,9 @@ require 'fileutils'
 
 
 
+prezto_dir = "#{Dir.home}/.zprezto"
+
+
 task :link_gitconfig do
   FileUtils.ln_sf("#{Dir.pwd}/gitconfig", "#{Dir.home}/.gitconfig")
 end
@@ -28,7 +31,13 @@ task :clone_antigen do
 end
 
 task :clone_prezto do
-  sh "git clone --recursive https://github.com/sorin-ionescu/prezto.git #{Dir.home}/.zprezto"
+  sh "git clone --recursive https://github.com/sorin-ionescu/prezto.git #{prezto_dir}"
+end
+
+task :update_prezto do
+  cd prezto_dir do
+    sh "git pull && git submodule update --init --recursive"
+  end
 end
 
 task :update_hunspell_dict do

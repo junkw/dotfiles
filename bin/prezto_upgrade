@@ -1,0 +1,6 @@
+#!/bin/sh
+CURRENT_PATH=${PWD}
+
+cd ${HOME}/.zprezto
+git pull && git submodule update --init --recursive
+cd ${CURRENT_PATH}

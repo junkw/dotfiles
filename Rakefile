@@ -3,6 +3,14 @@ require 'fileutils'
 
 
 
+task :make_dir do
+  home_dirs = ["#{Dir.home}/bin",
+              "#{Dir.home}/Code",
+              "#{Dir.home}/Documents/org",
+              "#{Dir.home}/lib"]
+  FileUtils.mkdir_p(home_dirs)
+end
+
 task :link_bin do
   bin = Dir.glob("#{Dir.pwd}/bin/*")
   FileUtils.ln_sf(bin, "#{Dir.home}/bin/")
@@ -17,15 +25,15 @@ task :link_offlineimap do
   FileUtils.ln_sf("#{Dir.home}/Dropbox/etc/offlineimaprc.worksite", "#{Dir.home}/.offlineimaprc")
 end
 
+task :link_vimrc do
+  FileUtils.ln_sf("#{Dir.pwd}/vimrc", "#{Dir.home}/.vimrc")
+end
+
 task :link_zshrc do
   FileUtils.ln_sf("#{Dir.pwd}/zlogin", "#{Dir.home}/.zlogin")
   FileUtils.ln_sf("#{Dir.pwd}/zpreztorc", "#{Dir.home}/.zpreztorc")
   FileUtils.ln_sf("#{Dir.pwd}/zshenv", "#{Dir.home}/.zshenv")
   FileUtils.ln_sf("#{Dir.pwd}/zshrc", "#{Dir.home}/.zshrc")
-end
-
-task :link_vimrc do
-  FileUtils.ln_sf("#{Dir.pwd}/vimrc", "#{Dir.home}/.vimrc")
 end
 
 task :clone_antigen do
@@ -37,18 +45,18 @@ task :clone_prezto do
 end
 
 task :update_hunspell_dict do
-  dictionary_path = "#{Dir.home}/Library/Spelling"
+  if RUBY_PLATFORM.include?("darwin")
+    dictionary_path = "#{Dir.home}/Library/Spelling"
+  else
+    dictionary_path = "/usr/share/myspell/dicts/"
+  end
 
   sh "curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.aff -o #{dictionary_path}/en_US.aff"
   sh "curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.dic -o #{dictionary_path}/en_US.dic"
 end
 
-task :setup_mac do
+task :set_mac_config do
   if RUBY_PLATFORM.include?("darwin")
-    FileUtils.mkdir_p("#{Dir.home}/bin")
-    FileUtils.mkdir_p("#{Dir.home}/Code")
-    FileUtils.mkdir_p("#{Dir.home}/Documents/org")
-    FileUtils.mkdir_p("#{Dir.home}/lib")
     sh "chflags nohidden ~/Library/"
     sh "defaults write com.apple.finder PathBarRootAtHome -bool true"
     sh "defaults write com.apple.finder QLHidePanelOnDeactivate -bool true"
@@ -58,11 +66,8 @@ task :setup_mac do
   end
 end
 
-task :default => [:link_gitconfig,
-                  :link_bin,
-                  :clone_prezto,
-                  :clone_antigen,
-                  :link_zshrc,
-                  :link_vimrc,
-                  :update_hunspell_dict,
-                  :setup_mac]
+task :install_zshplugins => [:clone_prezto, :clone_antigen]
+task :link => [:link_gitconfig, :link_bin, :link_vimrc, :link_zshrc]
+task :install => [:make_dir, :install_zshplugins, :link, :update_hunspell_dict]
+task :install_for_mac => [:install, :set_mac_config]
+task :default => [:install_for_mac, :link_offlineimap]

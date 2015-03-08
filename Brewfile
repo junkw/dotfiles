@@ -13,7 +13,6 @@ cask install xquartz
 
 # Install packages
 install atool
-install hunspell
 install cmigemo
 install ctags
 install doxygen
@@ -22,6 +21,7 @@ install fontforge
 install gnu-tar
 install grep --default-names
 install gpg
+install hunspell
 install markdown
 install pandoc
 install peco

@@ -13,11 +13,11 @@
 #+BEGIN_SRC sh
 git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
 cd /path/to/local/repo
-rake
+rake install_for_mac
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew tap homebrew/boneyard
 brew bundle
-brew linkapps
+ln -s $(brew --prefix emacs-mac)/Emacs.app /Applications
 cd /Applications
 rm Google\ Chrome.app
 rm Firefox.app

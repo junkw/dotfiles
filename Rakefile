@@ -44,15 +44,8 @@ task :clone_prezto do
   sh "git clone --recursive https://github.com/sorin-ionescu/prezto.git #{Dir.home}/.zprezto"
 end
 
-task :update_hunspell_dict do
-  if RUBY_PLATFORM.include?("darwin")
-    dictionary_path = "#{Dir.home}/Library/Spelling"
-  else
-    dictionary_path = "/usr/share/myspell/dicts/"
-  end
-
-  sh "curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.aff -o #{dictionary_path}/en_US.aff"
-  sh "curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.dic -o #{dictionary_path}/en_US.dic"
+task :install_hunspell_dicts do
+  sh "#{Dir.pwd}/bin/hunspell_update_dicts"
 end
 
 task :set_mac_config do
@@ -68,6 +61,6 @@ end
 
 task :install_zshplugins => [:clone_prezto, :clone_antigen]
 task :link => [:link_gitconfig, :link_bin, :link_vimrc, :link_zshrc]
-task :install => [:make_dir, :install_zshplugins, :link, :update_hunspell_dict]
+task :install => [:make_dir, :install_zshplugins, :link, :install_hunspell_dicts]
 task :install_for_mac => [:install, :set_mac_config]
 task :default => [:install_for_mac, :link_offlineimap]

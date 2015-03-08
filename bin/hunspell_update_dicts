@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case ${OSTYPE} in
+    darwin*)
+        DICTIONARY_PATH=${HOME}/Library/Spelling ;;
+    linux*)
+        DICTIONARY_PATH=/usr/share/myspell/dicts ;;
+esac
+
+curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.aff -o ${DICTIONARY_PATH}/en_US.aff
+curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.dic -o ${DICTIONARY_PATH}/en_US.dic

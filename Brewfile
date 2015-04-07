@@ -29,6 +29,7 @@ install rsync
 install source-highlight
 install svn
 install terminal-notifier
+install texinfo
 install the_silver_searcher
 install wget
 

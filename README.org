@@ -17,6 +17,7 @@ rake install_for_mac
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew tap homebrew/boneyard
 brew bundle
+brew link texinfo --force
 ln -s $(brew --prefix emacs-mac)/Emacs.app /Applications
 cd /Applications
 rm Google\ Chrome.app

@@ -1,13 +1,21 @@
 [user]
 	name = Jumpei KAWAMI
 	email = don.t.be.trapped.by.dogma@gmail.com
-[color]
-	ui = auto
+
 [core]
 	whitespace = trailing-space
+
+[color]
+	ui = auto
+
 [credential]
 	helper = osxkeychain
+
 [push]
 	default = simple
+
+[svn]
+	pushmergeinfo = true
+
 [alias]
 	graph = log --graph --branches --tags --decorate --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset'

@@ -6,6 +6,7 @@ tap peco/peco
 
 # Install requirements packages
 install git
+install git-lfs
 install zsh --disable-etcdir
 install caskroom/cask/brew-cask
 cask install java

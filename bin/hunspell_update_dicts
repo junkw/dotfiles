@@ -1,11 +1,17 @@
-#!/bin/sh
-
+#!/bin/bash
 case ${OSTYPE} in
-    darwin*)
-        DICTIONARY_PATH=${HOME}/Library/Spelling ;;
-    linux*)
-        DICTIONARY_PATH=/usr/share/myspell/dicts ;;
+  darwin*)
+    dictionary_path=${HOME}/Library/Spelling ;;
+  linux*)
+    dictionary_path=/usr/share/myspell/dicts ;;
 esac
 
-curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.aff -o ${DICTIONARY_PATH}/en_US.aff
-curl -sfL http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_US.dic -o ${DICTIONARY_PATH}/en_US.dic
+repository_url=http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en
+aff_file=en_US.aff
+dic_file=en_US.dic
+
+echo "Downloading ${aff_file}"
+curl -#fL ${repository_url}/${aff_file} -o ${dictionary_path}/${aff_file}
+
+echo "Downloading ${dic_file}"
+curl -#fL ${repository_url}/${dic_file} -o ${dictionary_path}/${dic_file}

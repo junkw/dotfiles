@@ -1,6 +1,7 @@
 # Add repository
 tap homebrew/dupes
 tap homebrew/versions
+tap mpv-player/mpv
 tap railwaycat/emacsmacport
 tap peco/peco
 
@@ -18,12 +19,14 @@ install cmigemo
 install ctags
 install doxygen
 install emacs-mac --icon-modern --with-gnutls --with-imagemagick --with-xml2
+install ffmpeg --HEAD
 install fontforge
 install gnu-tar
 install grep --default-names
 install gpg
 install hunspell
 install markdown
+install mpv --HEAD
 install pandoc
 install peco
 install rsync
@@ -50,7 +53,6 @@ cask install google-drive
 cask install google-japanese-ime
 cask install iterm2-beta
 cask install karabiner
-cask install mplayerx
 cask install onyx
 cask install https://gist.githubusercontent.com/junkw/9ec33e462385ccdbc032/raw/de7d6f3cb31185311a276710cebfe291b364afff/qlcolorcode-extra.rb
 cask install qlimagesize

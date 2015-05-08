@@ -1,0 +1,12 @@
+# General
+use-filedir-conf=yes
+cache=10000
+correct-pts=yes
+screenshot-template=~/Desktop/mpv-screenshot-%03n
+
+# Video
+vo=opengl-hq:icc-profile-auto
+hwdec=vda
+
+# Audio
+volume=80

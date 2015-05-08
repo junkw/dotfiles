@@ -19,6 +19,7 @@ brew tap homebrew/boneyard
 brew bundle
 brew link texinfo --force
 ln -s $(brew --prefix emacs-mac)/Emacs.app /Applications
+ln -s $(brew --prefix mpv)/mpv.app /Applications
 cd /Applications
 rm Google\ Chrome.app
 rm Firefox.app

@@ -16,6 +16,10 @@ task :link_bin do
   FileUtils.ln_sf(bin, "#{Dir.home}/bin/")
 end
 
+task :link_config_dir do
+  FileUtils.ln_sf("#{Dir.pwd}/config", "#{Dir.home}/.config")
+end
+
 task :link_gitconfig do
   FileUtils.ln_sf("#{Dir.pwd}/gitconfig", "#{Dir.home}/.gitconfig")
 end
@@ -60,7 +64,7 @@ task :set_mac_config do
 end
 
 task :install_zshplugins => [:clone_prezto, :clone_antigen]
-task :link => [:link_gitconfig, :link_bin, :link_vimrc, :link_zshrc]
+task :link => [:link_gitconfig, :link_bin, :link_config_dir, :link_vimrc, :link_zshrc]
 task :install => [:make_dir, :install_zshplugins, :link, :install_hunspell_dicts]
 task :install_for_mac => [:install, :set_mac_config]
 task :default => [:install_for_mac, :link_offlineimap]

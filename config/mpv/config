@@ -2,6 +2,8 @@
 use-filedir-conf=yes
 cache=10000
 correct-pts=yes
+osd-font='Hiragino Kaku Gothic Pro W3'
+sub-text-font='Hiragino Kaku Gothic Pro W3'
 screenshot-template=~/Desktop/mpv-screenshot-%03n
 
 # Video

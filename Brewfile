@@ -1,64 +1,64 @@
 # Add repository
-tap homebrew/dupes
-tap homebrew/versions
-tap mpv-player/mpv
-tap railwaycat/emacsmacport
-tap peco/peco
+tap 'homebrew/dupes'
+tap 'homebrew/versions'
+tap 'mpv-player/mpv'
+tap 'railwaycat/emacsmacport'
+tap 'peco/peco'
 
 # Install requirements packages
-install git
-install git-lfs
-install zsh --disable-etcdir
-install caskroom/cask/brew-cask
-cask install java
-cask install xquartz
+brew 'git'
+brew 'git-lfs'
+brew 'zsh', args: ['disable-etcdir']
+brew 'brew-cask'
+cask 'java'
+cask 'xquartz'
 
-# Install packages
-install atool
-install cmigemo
-install ctags
-install doxygen
-install emacs-mac --icon-modern --with-gnutls --with-imagemagick --with-xml2
-install ffmpeg --HEAD
-install fontforge
-install gnu-tar
-install grep --default-names
-install gpg
-install hunspell
-install markdown
-install mpv --HEAD
-install pandoc
-install peco
-install rsync
-install source-highlight
-install svn
-install terminal-notifier
-install texinfo
-install the_silver_searcher
-install wget
+# Brew 'packages
+brew 'atool'
+brew 'cmigemo'
+brew 'ctags'
+brew 'doxygen'
+brew 'emacs-mac', args: ['with-gnutls', 'with-imagemagick', 'with-xml2', 'with-modern-icon']
+brew 'ffmpeg', args: ['HEAD']
+brew 'fontforge'
+brew 'gnu-tar'
+brew 'grep', args: ['with-default-names']
+brew 'gpg'
+brew 'hunspell'
+brew 'markdown'
+brew 'mpv', args: ['HEAD']
+brew 'pandoc'
+brew 'peco'
+brew 'rsync'
+brew 'source-highlight'
+brew 'svn'
+brew 'terminal-notifier'
+brew 'texinfo'
+brew 'the_silver_searcher'
+brew 'wget'
 
 # Add homebrew-cask repository
-tap caskroom/homebrew-versions
+tap 'caskroom/homebrew-versions'
 
 # Install apps with homebrew-cask
-cask install alfred
-cask install appcleaner
-cask install basictex
-cask install betterzipql
-cask install firefox-ja
-cask install flash
-cask install dropbox
-cask install google-chrome
-cask install google-drive
-cask install google-japanese-ime
-cask install iterm2-beta
-cask install karabiner
-cask install onyx
-cask install https://gist.githubusercontent.com/junkw/9ec33e462385ccdbc032/raw/de7d6f3cb31185311a276710cebfe291b364afff/qlcolorcode-extra.rb
-cask install qlimagesize
-cask install qlmarkdown
-cask install qlstephen
-cask install quicklook-csv
-cask install quicklook-json
-cask install silverlight
-cask install suspicious-package
+cask 'alfred'
+cask 'appcleaner'
+cask 'basictex'
+cask 'betterzipql'
+cask 'firefox-ja'
+cask 'flash'
+cask 'dropbox'
+cask 'google-chrome'
+cask 'google-drive'
+cask 'google-japanese-ime'
+cask 'iterm2-beta'
+cask 'karabiner'
+cask 'onyx'
+cask 'https://gist.githubusercontent.com/junkw/9ec33e462385ccdbc032/raw/de7d6f3cb31185311a276710cebfe291b364afff/qlcolorcode-extra.rb'
+cask 'qlimagesize'
+cask 'qlmarkdown'
+cask 'qlstephen'
+cask 'quicklook-csv'
+cask 'quicklook-json'
+cask 'silverlight'
+cask 'suspicious-package'

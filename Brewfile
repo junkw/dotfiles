@@ -8,7 +8,9 @@ tap 'peco/peco'
 # Install requirements packages
 brew 'git'
 brew 'git-lfs'
+brew 'python'
 brew 'zsh', args: ['disable-etcdir']
+
 brew 'brew-cask'
 cask 'java'
 cask 'xquartz'

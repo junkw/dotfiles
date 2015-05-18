@@ -17,7 +17,8 @@ rake install_for_mac
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew tap Homebrew/bundle
 brew bundle
-brew link texinfo --force
+brew link --force texinfo
+brew link --force openssl
 ln -s $(brew --prefix emacs-mac)/Emacs.app /Applications
 ln -s $(brew --prefix mpv)/mpv.app /Applications
 cd /Applications

@@ -26,7 +26,7 @@ end
 
 task :link_offlineimap do
   FileUtils.ln_sf("#{Dir.pwd}/offlineimap", "#{Dir.home}/.offlineimap")
-  FileUtils.ln_sf("#{Dir.home}/Dropbox/etc/offlineimaprc.worksite", "#{Dir.home}/.offlineimaprc")
+  FileUtils.ln_sf("#{Dir.home}/Dropbox/etc/local/dotfiles/offlineimaprc.worksite", "#{Dir.home}/.offlineimaprc")
 end
 
 task :link_vimrc do

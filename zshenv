@@ -1,5 +1,9 @@
 # -*- mode: sh; coding: utf-8; indent-tabs-mode: nil -*-
 
+# Locale
+export LANG=ja_JP.UTF-8
+export LC_ALL=ja_JP.UTF-8
+
 # Paths
 typeset -T SUDO_PATH sudo_path
 typeset -T INFOPATH infopath

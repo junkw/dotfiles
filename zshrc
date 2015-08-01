@@ -9,7 +9,9 @@ if [[ -s /usr/local/bin/src-hilite-lesspipe.sh ]]; then
     export LESSOPEN='| src-hilite-lesspipe.sh %s'
 fi
 
-# Directory
+# Options
+setopt print_eight_bit
+
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-file $HOME/.zchpwd-recent-dirs

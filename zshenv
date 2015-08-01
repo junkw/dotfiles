@@ -39,6 +39,15 @@ if [[ -s /usr/libexec/java_home ]]; then
     export JAVA_HOME=`/usr/libexec/java_home`
 fi
 
+# Pager
+export EDITOR=vim
+export VISUAL=vim
+
+export LESS='-R'
+if [[ -s /usr/local/bin/src-hilite-lesspipe.sh ]]; then
+    export LESSOPEN='| src-hilite-lesspipe.sh %s'
+fi
+
 # Homebrew
 export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"

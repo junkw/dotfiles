@@ -1,14 +1,5 @@
 # -*- mode: sh; coding: utf-8; indent-tabs-mode: nil -*-
 
-# Variables
-export EDITOR=vim
-export VISUAL=vim
-
-export LESS='-R'
-if [[ -s /usr/local/bin/src-hilite-lesspipe.sh ]]; then
-    export LESSOPEN='| src-hilite-lesspipe.sh %s'
-fi
-
 # Options
 setopt print_eight_bit
 

@@ -1,0 +1,15 @@
+{
+    "InitialFilter": "SmartCase",
+    "SingleKeyJump": {
+        "ShowPrefix": true
+    },
+    "Keymap": {
+        "M-g":  "peco.ToggleSingleKeyJump",
+        "C-g":  "peco.Cancel",
+        "C-v":  "peco.ScrollPageDown",
+        "M-v":  "peco.ScrollPageUp",
+        "M-a":  "peco.SelectAll",
+        "Pgup": "peco.ScrollPageUp",
+        "Pgdn": "peco.ScrollPageDown"
+    }
+}

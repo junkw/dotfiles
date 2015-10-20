@@ -27,6 +27,7 @@ brew 'gnu-tar'
 brew 'grep', args: ['with-default-names']
 brew 'gpg'
 brew 'hunspell'
+brew 'jq'
 brew 'markdown'
 brew 'mpv', args: ['HEAD']
 brew 'pandoc'

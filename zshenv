@@ -49,8 +49,12 @@ if [[ -s /usr/local/bin/src-hilite-lesspipe.sh ]]; then
 fi
 
 # Homebrew
-export HOMEBREW_MAKE_JOBS=4
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+if [[ `which brew` ]]; then
+    export HOMEBREW_MAKE_JOBS=4
+    export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+    export PKG_CONFIG_PATH=$(brew --prefix)/opt/openssl/lib/pkgconfig
+fi
 
 # Hunspell
 export DICTIONARY=en_US

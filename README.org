@@ -4,7 +4,7 @@
 
 ** Requirements
 
-   - Mac OS X Yosemite
+   - Mac OS X El Capitan
    - Xcode
    - Homebrew
 
@@ -14,18 +14,18 @@
 git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
 cd /path/to/local/repo
 rake install_for_mac
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew tap Homebrew/bundle
 brew bundle
-brew link --force texinfo
 brew link --force openssl
-ln -s $(brew --prefix emacs-mac)/Emacs.app /Applications
-ln -s $(brew --prefix mpv)/mpv.app /Applications
+brew link --force sqlite
+brew link --force texinfo
+brew linkapps emacs-mac
+brew linkapps mpv
 cd /Applications
 mv -f /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app .
 mv -f /opt/homebrew-cask/Caskroom/firefox-ja/latest/Firefox.app .
 defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock
 sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
 chsh -s /usr/local/bin/zsh
-exit
+exec $SHELL -l
 #+END_SRC

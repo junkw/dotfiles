@@ -14,7 +14,7 @@ sudo_path=({/usr/local,/usr,}/sbin(N-/))
 path=({/usr/{local/,},/}bin
       $sudo_path
       /opt/X11/bin(N-/)
-      /usr/texbin(N-/)
+      /Library/TeX/texbin(N-/)
       $HOME/{.nodebrew/current/,}bin(N-/)
       $path)
 

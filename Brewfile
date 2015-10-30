@@ -14,7 +14,7 @@ brew 'brew-cask'
 cask 'java'
 cask 'xquartz'
 
-# Brew 'packages
+# Homebrew packages
 brew 'atool'
 brew 'cmigemo'
 brew 'ctags'
@@ -41,10 +41,13 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'wget'
 
-# Add homebrew-cask repository
+brew 'offlineimap', args: ['HEAD']
+brew 'mu', args: ['with-emacs', 'HEAD']
+
+# Add Homebrew Cask repository
 tap 'caskroom/homebrew-versions'
 
-# Install apps with homebrew-cask
+# Install apps with Homebrew Cask
 cask 'alfred'
 cask 'appcleaner'
 cask 'basictex'
@@ -65,4 +68,6 @@ cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'silverlight'
 cask 'suspicious-package'
+
+cask 'virtualbox'
 cask 'vagrant'

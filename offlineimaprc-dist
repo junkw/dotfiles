@@ -1,0 +1,41 @@
+[general]
+accounts   = Worksite
+pythonfile = ~/.offlineimap/offlineimap.py
+
+[Account Worksite]
+localrepository  = LocalWorksite
+remoterepository = RemoteWorksite
+
+status_backend   = sqlite
+
+[Repository LocalWorksite]
+type = Maildir
+
+localfolders = ~/.mail/
+sep = /
+nametrans    = lambda folder: {'Archive':   '[Gmail]/All Mail',
+                               'Drafts':    '[Gmail]/Drafts',
+                               'Sent':      '[Gmail]/Sent Mail',
+                               'Starred':   '[Gmail]/Starred',
+                               'Trash':     '[Gmail]/Trash'
+                               }.get(folder, folder)
+
+[Repository RemoteWorksite]
+maxconnections = 1
+
+type = Gmail
+remoteuser     = __GMAIL__
+remotepasseval = get_keychain_password("__GMAIL__", "imap.gmail.com")
+realdelete     = no
+
+ssl = yes
+sslcacertfile = /usr/local/etc/openssl/cert.pem
+
+nametrans = lambda folder: {'[Gmail]/All Mail':  'Archive',
+                            '[Gmail]/Drafts':    'Drafts',
+                            '[Gmail]/Sent Mail': 'Sent',
+                            '[Gmail]/Starred':   'Starred',
+                            '[Gmail]/Trash':     'Trash'
+                            }.get(folder, folder)
+
+folderfilter = lambda foldername: foldername not in ['[Gmail]/Important', '[Gmail]/Spam']

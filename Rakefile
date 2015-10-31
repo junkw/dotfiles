@@ -26,7 +26,10 @@ end
 
 task :link_offlineimap do
   FileUtils.ln_sf("#{Dir.pwd}/offlineimap", "#{Dir.home}/.offlineimap")
-  FileUtils.ln_sf("#{Dir.home}/Dropbox/etc/local/dotfiles/offlineimaprc.worksite", "#{Dir.home}/.offlineimaprc")
+  FileUtils.cp("#{Dir.pwd}/offlineimaprc-dist", "#{Dir.home}/.offlineimaprc")
+
+  mailaddress = ENV['GMAIL']
+  sh "sed -i '' -e 's/__GMAIL__/#{mailaddress}/g' ~/.offlineimaprc"
 end
 
 task :link_vimrc do

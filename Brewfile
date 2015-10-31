@@ -5,6 +5,8 @@ tap 'mpv-player/mpv'
 tap 'railwaycat/emacsmacport'
 tap 'peco/peco'
 
+tap 'homebrew/homebrew-php'
+
 # Install requirements packages
 brew 'git'
 brew 'git-lfs'
@@ -41,8 +43,13 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'wget'
 
+brew 'cscope'
 brew 'offlineimap', args: ['HEAD']
 brew 'mu', args: ['with-emacs', 'HEAD']
+brew 'php-code-sniffer'
+brew 'php-cs-fixer'
+brew 'phpctags'
+brew 'phpmd'
 
 # Add Homebrew Cask repository
 tap 'caskroom/homebrew-versions'

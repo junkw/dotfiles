@@ -12,7 +12,7 @@ brew 'git'
 brew 'git-lfs'
 brew 'zsh', args: ['disable-etcdir']
 
-brew 'brew-cask'
+brew 'caskroom/cask/brew-cask'
 cask 'java'
 cask 'xquartz'
 

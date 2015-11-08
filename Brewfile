@@ -77,4 +77,5 @@ cask 'silverlight'
 cask 'suspicious-package'
 
 cask 'virtualbox'
+cask 'virtualbox-extension-pack'
 cask 'vagrant'

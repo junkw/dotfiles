@@ -11,9 +11,6 @@ remoterepository = RemoteWorksite
 
 status_backend   = sqlite
 
-synclabels       = yes
-ignorelabels     = \Spam, \Important
-
 [Repository LocalWorksite]
 
 type         = GmailMaildir

@@ -32,6 +32,10 @@ task :link_offlineimap do
   sh "sed -i '' -e 's/__GMAIL__/#{mailaddress}/g' ~/.offlineimaprc"
 end
 
+task :link_tmuxconf do
+  FileUtils.ln_sf("#{Dir.pwd}/tmux.conf", "#{Dir.home}/.tmux.conf")
+end
+
 task :link_vimrc do
   FileUtils.ln_sf("#{Dir.pwd}/vimrc", "#{Dir.home}/.vimrc")
 end
@@ -67,7 +71,7 @@ task :set_mac_config do
 end
 
 task :install_zshplugins => [:clone_prezto, :clone_antigen]
-task :link => [:link_gitconfig, :link_bin, :link_config_dir, :link_vimrc, :link_zshrc]
+task :link => [:link_gitconfig, :link_bin, :link_config_dir, :link_tmuxconf, :link_vimrc, :link_zshrc]
 task :install => [:make_dir, :install_zshplugins, :link, :install_hunspell_dicts]
 task :install_for_mac => [:install, :set_mac_config]
 task :default => [:install_for_mac, :link_offlineimap]

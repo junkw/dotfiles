@@ -18,12 +18,12 @@ zstyle ':prezto:load' pmodule \
        'syntax-highlighting' \
        'tmux'
 
+# Theme
+zstyle ':prezto:module:prompt' theme 'sorin'
+
 # Editor
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
-
-# Theme
-zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Terminal
 if [[ -z "$INSIDE_EMACS" ]]; then

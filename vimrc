@@ -1,3 +1,8 @@
+set undodir=~/.cache/vim/undo
+set directory=~/.cache/vim/swap
+set backupdir=~/.cache/vim/backup
+set viminfo+=n~/.cache/vim/viminfo
+
 set langmenu=japanese
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis

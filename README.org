@@ -13,7 +13,8 @@
 #+BEGIN_SRC sh
 git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
 cd /path/to/local/repo
-rake install_for_mac
+GMAIL=xxxx@gmail.com rake
+
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew tap Homebrew/bundle
 brew bundle
@@ -26,7 +27,6 @@ brew linkapps mpv
 cd /Applications
 mv -f /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app .
 mv -f /opt/homebrew-cask/Caskroom/firefox-ja/latest/Firefox.app .
-
 defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock
 
 export SHELL=/usr/local/bin/zsh

@@ -1,7 +1,7 @@
 .DS_Store
 *.pyc
-*.lock
-pid
 
-Account-*
-Repository-*
+config/fontforge/
+config/gnupg/
+config/offlineimap/config
+config/subversion/

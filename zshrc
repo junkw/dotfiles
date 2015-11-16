@@ -8,6 +8,7 @@ add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-file $HOME/.zchpwd-recent-dirs
 
 # Aliases
-alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"
+alias muindex="mu index --muhome $XDG_CACHE_HOME/mu/ -m $XDG_DATA_HOME/mail/"
 alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
-alias syncmail="offlineimap && mu index --muhome $XDG_CACHE_HOME/mu/ -m XDG_DATA_HOME/mail"
+alias syncmail="offlineimap && muindex"
+alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"

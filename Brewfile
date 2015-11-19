@@ -3,6 +3,7 @@ tap 'homebrew/dupes'
 tap 'homebrew/versions'
 tap 'mpv-player/mpv'
 tap 'railwaycat/emacsmacport'
+tap 'sanemat/font'
 tap 'peco/peco'
 
 tap 'homebrew/homebrew-php'
@@ -34,6 +35,7 @@ brew 'markdown'
 brew 'mpv', args: ['with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
 brew 'pandoc'
 brew 'peco'
+brew 'ricty', args: ['powerline']
 brew 'rsync'
 brew 'source-highlight'
 brew 'svn'

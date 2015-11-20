@@ -31,14 +31,6 @@ manpath=(/usr/{local/,}share/man
 infopath=(/usr/local/share/info{/emacs,}(N-/)
           /usr/share/info)
 
-if [[ `which nodebrew` ]]; then
-    export NODE_PATH=$HOME/.nodebrew/current/lib/node_modules
-fi
-
-if [[ -s /usr/libexec/java_home ]]; then
-    export JAVA_HOME=`/usr/libexec/java_home`
-fi
-
 # XDG Base Directory
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
@@ -47,21 +39,29 @@ export XDG_DATA_HOME=$HOME/.local/share
 export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
 
 # Homebrew
-if [[ `which brew` ]]; then
-    export HOMEBREW_MAKE_JOBS=4
-    export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_MAKE_JOBS=4
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+if [[ `which brew` ]]; then
     export PKG_CONFIG_PATH=$(brew --prefix)/opt/openssl/lib/pkgconfig
 fi
+
+# Java
+if [[ -s /usr/libexec/java_home ]]; then
+    export JAVA_HOME=`/usr/libexec/java_home`
+fi
+
+# Node.js
+export NODE_PATH=$HOME/.nodebrew/current/lib/node_modules
 
 # Pager
 export EDITOR=vim
 export VISUAL=vim
 
 export LESSHISTFILE=-
-export LESS='-R'
-if [[ -s /usr/local/bin/src-hilite-lesspipe.sh ]]; then
-    export LESSOPEN='| src-hilite-lesspipe.sh %s'
+export LESS="-R"
+if [[ `src-hilite-lesspipe.sh` ]]; then
+    export LESSOPEN="| src-hilite-lesspipe.sh %s"
 fi
 
 # Hunspell

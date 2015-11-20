@@ -4,26 +4,34 @@
 zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
        'environment' \
-       'terminal' \
        'editor' \
-       'history' \
-       'directory' \
-       'spectrum' \
-       'utility' \
-       'completion' \
-       'prompt' \
        'helper' \
-       'git' \
-       'ssh' \
+       'spectrum' \
        'syntax-highlighting' \
-       'tmux'
-
-# Theme
-zstyle ':prezto:module:prompt' theme 'sorin'
+       'utility' \
+       'archive' \
+       'completion' \
+       'directory' \
+       'git' \
+       'history' \
+       'history-substring-search' \
+       'prompt' \
+       'terminal' \
 
 # Editor
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
+
+# Syntax Highlighting
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+       'main' \
+       'brackets' \
+       'pattern' \
+       'cursor' \
+       'root'
+
+# Prompt
+zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Terminal
 if [[ -z "$INSIDE_EMACS" ]]; then
@@ -31,7 +39,3 @@ if [[ -z "$INSIDE_EMACS" ]]; then
    zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
    zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 fi
-
-# Tmux
-zstyle ':prezto:module:tmux:auto-start' remote 'yes'
-zstyle ':prezto:module:tmux:iterm' integrate 'yes'

@@ -4,7 +4,9 @@ require 'fileutils'
 
 
 task :make_dir do
-  home_dirs = ["#{Dir.home}/.cache/vim",
+  home_dirs = ["#{Dir.home}/.cache/vim/backup",
+               "#{Dir.home}/.cache/vim/undo",
+               "#{Dir.home}/.cache/vim/swap",
                "#{Dir.home}/.local/share",
                "#{Dir.home}/bin",
                "#{Dir.home}/Code",

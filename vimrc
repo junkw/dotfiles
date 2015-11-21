@@ -1,8 +1,3 @@
-set undodir=~/.cache/vim/undo
-set directory=~/.cache/vim/swap
-set backupdir=~/.cache/vim/backup
-set viminfo+=n~/.cache/vim/viminfo
-
 set langmenu=japanese
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
@@ -20,8 +15,16 @@ endfunction
 
 set vb t_vb=                                     " stop the beeping
 
-set nobackup
-set noswapfile
+set viminfo+=n~/.cache/vim/viminfo
+
+set backup
+set backupdir=~/.cache/vim/backup
+
+set swapfile
+set directory=~/.cache/vim/swap
+
+set undodir=~/.cache/vim/undo
+set undofile
 
 set background=dark
 syntax on

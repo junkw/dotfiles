@@ -40,6 +40,10 @@ task :clone_antigen do
   sh "git clone https://github.com/zsh-users/antigen.git #{Dir.home}/.zantigen"
 end
 
+task :clone_enhancd do
+  sh "git clone https://github.com/b4b4r07/enhancd.git #{Dir.home}/.zenhancd"
+end
+
 task :clone_prezto do
   sh "git clone --recursive https://github.com/sorin-ionescu/prezto.git #{Dir.home}/.zprezto"
 end
@@ -66,7 +70,7 @@ task :set_mac_config do
   end
 end
 
-task :install_zsh_plugins => [:clone_prezto, :clone_antigen]
+task :install_zsh_plugins => [:clone_prezto, :clone_enhancd]
 task :link => [:link_bin, :link_xdg_config_home, :link_vimrc, :link_zshrc]
-task :install => [:make_dir, :link, :copy_offlineimap_config, :clone_prezto, :install_hunspell_dicts]
+task :install => [:make_dir, :link, :copy_offlineimap_config, :install_zsh_plugins, :install_hunspell_dicts]
 task :default => [:install, :set_mac_config]

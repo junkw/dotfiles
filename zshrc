@@ -3,10 +3,6 @@
 # Options
 setopt print_eight_bit
 
-autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-add-zsh-hook chpwd chpwd_recent_dirs
-zstyle ':chpwd:*' recent-dirs-file $HOME/.zchpwd-recent-dirs
-
 # Aliases
 alias muindex="mu index --muhome $XDG_CACHE_HOME/mu/ -m $XDG_DATA_HOME/mail/"
 alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"

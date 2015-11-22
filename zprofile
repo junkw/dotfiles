@@ -7,6 +7,14 @@ if [[ -s $init_prezto ]]; then
     source $init_prezto
 fi
 
+# enhancd
+export ENHANCD_DIR=$HOME/.zenhancd
+init_enhancd=$ENHANCD_DIR/enhancd.sh
+
+if [[ -s $init_enhancd ]]; then
+    source $init_enhancd
+fi
+
 # Functions
 function peco-kill-process() {
     ps -ef | peco | awk '{ print $2 }' | xargs kill

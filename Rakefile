@@ -68,5 +68,5 @@ end
 
 task :install_zsh_plugins => [:clone_prezto, :clone_antigen]
 task :link => [:link_bin, :link_xdg_config_home, :link_vimrc, :link_zshrc]
-task :install => [:make_dir, :link, :copy_offlineimap_config, :install_zsh_plugins, :install_hunspell_dicts]
+task :install => [:make_dir, :link, :copy_offlineimap_config, :clone_prezto, :install_hunspell_dicts]
 task :default => [:install, :set_mac_config]

@@ -1,25 +1,24 @@
 # -*- mode: sh; coding: utf-8; indent-tabs-mode: nil -*-
 
 # Prezto
-if [[ -s $HOME/.zprezto/init.zsh ]]; then
-    source $HOME/.zprezto/init.zsh
+init_prezto=$HOME/.zprezto/init.zsh
+
+if [[ -s $init_prezto ]]; then
+    source $init_prezto
 fi
 
-# Antigen
-ADOTDIR=$HOME/.zantigen
+# Functions
+function peco-kill-process() {
+    ps -ef | peco | awk '{ print $2 }' | xargs kill
+    zle clear-screen
+}
+zle -N peco-kill-process
+bindkey '^xk' peco-kill-process
 
-if [[ -s $ADOTDIR/antigen.zsh ]]; then
-    source $ADOTDIR/antigen.zsh
-
-	# Anyframe
-	if [[ `which peco` ]]; then
-		antigen bundle mollifier/anyframe
-		zstyle ":anyframe:selector:" use peco
-
-        bindkey '^xb' anyframe-widget-cdr
-        bindkey '^xr' anyframe-widget-execute-history
-        bindkey '^xk' anyframe-widget-kill
-	fi
-
-	antigen apply
-fi
+function peco-select-history() {
+    BUFFER=$(history -n 1 | tail -r | awk '!a[$0]++' | peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history

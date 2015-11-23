@@ -35,6 +35,7 @@ brew 'markdown'
 brew 'mpv', args: ['with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
 brew 'pandoc'
 brew 'peco'
+brew 'reattach-to-user-namespace'
 brew 'ricty', args: ['powerline']
 brew 'rsync'
 brew 'source-highlight'

@@ -5,6 +5,7 @@ bind C-z send-prefix
 
 # Color
 source-file ~/.local/share/tmux-colors-solarized/tmuxcolors-256.conf
+set -g status-left '#{?pane_synchronized,#[fg=red],}[#S]'
 
 # Session
 set-option -g default-shell /usr/local/bin/zsh

@@ -3,6 +3,9 @@ set -g prefix C-z
 unbind C-b
 bind C-z send-prefix
 
+# Color
+source-file ~/.local/share/tmux-colors-solarized/tmuxcolors-256.conf
+
 # Session
 set-option -g default-shell /usr/local/bin/zsh
 set -g base-index 1

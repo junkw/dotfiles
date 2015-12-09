@@ -8,11 +8,11 @@ if [[ -s $init_prezto ]]; then
 fi
 
 # enhancd
-export ENHANCD_DIR=$HOME/.zenhancd
-init_enhancd=$ENHANCD_DIR/enhancd.sh
+init_enhancd=$HOME/.zenhancd/enhancd.sh
 
 if [[ -s $init_enhancd ]]; then
     source $init_enhancd
+    export ENHANCD_DIR=$HOME/.zenhancd
 fi
 
 # Functions

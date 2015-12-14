@@ -1,4 +1,5 @@
 # Add repository
+tap 'homebrew/binary'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
 tap 'mpv-player/mpv'
@@ -33,6 +34,7 @@ brew 'hunspell'
 brew 'jq'
 brew 'markdown'
 brew 'mpv', args: ['with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
+brew 'packer'
 brew 'pandoc'
 brew 'peco'
 brew 'reattach-to-user-namespace'

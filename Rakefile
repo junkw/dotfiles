@@ -72,6 +72,7 @@ task :set_mac_config do
     sh "defaults write com.apple.finder QLEnableTextSelection -bool true"
     sh "defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true"
     sh "killall Finder"
+    sh "sudo sed -i.origin -e 's/^\(.*SendEnv.*\)/#\1/' /etc/ssh/ssh_config"
   end
 end
 

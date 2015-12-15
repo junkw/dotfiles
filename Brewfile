@@ -1,4 +1,5 @@
 # Add repository
+tap 'caskroom/cask'
 tap 'homebrew/binary'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
@@ -14,7 +15,6 @@ brew 'git'
 brew 'git-lfs'
 brew 'zsh', args: ['disable-etcdir']
 
-brew 'caskroom/cask/brew-cask'
 cask 'java'
 cask 'xquartz'
 

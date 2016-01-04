@@ -33,7 +33,7 @@ brew 'gpg'
 brew 'hunspell'
 brew 'jq'
 brew 'markdown'
-brew 'mpv', args: ['with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
+brew 'mpv', args: ['with-bundle', 'with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
 brew 'packer'
 brew 'pandoc'
 brew 'peco'

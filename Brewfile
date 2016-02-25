@@ -24,7 +24,7 @@ brew 'cmigemo'
 brew 'ctags'
 brew 'doxygen'
 brew 'emacs-mac', args: ['with-gnutls', 'with-imagemagick', 'with-xml2', 'with-modern-icon']
-brew 'ffmpeg', args: ['HEAD']
+brew 'ffmpeg', args: ['with-faac', 'HEAD']
 brew 'fontforge'
 brew 'ghostscript'
 brew 'gnu-tar'

@@ -32,12 +32,15 @@ infopath=(/usr/local/share/info{/emacs,}(N-/)
           /usr/share/info)
 
 # XDG Base Directory
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_CACHE_HOME=$HOME/.cache
-export XDG_DATA_HOME=$HOME/.local/share
-
-export DVDCSS_CACHE=$XDG_CACHE_HOME/mpv/dvdcss/
-export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
+if [[ -z $XDG_CONFIG_HOME ]]; then
+    export XDG_CONFIG_HOME=$HOME/.config
+fi
+if [[ -z $XDG_CACHE_HOME ]]; then
+    export XDG_CACHE_HOME=$HOME/.cache
+fi
+if [[ -z $XDG_DATA_HOME ]]; then
+    export XDG_DATA_HOME=$HOME/.local/share
+fi
 
 # Homebrew
 export HOMEBREW_MAKE_JOBS=4
@@ -55,6 +58,17 @@ fi
 # Node.js
 export NODE_PATH=$HOME/.nodebrew/current/lib/node_modules
 
+
+# GnuPG
+export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
+
+# Hunspell
+export DICTIONARY=en_US
+export DICPATH=$HOME/Library/Spelling/
+
+# mpv
+export DVDCSS_CACHE=$XDG_CACHE_HOME/mpv/dvdcss
+
 # Pager
 export EDITOR=vim
 export VISUAL=vim
@@ -64,7 +78,3 @@ export LESS="-R"
 if [[ `src-hilite-lesspipe.sh` ]]; then
     export LESSOPEN="| src-hilite-lesspipe.sh %s"
 fi
-
-# Hunspell
-export DICTIONARY=en_US
-export DICPATH=$HOME/Library/Spelling/

@@ -12,7 +12,8 @@ task :make_dir do
                "#{Dir.home}/bin",
                "#{Dir.home}/Code",
                "#{Dir.home}/Documents/org",
-               "#{Dir.home}/lib"]
+               "#{Dir.home}/lib",
+               "#{Dir.home}/opt"]
   FileUtils.mkdir_p(home_dirs)
 end
 

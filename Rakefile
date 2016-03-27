@@ -38,6 +38,12 @@ task :link_vimrc do
   FileUtils.ln_sf("#{Dir.pwd}/vimrc", "#{Dir.home}/.vimrc")
 end
 
+task :link_zsh_functions do
+  if RUBY_PLATFORM.include?("darwin")
+    FileUtils.ln_sf("/usr/local/Library/Contributions/brew_zsh_completion.zsh" "/usr/local/share/zsh/site-functions/_brew")
+  end
+end
+
 task :link_zshrc do
   FileUtils.ln_sf("#{Dir.pwd}/zlogin", "#{Dir.home}/.zlogin")
   FileUtils.ln_sf("#{Dir.pwd}/zpreztorc", "#{Dir.home}/.zpreztorc")
@@ -86,7 +92,7 @@ task :set_mac_config do
 end
 
 task :install_zsh_plugins => [:clone_prezto, :clone_enhancd]
-task :link => [:link_bin, :link_xdg_config_home, :link_vimrc, :link_zshrc]
+task :link => [:link_bin, :link_xdg_config_home, :link_vimrc, :link_zsh_functions, :link_zshrc]
 task :install => [:make_dir, :link, :copy_offlineimap_config, :install_zsh_plugins, :clone_tmux_colors_solarized, :install_hunspell_dicts]
 task :setup_mac => [:link_launch_agents, :load_launch_agents, :set_mac_config]
 task :default => [:install, :setup_mac]

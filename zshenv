@@ -19,7 +19,6 @@ path=({/usr/{local/,},/}bin
       $path)
 
 fpath=(/usr/local/share/zsh/functions(N-/)
-       $(brew --repository)/Library/Contributions(N-/)
        $fpath)
 
 manpath=(/usr/{local/,}share/man

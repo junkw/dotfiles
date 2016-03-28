@@ -40,7 +40,7 @@ end
 
 task :link_zsh_functions do
   if RUBY_PLATFORM.include?("darwin")
-    FileUtils.ln_sf("/usr/local/Library/Contributions/brew_zsh_completion.zsh" "/usr/local/share/zsh/site-functions/_brew")
+    FileUtils.ln_sf("/usr/local/Library/Contributions/brew_zsh_completion.zsh", "/usr/local/share/zsh/site-functions/_brew")
   end
 end
 

@@ -4,6 +4,7 @@
 
 [core]
 	whitespace = trailing-space
+	quotepath = false
 
 [color]
 	ui = auto

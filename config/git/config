@@ -20,3 +20,4 @@
 
 [alias]
 	graph = log --graph --branches --tags --decorate --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset'
+	unstage = reset HEAD --

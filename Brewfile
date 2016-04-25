@@ -3,9 +3,10 @@ tap 'caskroom/cask'
 tap 'homebrew/binary'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
+tap 'homebrew/services'
+tap 'hsanemat/font'
 tap 'mpv-player/mpv'
 tap 'railwaycat/emacsmacport'
-tap 'hsanemat/font'
 tap 'peco/peco'
 
 tap 'homebrew/homebrew-php'
@@ -23,7 +24,7 @@ brew 'atool'
 brew 'cmigemo'
 brew 'ctags'
 brew 'doxygen'
-brew 'emacs-mac', args: ['with-gnutls', 'with-imagemagick', 'with-xml2', 'with-modern-icon']
+brew 'emacs-mac', args: ['with-dbus', 'with-gnutls', 'with-imagemagick', 'with-xml2', 'with-modern-icon']
 brew 'ffmpeg', args: ['with-faac', 'HEAD']
 brew 'fontforge'
 brew 'ghostscript'

@@ -21,6 +21,7 @@ brew bundle
 brew link --force openssl
 brew link --force sqlite
 brew link --force texinfo
+brew services start d-bus # launchctl load /usr/local/opt/d-bus/org.freedesktop.dbus-session.plist
 brew linkapps emacs-mac
 brew linkapps mpv
 

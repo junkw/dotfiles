@@ -15,6 +15,9 @@
 [push]
 	default = simple
 
+[rerere]
+	enabled = true
+
 [svn]
 	pushmergeinfo = true
 

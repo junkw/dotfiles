@@ -30,6 +30,13 @@ task :load_launch_agents do
   sh("launchctl load #{Dir.home}/Library/LaunchAgents/junkw.xdg.environments.plist")
 end
 
+task :load_launch_agents_virtualbox do
+  plist = 'org.virtualbox.environments.plist'
+
+  sh("sed -e \"s/__USER__/#{ENV['USER']}/g\" #{Dir.pwd}/Library/LaunchAgents/#{plist} > #{Dir.home}/Library/LaunchAgents/#{plist}")
+  sh("launchctl load #{Dir.home}/Library/LaunchAgents/#{plist}")
+end
+
 task :link_xdg_config_home do
   FileUtils.ln_sf("#{Dir.pwd}/config", "#{Dir.home}/.config")
 end

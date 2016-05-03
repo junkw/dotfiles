@@ -25,6 +25,9 @@ brew services start d-bus # launchctl load /usr/local/opt/d-bus/org.freedesktop.
 brew linkapps emacs-mac
 brew linkapps mpv
 
+killall VirtualBox
+rake load_launch_agents_virtualbox
+
 cd /Applications
 mv -f /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app .
 mv -f /opt/homebrew-cask/Caskroom/firefox-ja/latest/Firefox.app .

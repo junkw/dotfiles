@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>org.virtualbox.environments</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>launchctl</string>
+      <string>setenv</string>
+      <string>VBOX_LOG_DEST</string>
+      <string>dir=/Users/__USER__/Library/Logs/VirtualBox</string>
+      <string>VBOX_RELEASE_LOG_DEST</string>
+      <string>nofile stderr</string>
+      <string>VBOXSVC_RELEASE_LOG_DEST</string>
+      <string>dir=/Users/__USER__/Library/Logs/VirtualBox</string>
+      <string>VBOX_GUI_SELECTORWINDOW_RELEASE_LOG_DEST</string>
+      <string>dir=/Users/__USER__/Library/Logs/VirtualBox</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>LaunchOnlyOnce</key>
+    <true/>
+  </dict>
+</plist>

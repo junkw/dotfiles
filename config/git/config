@@ -36,5 +36,12 @@
 	pushmergeinfo = true
 
 [alias]
-	graph = log --graph --branches --tags --decorate --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset'
+	branches = branch -a
+	conflicts = diff --name-only --diff-filter=U
+	discard = checkout --
+	graph = log --graph --remotes --branches --tags --decorate --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset'
+	remotes = remote -v
+	stashes = stash list
+	uncommit = reset --mixed HEAD~1
 	unstage = reset HEAD --
+	tags = tag

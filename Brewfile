@@ -1,6 +1,5 @@
 # Add repository
 tap 'caskroom/cask'
-tap 'homebrew/binary'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
 tap 'homebrew/services'

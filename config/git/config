@@ -12,9 +12,18 @@
 [credential]
 	helper = osxkeychain
 
+[push]
+	default = simple
+
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+
 [diff]
 	tool = ediff
 	guitool = ediff
+	compactionHeuristic = true
 
 [difftool "ediff"]
 	cmd = ediff.sh $LOCAL $REMOTE $MERGED
@@ -25,9 +34,6 @@
 [mergetool "ediff"]
 	cmd = ediff.sh $LOCAL $REMOTE $MERGED $BASE
 	trustExitCode = true
-
-[push]
-	default = simple
 
 [rerere]
 	enabled = true

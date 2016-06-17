@@ -16,6 +16,7 @@ path=({/usr/{local/,},/}bin
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
       $HOME/{.nodebrew/current/,}bin(N-/)
+      /usr/local/share/git-core/contrib/diff-highlight
       $path)
 
 fpath=(/usr/local/share/zsh/functions(N-/)

@@ -8,12 +8,12 @@ if [[ -s $init_prezto ]]; then
 fi
 
 # enhancd
-init_enhancd=$HOME/.zenhancd/enhancd.sh
+export ENHANCD_DIR=$HOME/.zenhancd
+export ENHANCD_LOG=$XDG_CACHE_HOME/enhancd/enhancd.log
+init_enhancd=$ENHANCD_DIR/enhancd.sh
 
 if [[ -s $init_enhancd ]]; then
     source $init_enhancd
-    export ENHANCD_DIR=$HOME/.zenhancd
-    export ENHANCD_LOG=$XDG_CACHE_HOME/enhancd/enhancd.log
 fi
 
 # Functions

@@ -45,6 +45,7 @@
 	branches = branch -a
 	conflicts = diff --name-only --diff-filter=U
 	discard = checkout --
+	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 	graph = log --graph --remotes --branches --tags --decorate --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset'
 	remotes = remote -v
 	stashes = stash list

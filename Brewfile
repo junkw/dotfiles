@@ -1,5 +1,6 @@
 # Add repository
 tap 'caskroom/cask'
+tap 'delphinus35/font'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
 tap 'homebrew/services'
@@ -41,6 +42,7 @@ brew 'packer'
 brew 'pandoc'
 brew 'peco'
 brew 'reattach-to-user-namespace'
+brew 'ricty' args: ['powerline']
 brew 'rsync'
 brew 'source-highlight'
 brew 'ssh-copy-id'

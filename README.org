@@ -26,9 +26,6 @@ brew services start d-bus # launchctl load /usr/local/opt/d-bus/org.freedesktop.
 brew linkapps emacs-mac
 brew linkapps mpv
 
-brew tap delphinus35/font --full
-git -C /usr/local/Library/Taps/delphinus35/homebrew-font checkout -b nerd-fonts origin/nerd-fonts
-brew install ricty --powerline
 cp -f /usr/local/Cellar/ricty/4.0.1/share/fonts/Ricty*.ttf ~/Library/Fonts
 fc-cache -vf
 

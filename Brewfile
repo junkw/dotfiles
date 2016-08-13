@@ -8,6 +8,7 @@ tap 'homebrew/completions'
 tap 'mpv-player/mpv'
 tap 'railwaycat/emacsmacport'
 tap 'peco/peco'
+tap 'universal-ctags/universal-ctags'
 
 tap 'homebrew/homebrew-php'
 
@@ -22,14 +23,13 @@ cask 'xquartz'
 # Homebrew packages
 brew 'atool'
 brew 'cmigemo'
-brew 'ctags'
 brew 'doxygen'
 brew 'emacs-mac', args: ['with-dbus', 'with-gnutls', 'with-imagemagick', 'with-xml2', 'with-modern-icon']
 brew 'ffmpeg', args: ['with-faac', 'HEAD']
 brew 'flow'
 brew 'fontforge'
 brew 'ghostscript'
-brew 'gnu-sed' args: ['with-default-names']
+brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'
 brew 'grep', args: ['with-default-names']
 brew 'gpg'
@@ -42,7 +42,7 @@ brew 'packer'
 brew 'pandoc'
 brew 'peco'
 brew 'reattach-to-user-namespace'
-brew 'ricty' args: ['powerline']
+brew 'ricty', args: ['powerline']
 brew 'rsync'
 brew 'source-highlight'
 brew 'ssh-copy-id'
@@ -51,6 +51,7 @@ brew 'terminal-notifier'
 brew 'texinfo'
 brew 'the_silver_searcher'
 brew 'tmux'
+brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
 
 brew 'cscope'

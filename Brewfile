@@ -32,7 +32,7 @@ brew 'ghostscript'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'
 brew 'grep', args: ['with-default-names']
-brew 'gpg'
+brew 'gnupg2'
 brew 'hunspell'
 brew 'jq'
 brew 'markdown'

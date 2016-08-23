@@ -1,6 +1,6 @@
 # Add repository
 tap 'caskroom/cask'
-tap 'delphinus35/font'
+tap 'sanemat/font'
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
 tap 'homebrew/services'

@@ -12,9 +12,6 @@
 [credential]
 	helper = osxkeychain
 
-[push]
-	default = simple
-
 [pager]
 	log = diff-highlight | less
 	show = diff-highlight | less
@@ -35,6 +32,9 @@
 	cmd = ediff.sh $LOCAL $REMOTE $MERGED $BASE
 	trustExitCode = true
 
+[push]
+	default = simple
+
 [rerere]
 	enabled = true
 
@@ -52,3 +52,8 @@
 	uncommit = reset --mixed HEAD~1
 	unstage = reset HEAD --
 	tags = tag
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true

@@ -24,7 +24,7 @@ cask 'xquartz'
 brew 'atool'
 brew 'cmigemo'
 brew 'doxygen'
-brew 'emacs-mac', args: ['with-dbus', 'with-gnutls', 'with-imagemagick', 'with-xml2', 'with-modern-icon']
+brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-official-icon', 'with-xml2']
 brew 'ffmpeg', args: ['with-faac', 'HEAD']
 brew 'flow'
 brew 'fontforge'

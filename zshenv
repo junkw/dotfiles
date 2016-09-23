@@ -11,7 +11,7 @@ typeset -gxU path fpath manpath sudo_path infopath
 
 sudo_path=({/usr/local,/usr,}/sbin(N-/))
 
-path=({/usr/{local/,},/}bin
+path=({/usr/{local/{,opt/openssl/},},/}bin
       $sudo_path
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)

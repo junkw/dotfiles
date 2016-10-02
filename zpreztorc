@@ -6,6 +6,7 @@ zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 
 zstyle ':prezto:load' pmodule \
        'environment' \
+       'terminal' \
        'editor' \
        'helper' \
        'spectrum' \
@@ -18,14 +19,21 @@ zstyle ':prezto:load' pmodule \
        'git' \
        'history' \
        'history-substring-search' \
-       'prompt' \
-       'terminal' \
+       'prompt'
+
+# Terminal
+if [[ -z "$INSIDE_EMACS" ]]; then
+   zstyle ':prezto:module:terminal' auto-title 'yes'
+   zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+   zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+fi
 
 # Editor
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Syntax Highlighting
+zstyle ':prezto:module:syntax-highlighting' color 'yes'
 zstyle ':prezto:module:syntax-highlighting' highlighters \
        'main' \
        'brackets' \
@@ -42,10 +50,3 @@ zstyle ':prezto:module:history-substring-search' case-sensitive 'no'
 
 # Prompt
 zstyle ':prezto:module:prompt' theme 'sorin'
-
-# Terminal
-if [[ -z "$INSIDE_EMACS" ]]; then
-   zstyle ':prezto:module:terminal' auto-title 'yes'
-   zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
-   zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
-fi

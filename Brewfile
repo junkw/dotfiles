@@ -1,19 +1,22 @@
 # Config
 cask_args appdir: '/Applications'
 
-# Add repository
-tap 'caskroom/cask'
-tap 'sanemat/font'
+# Add repositories
 tap 'homebrew/dupes'
 tap 'homebrew/versions'
-tap 'homebrew/services'
-tap 'homebrew/completions'
-tap 'mpv-player/mpv'
-tap 'railwaycat/emacsmacport'
-tap 'peco/peco'
-tap 'universal-ctags/universal-ctags'
 
+tap 'homebrew/completions'
 tap 'homebrew/homebrew-php'
+tap 'homebrew/services'
+
+tap 'caskroom/cask'
+tap 'caskroom/homebrew-versions'
+
+tap 'mpv-player/mpv'
+tap 'peco/peco'
+tap 'railwaycat/emacsmacport'
+tap 'sanemat/font'
+tap 'universal-ctags/universal-ctags'
 
 # Install requirements packages
 brew 'git'
@@ -65,10 +68,7 @@ brew 'php-cs-fixer'
 brew 'phpctags'
 brew 'phpmd'
 
-# Add Homebrew Cask repository
-tap 'caskroom/homebrew-versions'
-
-# Install apps with Homebrew Cask
+# Homebrew Cask apps
 cask 'alfred'
 cask 'appcleaner'
 cask 'basictex'

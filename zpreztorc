@@ -36,6 +36,10 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 # Autosuggestions
 zstyle ':prezto:module:autosuggestions' color 'yes'
 
+# History Substring Search
+zstyle ':prezto:module:history-substring-search' color 'yes'
+zstyle ':prezto:module:history-substring-search' case-sensitive 'no'
+
 # Prompt
 zstyle ':prezto:module:prompt' theme 'sorin'
 

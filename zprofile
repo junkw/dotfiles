@@ -1,22 +1,51 @@
 # -*- mode: sh; coding: utf-8; indent-tabs-mode: nil -*-
 
-# Prezto
+#
+## zplug
+#
+init_zplug=$HOME/.zplug/init.zsh
+
+# Bootstrap
+if [[ ! -s $init_zplug ]]; then
+  git clone https://github.com/zplug/zplug $HOME/.zplug
+  source $init_zplug && zplug update --self
+fi
+
+source $init_zplug
+
+# Plugins
+zplug "sorin-ionescu/prezto"
+
+export ENHANCD_LOG=$XDG_CACHE_HOME/enhancd/enhancd.log
+zplug "b4b4r07/enhancd", use:init.sh
+
+# Install plugins
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+
+    if read -q; then
+        echo; zplug install
+    else
+        echo
+    fi
+fi
+
+zplug load
+
+
+#
+## Prezto
+#
 init_prezto=$HOME/.zprezto/init.zsh
 
 if [[ -s $init_prezto ]]; then
     source $init_prezto
 fi
 
-# enhancd
-export ENHANCD_DIR=$HOME/.zenhancd
-export ENHANCD_LOG=$XDG_CACHE_HOME/enhancd/enhancd.log
-init_enhancd=$ENHANCD_DIR/enhancd.sh
 
-if [[ -s $init_enhancd ]]; then
-    source $init_enhancd
-fi
-
-# Functions
+#
+## Functions
+#
 function peco-kill-process() {
     ps -ef | peco | awk '{ print $2 }' | xargs kill
     zle clear-screen

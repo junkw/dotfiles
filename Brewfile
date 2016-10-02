@@ -12,6 +12,7 @@ tap 'homebrew/services'
 tap 'caskroom/cask'
 tap 'caskroom/homebrew-versions'
 
+tap 'BurntSushi/ripgrep', 'https://github.com/BurntSushi/ripgrep.git'
 tap 'mpv-player/mpv'
 tap 'peco/peco'
 tap 'railwaycat/emacsmacport'

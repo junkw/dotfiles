@@ -38,9 +38,11 @@ zplug load
 #
 init_prezto=$HOME/.zprezto/init.zsh
 
-if [[ -s $init_prezto ]]; then
-    source $init_prezto
+if [[ ! -s $init_prezto ]]; then
+    ln -s $HOME/.zplug/repos/sorin-ionescu/prezto $HOME/.zprezto
 fi
+
+source $init_prezto
 
 
 #

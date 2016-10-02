@@ -1,3 +1,6 @@
+# Config
+cask_args appdir: '/Applications'
+
 # Add repository
 tap 'caskroom/cask'
 tap 'sanemat/font'

@@ -4,7 +4,7 @@
 
 ** Requirements
 
-   - Mac OS X El Capitan
+   - macOS Sierra
    - Xcode
    - Homebrew
 
@@ -15,7 +15,6 @@ git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
 cd /path/to/local/repo
 GMAIL=xxxx@gmail.com rake
 
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew tap Homebrew/bundle
 brew bundle
 

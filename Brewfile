@@ -49,6 +49,7 @@ brew 'pandoc'
 brew 'peco'
 brew 'reattach-to-user-namespace'
 brew 'ricty', args: ['powerline']
+brew 'ripgrep'
 brew 'rsync'
 brew 'source-highlight'
 brew 'ssh-copy-id'

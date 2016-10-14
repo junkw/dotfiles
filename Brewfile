@@ -31,7 +31,7 @@ brew 'atool'
 brew 'cmigemo'
 brew 'doxygen'
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-official-icon', 'with-xml2']
-brew 'ffmpeg', args: ['with-faac', 'HEAD']
+brew 'ffmpeg', args: ['HEAD']
 brew 'flow'
 brew 'fontforge'
 brew 'ghostscript'

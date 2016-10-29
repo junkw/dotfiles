@@ -14,7 +14,7 @@ fi
 source $init_zplug
 
 # Plugins
-zplug "sorin-ionescu/prezto"
+zplug "sorin-ionescu/prezto", use:false
 
 export ENHANCD_LOG=$XDG_CACHE_HOME/enhancd/enhancd.log
 zplug "b4b4r07/enhancd", use:init.sh

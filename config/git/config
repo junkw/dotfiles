@@ -41,6 +41,14 @@
 [svn]
 	pushmergeinfo = true
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+
+[url "git@github.com:"]
+	insteadOf = gh:
+
 [alias]
 	branches = branch -a
 	conflicts = diff --name-only --diff-filter=U
@@ -52,8 +60,3 @@
 	uncommit = reset --mixed HEAD~1
 	unstage = reset HEAD --
 	tags = tag
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true

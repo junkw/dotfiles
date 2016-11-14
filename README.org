@@ -7,6 +7,7 @@
    - macOS Sierra
    - Xcode
    - Homebrew
+   - Zsh
 
 ** Installation
 
@@ -17,25 +18,16 @@ GMAIL=xxxx@gmail.com rake
 
 brew tap Homebrew/bundle
 brew bundle
-
-brew link --force sqlite
 brew link --force texinfo
-brew services start d-bus # launchctl load /usr/local/opt/d-bus/org.freedesktop.dbus-session.plist
+brew services start dbus
 brew linkapps emacs-mac
 brew linkapps mpv
 
-git lfs install
-
-cp -f /usr/local/Cellar/ricty/4.0.1/share/fonts/Ricty*.ttf ~/Library/Fonts
+ln -sf /usr/local/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -vf
 
 killall VirtualBox
 rake load_launch_agents_virtualbox
-
-cd /Applications
-mv -f /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app .
-mv -f /opt/homebrew-cask/Caskroom/firefox-ja/latest/Firefox.app .
-defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock
 
 export SHELL=/usr/local/bin/zsh
 echo $SHELL | sudo tee -a /etc/shells

@@ -47,6 +47,7 @@ brew 'p7zip'
 brew 'packer'
 brew 'pandoc'
 brew 'peco'
+brew 'plantuml'
 brew 'reattach-to-user-namespace'
 brew 'ricty', args: ['powerline']
 brew 'ripgrep'

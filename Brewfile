@@ -65,6 +65,7 @@ brew 'wget'
 brew 'cscope'
 brew 'offlineimap', args: ['HEAD']
 brew 'mu', args: ['with-emacs', 'HEAD']
+brew 'php71'
 brew 'php-code-sniffer'
 brew 'php-cs-fixer'
 brew 'phpctags'

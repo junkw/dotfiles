@@ -18,9 +18,10 @@
 	diff = diff-highlight | less
 
 [diff]
+	compactionHeuristic = true
+	indentHeuristic = true
 	tool = ediff
 	guitool = ediff
-	compactionHeuristic = true
 
 [difftool "ediff"]
 	cmd = ediff.sh $LOCAL $REMOTE $MERGED

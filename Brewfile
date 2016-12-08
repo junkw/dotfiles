@@ -70,6 +70,7 @@ brew 'php-code-sniffer'
 brew 'php-cs-fixer'
 brew 'phpctags'
 brew 'phpmd'
+brew 'putty'
 
 # Homebrew Cask apps
 cask 'alfred'

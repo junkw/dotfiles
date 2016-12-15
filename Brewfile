@@ -64,6 +64,10 @@ brew 'tmux'
 brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
 
+brew 'e2fsprogs'
+brew 'ext2fuse'
+brew 'ext4fuse'
+
 brew 'cscope'
 brew 'offlineimap', args: ['HEAD']
 brew 'mu', args: ['with-emacs', 'HEAD']

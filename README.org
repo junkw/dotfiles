@@ -19,6 +19,7 @@ GMAIL=xxxx@gmail.com rake
 brew tap Homebrew/bundle
 brew bundle
 brew link --force texinfo
+brew link --overwrite --force e2fsprogs
 brew services start dbus
 brew linkapps emacs-mac
 brew linkapps mpv

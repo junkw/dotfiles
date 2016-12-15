@@ -6,6 +6,7 @@ tap 'homebrew/dupes'
 tap 'homebrew/versions'
 
 tap 'homebrew/completions'
+tap 'homebrew/fuse'
 tap 'homebrew/homebrew-php'
 tap 'homebrew/services'
 
@@ -25,6 +26,7 @@ brew 'zsh', args: ['disable-etcdir']
 
 cask 'java'
 cask 'xquartz'
+cask 'osxfuse'
 
 # Homebrew packages
 brew 'atool'

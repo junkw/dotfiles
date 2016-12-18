@@ -49,6 +49,7 @@ brew 'p7zip'
 brew 'packer'
 brew 'pandoc'
 brew 'peco'
+brew 'pinentry-mac'
 brew 'plantuml'
 brew 'reattach-to-user-namespace'
 brew 'ricty', args: ['powerline']

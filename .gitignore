@@ -1,7 +1,12 @@
-.DS_Store
+._*
+*~
+\#*\#
 *.pyc
+.DS_Store
 
 config/fontforge/
-config/gnupg/
+config/gnupg/private-keys*
+config/gnupg/*.gpg
+config/gnupg/*_seed
 config/offlineimap/config
 config/subversion/

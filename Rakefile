@@ -9,6 +9,7 @@ task :make_dir do
                "#{Dir.home}/.cache/vim/undo",
                "#{Dir.home}/.cache/vim/swap",
                "#{Dir.home}/.local/share",
+               "#{Dir.home}/.local/share/gmail",
                "#{Dir.home}/bin",
                "#{Dir.home}/Code",
                "#{Dir.home}/Documents/org",
@@ -63,8 +64,8 @@ task :clone_tmux_colors_solarized do
   sh "git clone https://github.com/seebi/tmux-colors-solarized.git #{Dir.home}/.local/share/tmux-colors-solarized"
 end
 
-task :copy_offlineimap_config do
-  FileUtils.cp("#{Dir.pwd}/config/offlineimap/config-dist", "#{Dir.home}/.config/offlineimap/config")
+task :copy_mbsync_config do
+  FileUtils.cp("#{Dir.pwd}/config/mbsync/config-dist", "#{Dir.home}/.config/mbsync/config")
 
   mailaddress = ENV['GMAIL']
   sh "sed -i '' -e 's/__GMAIL__/#{mailaddress}/g' #{Dir.home}/.config/offlineimap/config"

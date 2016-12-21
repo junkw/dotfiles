@@ -73,7 +73,8 @@ bindkey '^r' peco-select-history
 #
 ## Aliases
 #
+alias fetchmail="mbsync -a -c $XDG_CONFIG_HOME/mbsync/config"
 alias muindex="mu index --muhome $XDG_CACHE_HOME/mu/ -m $XDG_DATA_HOME/mail/"
-alias syncmail="offlineimap && muindex"
+alias syncmail="fetchmail && muindex"
 alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"
 alias zmv="noglob zmv -W"

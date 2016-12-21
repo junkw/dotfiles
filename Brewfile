@@ -70,7 +70,7 @@ brew 'ext2fuse'
 brew 'ext4fuse'
 
 brew 'cscope'
-brew 'offlineimap', args: ['HEAD']
+brew 'isync', args: ['HEAD']
 brew 'mu', args: ['with-emacs', 'HEAD']
 brew 'php71'
 brew 'php-code-sniffer'

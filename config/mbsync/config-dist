@@ -1,0 +1,59 @@
+## Defaults
+Create Both
+Expunge Both
+SyncState *
+
+
+## Gmail
+# Account
+IMAPAccount     gmail
+Host            imap.gmail.com
+User            __GMAIL__
+PassCmd         "security find-internet-password -w -a __GMAIL__ -s imap.gmail.com"
+AuthMechs       LOGIN
+SSLType         IMAPS
+SSLVersion      TLSv1.2
+CertificateFile /usr/local/etc/openssl/cert.pem
+
+# Remote
+IMAPStore gmail-remote
+Account   gmail
+
+# Local
+MaildirStore gmail-local
+Path         ~/.local/share/gmail/
+Inbox        ~/.local/share/gmail/inbox
+
+# Chanels
+Channel  gmail-inbox
+Master   :gmail-remote:
+Slave    :gmail-local:
+Patterns "INBOX"
+
+Channel  gmail-archive
+Master   :gmail-remote:"[Gmail]/All Mail"
+Slave    :gmail-local:archive
+
+Channel  gmail-drafts
+Master   :gmail-remote:"[Gmail]/Drafts"
+Slave    :gmail-local:drafts
+
+Channel  gmail-sent
+Master   :gmail-remote:"[Gmail]/Sent Mail"
+Slave    :gmail-local:sent
+
+Channel  gmail-starred
+Master   :gmail-remote:"[Gmail]/Starred"
+Slave    :gmail-local:starred
+
+Channel  gmail-trash
+Master   :gmail-remote:"[Gmail]/Trash"
+Slave    :gmail-local:trash
+
+# Groups
+Group gmail
+Channel gmail-inbox
+Channel gmail-starred
+Channel gmail-sent
+Channel gmail-archive
+Channel gmail-trash

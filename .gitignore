@@ -8,5 +8,5 @@ config/fontforge/
 config/gnupg/private-keys*
 config/gnupg/*.gpg
 config/gnupg/*_seed
-config/offlineimap/config
+config/mbsync/config
 config/subversion/

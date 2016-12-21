@@ -51,9 +51,10 @@ Master   :gmail-remote:"[Gmail]/Trash"
 Slave    :gmail-local:trash
 
 # Groups
-Group gmail
+Group   gmail
 Channel gmail-inbox
 Channel gmail-starred
 Channel gmail-sent
 Channel gmail-archive
+Channel gmail-drafts
 Channel gmail-trash

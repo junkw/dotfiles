@@ -71,6 +71,7 @@ brew 'ext4fuse'
 
 brew 'cscope'
 brew 'isync', args: ['HEAD']
+brew 'msmtp'
 brew 'mu', args: ['with-emacs', 'HEAD']
 brew 'php71'
 brew 'php-code-sniffer'

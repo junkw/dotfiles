@@ -24,7 +24,10 @@ task :link_bin do
 end
 
 task :link_launch_agents do
-  FileUtils.ln_sf("#{Dir.pwd}/Library/LaunchAgents/junkw.xdg.environments.plist", "#{Dir.home}/Library/LaunchAgents/junkw.xdg.environments.plist")
+  usr_launch_agents_path = "#{Dir.home}/Library/LaunchAgents/"
+
+  FileUtils.mkdir_p(usr_launch_agents_path)
+  FileUtils.ln_sf("#{Dir.pwd}/Library/LaunchAgents/junkw.xdg.environments.plist", "#{usr_launch_agents_path}")
 end
 
 task :load_launch_agents do

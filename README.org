@@ -24,6 +24,8 @@ brew services start dbus
 brew linkapps emacs-mac
 brew linkapps mpv
 
+rake link_zsh_functions
+
 ln -sf /usr/local/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -vf
 

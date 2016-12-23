@@ -65,10 +65,11 @@ task :clone_tmux_colors_solarized do
 end
 
 task :copy_mbsync_config do
-  FileUtils.cp("#{Dir.pwd}/config/mbsync/config-dist", "#{Dir.home}/.config/mbsync/config")
+  config_file = ".config/mbsync/config"
+  FileUtils.cp("#{Dir.pwd}/config/mbsync/config-dist", "#{Dir.home}/#{config_file}")
 
   mailaddress = ENV['GMAIL']
-  sh "sed -i '' -e 's/__GMAIL__/#{mailaddress}/g' #{Dir.home}/.config/offlineimap/config"
+  sh "sed -i '' -e 's/__GMAIL__/#{mailaddress}/g' #{Dir.home}/#{config_file}"
 end
 
 task :install_hunspell_dicts do

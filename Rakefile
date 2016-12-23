@@ -88,6 +88,6 @@ task :set_mac_config do
 end
 
 task :link => [:link_bin, :link_xdg_config_home, :link_vimrc, :link_zsh_functions, :link_zshrc]
-task :install => [:make_dir, :link, :copy_offlineimap_config, :clone_tmux_colors_solarized, :install_hunspell_dicts]
+task :install => [:make_dir, :link, :copy_mbsync_config, :clone_tmux_colors_solarized, :install_hunspell_dicts]
 task :setup_mac => [:link_launch_agents, :load_launch_agents, :set_mac_config]
 task :default => [:install, :setup_mac]

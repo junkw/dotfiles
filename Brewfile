@@ -32,6 +32,7 @@ cask 'osxfuse'
 brew 'atool'
 brew 'cmigemo'
 brew 'doxygen'
+brew 'dbus', restart_service: true
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-official-icon', 'with-xml2']
 brew 'ffmpeg', args: ['HEAD']
 brew 'flow'

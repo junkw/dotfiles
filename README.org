@@ -23,6 +23,7 @@ brew link --overwrite --force e2fsprogs
 brew linkapps emacs-mac
 brew linkapps mpv
 
+git lfs install
 rake link_zsh_functions
 
 ln -sf /usr/local/share/fonts/Ricty*.ttf ~/Library/Fonts/

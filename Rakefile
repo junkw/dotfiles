@@ -49,12 +49,6 @@ task :link_vimrc do
   FileUtils.ln_sf("#{Dir.pwd}/vimrc", "#{Dir.home}/.vimrc")
 end
 
-task :link_zsh_functions do
-  if RUBY_PLATFORM.include?("darwin")
-    FileUtils.ln_sf("/usr/local/Library/Contributions/brew_zsh_completion.zsh", "/usr/local/share/zsh/site-functions/_brew")
-  end
-end
-
 task :link_zshrc do
   FileUtils.ln_sf("#{Dir.pwd}/zlogin", "#{Dir.home}/.zlogin")
   FileUtils.ln_sf("#{Dir.pwd}/zpreztorc", "#{Dir.home}/.zpreztorc")

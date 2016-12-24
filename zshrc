@@ -16,7 +16,7 @@ source $init_zplug
 # Plugins
 zplug "sorin-ionescu/prezto", use:false
 
-export ENHANCD_LOG=$XDG_CACHE_HOME/enhancd/enhancd.log
+export ENHANCD_DIR=$XDG_CACHE_HOME/enhancd
 zplug "b4b4r07/enhancd", use:init.sh
 
 # Install plugins

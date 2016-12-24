@@ -24,11 +24,9 @@ brew linkapps emacs-mac
 brew linkapps mpv
 
 git lfs install
-rake link_zsh_functions
-
-ln -sf /usr/local/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -vf
 
+rake link_zsh_functions
 rake setup_virtualbox
 
 export SHELL=/usr/local/bin/zsh

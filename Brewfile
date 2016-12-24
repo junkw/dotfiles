@@ -12,6 +12,7 @@ tap 'homebrew/services'
 
 tap 'caskroom/cask'
 tap 'caskroom/homebrew-versions'
+tap 'caskroom/fonts'
 
 tap 'mpv-player/mpv'
 tap 'peco/peco'
@@ -53,7 +54,6 @@ brew 'peco'
 brew 'pinentry-mac'
 brew 'plantuml'
 brew 'reattach-to-user-namespace'
-brew 'ricty', args: ['powerline']
 brew 'ripgrep'
 brew 'rsync'
 brew 'source-highlight'
@@ -107,3 +107,6 @@ cask 'suspicious-package'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vagrant'
+
+# Homebrew Cask Fonts
+cask 'font-ricty-diminished'

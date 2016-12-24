@@ -29,8 +29,7 @@ rake link_zsh_functions
 ln -sf /usr/local/share/fonts/Ricty*.ttf ~/Library/Fonts/
 fc-cache -vf
 
-killall VirtualBox
-rake load_launch_agents_virtualbox
+rake setup_virtualbox
 
 export SHELL=/usr/local/bin/zsh
 echo $SHELL | sudo tee -a /etc/shells

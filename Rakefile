@@ -34,13 +34,6 @@ task :load_launch_agents do
   sh("launchctl load #{Dir.home}/Library/LaunchAgents/junkw.xdg.environments.plist")
 end
 
-task :load_launch_agents_virtualbox do
-  plist = 'org.virtualbox.environments.plist'
-
-  sh("sed -e \"s/__USER__/#{ENV['USER']}/g\" #{Dir.pwd}/Library/LaunchAgents/#{plist} > #{Dir.home}/Library/LaunchAgents/#{plist}")
-  sh("launchctl load #{Dir.home}/Library/LaunchAgents/#{plist}")
-end
-
 task :link_xdg_config_home do
   FileUtils.ln_sf("#{Dir.pwd}/config", "#{Dir.home}/.config")
 end
@@ -83,6 +76,20 @@ task :set_mac_config do
     sh "killall Finder"
     sh "sudo /usr/bin/sed -i.origin -E 's/(^ +SendEnv)/#\1/g' /etc/ssh/ssh_config"
   end
+end
+
+task :setup_virtualbox do
+  vm_dir  = "#{Dir.home}/VirtualBox\ VMs"
+  log_dir = "#{Dir.home}/Logs/VirtualBox"
+
+  FileUtils.mkdir_p(vm_dir)
+  FileUtils.mkdir_p(log_dir)
+
+  plist = 'org.virtualbox.environments.plist'
+
+  sh("sed -e \"s/__USER__/#{ENV['USER']}/g\" #{Dir.pwd}/Library/LaunchAgents/#{plist} > #{Dir.home}/Library/LaunchAgents/#{plist}")
+  sh("killall VirtualBox")
+  sh("launchctl load #{Dir.home}/Library/LaunchAgents/#{plist}")
 end
 
 task :link => [:link_bin, :link_xdg_config_home, :link_vimrc, :link_zshrc]

@@ -72,7 +72,7 @@ task :copy_mbsync_config do
   FileUtils.cp("#{Dir.pwd}/config/mbsync/config-dist", "#{Dir.home}/#{config_file}")
 
   mailaddress = ENV['GMAIL']
-  sh "sed -i '' -e 's/__GMAIL__/#{mailaddress}/g' #{Dir.home}/#{config_file}"
+  sh "/usr/bin/sed -i '' -e 's/__GMAIL__/#{mailaddress}/g' #{Dir.home}/#{config_file}"
 end
 
 task :install_hunspell_dicts do
@@ -87,7 +87,7 @@ task :set_mac_config do
     sh "defaults write com.apple.finder QLEnableTextSelection -bool true"
     sh "defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true"
     sh "killall Finder"
-    sh "sudo sed -i.origin -E 's/(^ +SendEnv)/#\1/g' /etc/ssh/ssh_config"
+    sh "sudo /usr/bin/sed -i.origin -E 's/(^ +SendEnv)/#\1/g' /etc/ssh/ssh_config"
   end
 end
 

@@ -14,7 +14,6 @@ tap 'caskroom/cask'
 tap 'caskroom/homebrew-versions'
 tap 'caskroom/fonts'
 
-tap 'mpv-player/mpv'
 tap 'peco/peco'
 tap 'railwaycat/emacsmacport'
 tap 'sanemat/font'

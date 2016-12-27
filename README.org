@@ -14,7 +14,7 @@
 #+BEGIN_SRC sh
 git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
 cd /path/to/local/repo
-GMAIL=xxxx@gmail.com rake
+rake
 
 brew tap Homebrew/bundle
 brew bundle
@@ -26,8 +26,7 @@ brew linkapps mpv
 git lfs install
 fc-cache -vf
 
-rake link_zsh_functions
-rake setup_virtualbox
+GMAIL=xxxx@gmail.com rake after
 
 export SHELL=/usr/local/bin/zsh
 echo $SHELL | sudo tee -a /etc/shells

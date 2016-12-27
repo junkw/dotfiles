@@ -101,4 +101,4 @@ task :link => [:link_bin, :link_xdg_config_home, :link_ctags, :link_vimrc, :link
 task :install => [:make_dir, :link, :clone_tmux_colors_solarized, :install_hunspell_dicts]
 task :setup_mac => [:link_launch_agents, :load_launch_agents, :set_macos_config]
 task :default => [:install, :setup_mac]
-task :for_worksite => [:install, :set_mbsync_config, :setup_virtualbox, :setup_mac]
+task :after => [:set_mbsync_config, :setup_virtualbox]

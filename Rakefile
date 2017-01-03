@@ -85,7 +85,7 @@ end
 
 task :setup_virtualbox do
   vm_dir  = "#{Dir.home}/VirtualBox\ VMs"
-  log_dir = "#{Dir.home}/Logs/VirtualBox"
+  log_dir = "#{Dir.home}/Library/Logs/VirtualBox"
 
   FileUtils.mkdir_p(vm_dir)
   FileUtils.mkdir_p(log_dir)

@@ -93,7 +93,6 @@ task :setup_virtualbox do
   plist = 'org.virtualbox.environments.plist'
 
   sh("sed -e \"s/__USER__/#{ENV['USER']}/g\" #{Dir.pwd}/Library/LaunchAgents/#{plist} > #{Dir.home}/Library/LaunchAgents/#{plist}")
-  sh("killall VirtualBox")
   sh("launchctl load #{Dir.home}/Library/LaunchAgents/#{plist}")
 end
 

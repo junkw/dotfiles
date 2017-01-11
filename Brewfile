@@ -6,7 +6,6 @@ tap 'homebrew/dupes'
 tap 'homebrew/versions'
 
 tap 'homebrew/completions'
-tap 'homebrew/fuse'
 tap 'homebrew/homebrew-php'
 tap 'homebrew/services'
 
@@ -15,7 +14,6 @@ tap 'caskroom/homebrew-versions'
 tap 'caskroom/fonts'
 
 tap 'railwaycat/emacsmacport'
-tap 'sanemat/font'
 tap 'universal-ctags/universal-ctags'
 
 # Install requirements packages
@@ -25,7 +23,6 @@ brew 'zsh', args: ['disable-etcdir']
 
 cask 'java'
 cask 'xquartz'
-cask 'osxfuse'
 
 # Homebrew packages
 brew 'atool'
@@ -35,15 +32,12 @@ brew 'dbus', restart_service: true
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-official-icon', 'with-xml2']
 brew 'ffmpeg', args: ['HEAD']
 brew 'flow'
-brew 'fontforge'
-brew 'ghostscript'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'
 brew 'grep', args: ['with-default-names']
 brew 'gnupg2'
 brew 'hunspell'
 brew 'jq'
-brew 'markdown'
 brew 'mpv', args: ['with-bundle', 'with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
 brew 'p7zip'
 brew 'packer'
@@ -65,11 +59,6 @@ brew 'unar'
 brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
 
-brew 'e2fsprogs'
-brew 'ext2fuse'
-brew 'ext4fuse'
-
-brew 'cscope'
 brew 'isync'
 brew 'msmtp'
 brew 'mu', args: ['with-emacs', 'HEAD']

@@ -30,7 +30,7 @@ brew 'cmigemo'
 brew 'doxygen'
 brew 'dbus', restart_service: true
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-official-icon', 'with-xml2']
-brew 'ffmpeg', args: ['HEAD']
+brew 'ffmpeg', args: ['with-fdk-aac', 'with-openh264', 'with-x265', 'with-libbluray', 'HEAD']
 brew 'flow'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'
@@ -38,7 +38,7 @@ brew 'grep', args: ['with-default-names']
 brew 'gnupg2'
 brew 'hunspell'
 brew 'jq'
-brew 'mpv', args: ['with-bundle', 'with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
+brew 'mpv', args: ['with-bundle', 'with-libaacs', 'with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
 brew 'p7zip'
 brew 'packer'
 brew 'pandoc'

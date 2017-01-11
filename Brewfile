@@ -61,6 +61,7 @@ brew 'terminal-notifier'
 brew 'texinfo'
 brew 'the_silver_searcher'
 brew 'tmux'
+brew 'unar'
 brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
 

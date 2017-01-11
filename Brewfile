@@ -3,11 +3,11 @@ cask_args appdir: '/Applications'
 
 # Add repositories
 tap 'homebrew/dupes'
+tap 'homebrew/services'
 tap 'homebrew/versions'
 
 tap 'homebrew/completions'
 tap 'homebrew/homebrew-php'
-tap 'homebrew/services'
 
 tap 'caskroom/cask'
 tap 'caskroom/homebrew-versions'
@@ -16,21 +16,23 @@ tap 'caskroom/fonts'
 tap 'railwaycat/emacsmacport'
 tap 'universal-ctags/universal-ctags'
 
-# Install requirements packages
+# Install requirements and dependencies packages
+cask 'java' unless system '/usr/libexec/java_home --failfast'
+cask 'xquartz'
+
 brew 'git'
 brew 'git-lfs'
 brew 'zsh', args: ['disable-etcdir']
 
-cask 'java'
-cask 'xquartz'
+brew 'dbus', restart_service: true
+brew 'ffmpeg', args: ['with-fdk-aac', 'with-openh264', 'with-x265', 'with-libbluray', 'HEAD']
 
 # Homebrew packages
 brew 'atool'
 brew 'cmigemo'
+brew 'cscope'
 brew 'doxygen'
-brew 'dbus', restart_service: true
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-official-icon', 'with-xml2']
-brew 'ffmpeg', args: ['with-fdk-aac', 'with-openh264', 'with-x265', 'with-libbluray', 'HEAD']
 brew 'flow'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'
@@ -45,6 +47,7 @@ brew 'pandoc'
 brew 'peco'
 brew 'pinentry-mac'
 brew 'plantuml'
+brew 'putty'
 brew 'reattach-to-user-namespace'
 brew 'ripgrep'
 brew 'rsync'
@@ -62,12 +65,12 @@ brew 'wget'
 brew 'isync'
 brew 'msmtp'
 brew 'mu', args: ['with-emacs', 'HEAD']
+
 brew 'php71'
 brew 'php-code-sniffer'
 brew 'php-cs-fixer'
 brew 'phpctags'
 brew 'phpmd'
-brew 'putty'
 
 # Homebrew Cask apps
 cask 'alfred'

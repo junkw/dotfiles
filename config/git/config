@@ -57,8 +57,9 @@
 	discard = checkout --
 	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 	graph = log --graph --remotes --branches --tags --decorate --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset'
+	lfs-pull = !git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull
 	remotes = remote -v
 	stashes = stash list
+	tags = tag
 	uncommit = reset --mixed HEAD~1
 	unstage = reset HEAD --
-	tags = tag

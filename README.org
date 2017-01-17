@@ -19,7 +19,6 @@ rake
 brew tap Homebrew/bundle
 brew bundle
 brew link --force texinfo
-brew link --overwrite --force e2fsprogs
 brew linkapps emacs-mac
 brew linkapps mpv
 

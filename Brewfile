@@ -6,7 +6,6 @@ tap 'homebrew/dupes'
 tap 'homebrew/services'
 tap 'homebrew/versions'
 
-tap 'homebrew/completions'
 tap 'homebrew/homebrew-php'
 
 tap 'caskroom/cask'

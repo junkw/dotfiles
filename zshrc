@@ -8,7 +8,6 @@ init_zplug=$HOME/.zplug/init.zsh
 # Bootstrap
 if [[ ! -s $init_zplug ]]; then
   git clone https://github.com/zplug/zplug $HOME/.zplug
-  source $init_zplug && zplug update --self
 fi
 
 source $init_zplug

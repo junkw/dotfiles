@@ -69,6 +69,16 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
+function peco-delete-history() {
+    BUFFER=$(cat ${HISTFILE} | tail -r | peco --query "$LBUFFER")
+    id=$(grep ${BUFFER} ${HISTFILE} | sed -e "s/: \(.*\);\(.*\)/\1/")
+    sed -i "/${id}/d" $HISTFILE
+    BUFFER=""
+    zle clear-screen
+}
+zle -N peco-delete-history
+bindkey '^xcr' peco-delete-history
+
 
 #
 ## Aliases

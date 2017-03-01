@@ -11,6 +11,7 @@ if [[ ! -s $init_zplug ]]; then
 fi
 
 source $init_zplug
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # Plugins
 zplug "sorin-ionescu/prezto", use:false

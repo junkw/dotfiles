@@ -26,6 +26,7 @@ manpath=(/usr/{local/,}share/man
          /Applications/Xcode.app/Contents/Developer/usr/share/man(N-/)
          /opt/X11/share/man(N-/)
          $HOME/.nodebrew/current/share/man(N-/)
+         $HOME/.zplug/doc/man(N-/)
          $manpath)
 
 infopath=(/usr/local/share/info{/emacs,}(N-/)

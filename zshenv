@@ -24,6 +24,7 @@ fpath=(/usr/local/share/zsh/functions(N-/)
        $fpath)
 
 manpath=(/usr/{local/,}share/man
+         /usr/local/opt/gnu-tar/libexec/gnuman(N-/)
          /Applications/Xcode.app/Contents/Developer/usr/share/man(N-/)
          /opt/X11/share/man(N-/)
          $HOME/.nodebrew/current/share/man(N-/)

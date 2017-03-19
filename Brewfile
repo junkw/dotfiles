@@ -21,7 +21,7 @@ cask 'xquartz'
 
 brew 'git'
 brew 'git-lfs'
-brew 'zsh', args: ['disable-etcdir']
+brew 'zsh', args: ['without-etcdir']
 
 brew 'dbus', restart_service: true
 brew 'ffmpeg', args: ['with-fdk-aac', 'with-openh264', 'with-x265', 'with-libbluray', 'HEAD']

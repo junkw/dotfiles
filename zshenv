@@ -49,7 +49,11 @@ export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 if [[ `which brew` ]]; then
-    export PKG_CONFIG_PATH=$(brew --prefix)/opt/openssl/lib/pkgconfig:$(brew --prefix)/opt/sqlite/lib/pkgconfig:$(brew --prefix)/opt/libxml2/lib/pkgconfig
+    export PKG_CONFIG_PATH=$(brew --prefix)/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH
+    export PKG_CONFIG_PATH=$(brew --prefix)/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH
+    export PKG_CONFIG_PATH=$(brew --prefix)/opt/libxml2/lib/pkgconfig:$PKG_CONFIG_PATH
+    export PKG_CONFIG_PATH=$(brew --prefix)/opt/sqlite/lib/pkgconfig:$PKG_CONFIG_PATH
+    export PKG_CONFIG_PATH=$(brew --prefix)/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH
 fi
 
 # Java

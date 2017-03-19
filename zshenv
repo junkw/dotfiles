@@ -9,13 +9,14 @@ typeset -T SUDO_PATH sudo_path
 typeset -T INFOPATH infopath
 typeset -gxU path fpath manpath sudo_path infopath
 
-sudo_path=({/usr/local,/usr,}/sbin(N-/))
+sudo_path=({/usr/local{,/opt/icu4c},/usr,}/sbin(N-/))
 
-path=({/usr/{local/{,opt/openssl/},},/}bin
+path=({/usr/{local/{,opt/{apr,apr-util,gettext,icu4c,libxml2,openssl,sqlite,texinfo}/},},/}bin(N-/)
       $sudo_path
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
       $HOME/{.nodebrew/current/,}bin(N-/)
+      $(brew --prefix homebrew/php/php71)/bin(N-/)
       /usr/local/share/git-core/contrib/diff-highlight
       $path)
 

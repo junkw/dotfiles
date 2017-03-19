@@ -16,8 +16,8 @@ path=({/usr/{local/{,opt/{apr,apr-util,gettext,icu4c,libxml2,openssl,sqlite,texi
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
       $HOME/{.nodebrew/current/,}bin(N-/)
-      $(brew --prefix homebrew/php/php71)/bin(N-/)
-      /usr/local/share/git-core/contrib/diff-highlight
+      /usr/local/opt/php71/bin(N-/)
+      /usr/local/share/git-core/contrib/diff-highlight(N-/)
       $path)
 
 fpath=(/usr/local/share/zsh/functions(N-/)

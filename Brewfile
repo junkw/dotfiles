@@ -36,7 +36,7 @@ brew 'flow'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'
 brew 'grep', args: ['with-default-names']
-brew 'gnupg2'
+brew 'gnupg'
 brew 'hunspell'
 brew 'jq'
 brew 'mpv', args: ['with-bundle', 'with-libaacs', 'with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']

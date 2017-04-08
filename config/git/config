@@ -37,6 +37,9 @@
 	default = simple
 	followTags = true
 
+[rebase]
+	autostash = true
+
 [rerere]
 	enabled = true
 

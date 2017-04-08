@@ -63,8 +63,8 @@
 	graph = log --graph --remotes --branches --tags --decorate --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset'
 	lfs-checkout = !git checkout && git lfs pull
 	lfs-pull = !git pull && git lfs pull
+	refuge = stash save --include-untracked
 	remotes = remote -v
-	stash-all = stash save --include-untracked
 	stashes = stash list
 	tags = tag
 	uncommit = reset --mixed HEAD~1

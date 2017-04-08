@@ -58,14 +58,15 @@
 	conflicts = diff --name-only --diff-filter=U
 	deep-cleanup = !git repack -a -f --depth=250 --window=250; git prune; git fsck --full
 	discard = checkout --
+	fetch-all = fetch --all --prune --tags origin
 	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 	graph = log --graph --remotes --branches --tags --decorate --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset'
 	lfs-checkout = !git checkout && git lfs pull
 	lfs-pull = !git pull && git lfs pull
-	prune = fetch --prune
 	remotes = remote -v
 	stash-all = stash save --include-untracked
 	stashes = stash list
 	tags = tag
 	uncommit = reset --mixed HEAD~1
+	update = !git fetch-all && git merge --ff origin/master master
 	unstage = reset HEAD --

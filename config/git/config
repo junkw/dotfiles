@@ -68,6 +68,7 @@
 	lfs-pull = !git pull && git lfs pull
 	refuge = stash save --include-untracked
 	remotes = remote -v
+	show-parent-branch = !git show-branch | grep '*' | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -1 | awk -F'[]~^[]' '{print $2}'
 	stashes = stash list
 	tags = tag
 	uncommit = reset --mixed HEAD~1

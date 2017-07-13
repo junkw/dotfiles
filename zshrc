@@ -84,8 +84,9 @@ bindkey '^xcr' peco-delete-history
 ## Aliases
 #
 alias fetchmail="mbsync -a -c $XDG_CONFIG_HOME/mbsync/config"
+alias mulazyindex="mu index --lazy-check --nocleanup --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
 alias muindex="mu index --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
 alias mureindex="mu index --rebuild --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
-alias syncmail="fetchmail && muindex"
+alias syncmail="fetchmail && mulazyindex"
 alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"
 alias zmv="noglob zmv -W"

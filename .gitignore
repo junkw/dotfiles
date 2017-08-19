@@ -4,6 +4,7 @@
 *.pyc
 .DS_Store
 
+config/configstore/
 config/fontforge/
 config/gnupg/private-keys*
 config/gnupg/*.gpg

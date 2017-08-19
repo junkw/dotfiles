@@ -17,6 +17,10 @@
 	show = diff-highlight | less
 	diff = diff-highlight | less
 
+[pretty]
+	changelog-format = format:- %s  %n  %h @%an
+	graph-format = format:%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset
+
 [diff]
 	compactionHeuristic = true
 	indentHeuristic = true
@@ -57,18 +61,22 @@
 
 [alias]
 	branches = branch -a
+	cached = diff --cached
+	changelog = log --pretty=changelog-format --no-merges --cherry --abbrev-commit --date-order
 	cleanup = !git gc --aggressive; git fsck --full
 	conflicts = diff --name-only --diff-filter=U
 	deep-cleanup = !git repack -a -f --depth=250 --window=250; git prune; git fsck --full
 	discard = checkout --
 	fetch-all = fetch --all --prune --tags
 	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
-	graph = log --graph --remotes --branches --tags --decorate --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset'
+	graph = log --graph --remotes --branches --tags --decorate --pretty=graph-format
 	lfs-checkout = !git checkout && git lfs pull
 	lfs-pull = !git pull && git lfs pull
+	push-all = push --tags origin
 	refuge = stash save --include-untracked
 	remotes = remote -v
 	show-parent-branch = !git show-branch | grep '*' | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -1 | awk -F'[]~^[]' '{print $2}'
+	staged = cached
 	stashes = stash list
 	tags = tag
 	uncommit = reset --mixed HEAD~1

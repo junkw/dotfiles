@@ -92,6 +92,7 @@ cask 'qlmarkdown'
 cask 'qlstephen'
 cask 'quicklook-csv'
 cask 'quicklook-json'
+cask 'slack'
 cask 'silverlight'
 cask 'suspicious-package'
 

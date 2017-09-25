@@ -59,6 +59,9 @@
 [url "git@github.com:"]
 	insteadOf = gh:
 
+[magit]
+	hideCampaign = true
+
 [alias]
 	branches = branch -a
 	cached = diff --cached
@@ -82,3 +85,6 @@
 	uncommit = reset --mixed HEAD~1
 	update = !git fetch-all && git merge --ff origin/master master
 	unstage = reset HEAD --
+
+[includeIf "gitdir:~/Code/worksite/"]
+	path = ~/.config/git/config-worksite

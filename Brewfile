@@ -32,6 +32,7 @@ brew 'cmigemo'
 brew 'cscope'
 brew 'doxygen'
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-modules', 'with-natural-title-bar', 'with-official-icon', 'with-xml2']
+brew 'fd'
 brew 'flow'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'

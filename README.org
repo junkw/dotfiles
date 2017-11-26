@@ -4,7 +4,7 @@
 
 ** Requirements
 
-   - macOS Sierra
+   - macOS High Sierra
    - Xcode
    - Homebrew
    - Zsh
@@ -17,7 +17,7 @@ cd /path/to/local/repo
 rake
 
 brew tap Homebrew/bundle
-brew bundle
+brew bundle -v
 
 git lfs install
 fc-cache -vf

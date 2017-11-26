@@ -22,13 +22,14 @@ brew 'zsh', args: ['without-etcdir']
 
 brew 'dbus', restart_service: true
 brew 'ffmpeg', args: ['with-fdk-aac', 'with-openh264', 'with-x265', 'with-libbluray', 'HEAD']
+brew 'texinfo'
 
 # Homebrew packages
 brew 'atool'
 brew 'cmigemo'
 brew 'cscope'
 brew 'doxygen'
-brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-modules', 'with-natural-title-bar', 'with-official-icon', 'with-xml2']
+brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-modules', 'with-official-icon', 'with-xml2']
 brew 'fd'
 brew 'flow'
 brew 'gnu-sed', args: ['with-default-names']
@@ -53,7 +54,6 @@ brew 'source-highlight'
 brew 'ssh-copy-id'
 brew 'svn'
 brew 'terminal-notifier'
-brew 'texinfo'
 brew 'the_silver_searcher'
 brew 'tmux'
 brew 'unar'

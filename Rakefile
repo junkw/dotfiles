@@ -34,8 +34,8 @@ task :link_launch_agents do
 end
 
 task :link_libmmbd do
-  FileUtils.ln_sf("/Applications/MakeMKV.app/Contents/lib/libmmbd.dylib" "#{Dir.home}/lib/libaacs.dylib")
-  FileUtils.ln_sf("/Applications/MakeMKV.app/Contents/lib/libmmbd.dylib" "#{Dir.home}/lib/libbdplus.dylib")
+  FileUtils.ln_sf("/Applications/MakeMKV.app/Contents/lib/libmmbd.dylib", "#{Dir.home}/lib/libaacs.dylib")
+  FileUtils.ln_sf("/Applications/MakeMKV.app/Contents/lib/libmmbd.dylib", "#{Dir.home}/lib/libbdplus.dylib")
 end
 
 task :link_vimrc do
@@ -103,6 +103,6 @@ end
 
 task :link => [:link_bin, :link_xdg_config_home, :link_ctags, :link_vimrc, :link_zshrc]
 task :install => [:make_dir, :link, :clone_tmux_colors_solarized, :install_hunspell_dicts]
-task :setup_mac => [:link_launch_agents, :load_launch_agents, :link_libmmbd, :set_macos_config]
+task :setup_mac => [:link_launch_agents, :load_launch_agents, :set_macos_config]
 task :default => [:install, :setup_mac]
-task :after => [:set_mbsync_config, :setup_virtualbox]
+task :after => [:link_libmmbd, :set_mbsync_config, :setup_virtualbox]

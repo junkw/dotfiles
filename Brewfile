@@ -2,10 +2,7 @@
 cask_args appdir: '/Applications'
 
 # Add repositories
-tap 'homebrew/dupes'
 tap 'homebrew/services'
-tap 'homebrew/versions'
-
 tap 'homebrew/homebrew-php'
 
 tap 'caskroom/cask'

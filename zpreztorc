@@ -2,7 +2,7 @@
 
 # General
 zstyle ':prezto:*:*' color 'yes'
-zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+zstyle ':prezto:load' zfunction 'zargs'
 
 zstyle ':prezto:load' pmodule \
        'environment' \

@@ -5,20 +5,19 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' zfunction 'zargs'
 
 zstyle ':prezto:load' pmodule \
+       'helper' \
+       'spectrum' \
+       'git' \
        'environment' \
        'terminal' \
        'editor' \
-       'helper' \
-       'spectrum' \
+       'directory' \
+       'history' \
        'syntax-highlighting' \
-       'utility' \
-       'archive' \
        'autosuggestions' \
        'completion' \
-       'directory' \
-       'git' \
-       'history' \
        'history-substring-search' \
+       'archive' \
        'prompt'
 
 # Terminal
@@ -31,6 +30,9 @@ fi
 # Editor
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
+
+# Prompt
+zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Syntax Highlighting
 zstyle ':prezto:module:syntax-highlighting' color 'yes'
@@ -47,6 +49,3 @@ zstyle ':prezto:module:autosuggestions' color 'yes'
 # History Substring Search
 zstyle ':prezto:module:history-substring-search' color 'yes'
 zstyle ':prezto:module:history-substring-search' case-sensitive 'no'
-
-# Prompt
-zstyle ':prezto:module:prompt' theme 'sorin'

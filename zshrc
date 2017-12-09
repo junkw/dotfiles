@@ -83,6 +83,7 @@ bindkey '^xcr' peco-delete-history
 #
 ## Aliases
 #
+alias ls="exa --group-directories-first --color-scale"
 alias fetchmail="mbsync -a -c $XDG_CONFIG_HOME/mbsync/config"
 alias mulazyindex="mu index --lazy-check --nocleanup --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
 alias muindex="mu index --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"

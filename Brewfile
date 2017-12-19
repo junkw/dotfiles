@@ -33,6 +33,7 @@ brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemag
 brew 'exa'
 brew 'fd'
 brew 'flow'
+brew 'git-when-merged'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'
 brew 'grep', args: ['with-default-names']

@@ -40,6 +40,7 @@ brew 'grep', args: ['with-default-names']
 brew 'gnupg'
 brew 'hunspell'
 brew 'jq'
+brew 'mas'
 brew 'mpv', args: ['with-bundle', 'with-libaacs', 'with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
 brew 'p7zip'
 brew 'packer'

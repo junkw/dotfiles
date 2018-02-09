@@ -104,3 +104,4 @@ cask 'vagrant'
 
 # Homebrew Cask Fonts
 cask 'font-ricty-diminished'
+cask 'font-fontawesome'

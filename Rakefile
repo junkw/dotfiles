@@ -49,7 +49,6 @@ end
 task :link_zshrc do
   FileUtils.ln_sf("#{Dir.pwd}/zlogin", "#{Dir.home}/.zlogin")
   FileUtils.ln_sf("#{Dir.pwd}/zpreztorc", "#{Dir.home}/.zpreztorc")
-  FileUtils.ln_sf("#{Dir.pwd}/zprofile", "#{Dir.home}/.zprofile")
   FileUtils.ln_sf("#{Dir.pwd}/zshenv", "#{Dir.home}/.zshenv")
   FileUtils.ln_sf("#{Dir.pwd}/zshrc", "#{Dir.home}/.zshrc")
 end

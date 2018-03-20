@@ -89,6 +89,7 @@
 	uncommit = reset --mixed HEAD~1
 	update = !git pull-all
 	unstage = reset HEAD --
+	ver-contains = tag --contains
 
 [includeIf "gitdir:~/Code/worksite/"]
 	path = ~/.config/git/config-worksite

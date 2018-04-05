@@ -7,7 +7,7 @@
 
 
 --langmap=PHP:+.inc
---php-kinds=cfd
+--php-types=c+i+d+f
 
 
 --languages=-javascript

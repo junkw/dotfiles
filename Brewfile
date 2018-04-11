@@ -29,6 +29,7 @@ brew 'atool'
 brew 'cmigemo'
 brew 'cscope'
 brew 'doxygen'
+brew 'editorconfig'
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-modules', 'with-official-icon', 'with-xml2']
 brew 'exa'
 brew 'fd'

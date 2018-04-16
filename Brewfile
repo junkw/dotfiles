@@ -1,6 +1,7 @@
 # Config
 cask_args appdir: '/Applications'
 
+
 # Add repositories
 tap 'homebrew/services'
 
@@ -10,6 +11,7 @@ tap 'caskroom/fonts'
 
 tap 'railwaycat/emacsmacport'
 tap 'universal-ctags/universal-ctags'
+
 
 # Install requirements and dependencies packages
 cask 'java' unless system '/usr/libexec/java_home --failfast'
@@ -22,6 +24,7 @@ brew 'zsh', args: ['without-etcdir']
 brew 'dbus', restart_service: true
 brew 'ffmpeg', args: ['with-fdk-aac', 'with-openh264', 'with-x265', 'with-libbluray', 'HEAD']
 brew 'texinfo'
+
 
 # Homebrew packages
 brew 'atool'
@@ -43,12 +46,10 @@ brew 'jq'
 brew 'mas'
 brew 'mpv', args: ['with-bundle', 'with-libaacs', 'with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
 brew 'p7zip'
-brew 'packer'
 brew 'pandoc'
 brew 'peco'
 brew 'pinentry-mac'
 brew 'plantuml'
-brew 'putty'
 brew 'reattach-to-user-namespace'
 brew 'rename'
 brew 'ripgrep'
@@ -63,9 +64,13 @@ brew 'unar'
 brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
 
+## for Worksite
 brew 'isync'
 brew 'msmtp'
 brew 'mu', args: ['with-emacs', 'HEAD']
+brew 'packer'
+brew 'putty'
+
 
 # Homebrew Cask apps
 cask 'alfred'
@@ -88,13 +93,15 @@ cask 'qlmarkdown'
 cask 'qlstephen'
 cask 'quicklook-csv'
 cask 'quicklook-json'
-cask 'slack'
 cask 'silverlight'
 cask 'suspicious-package'
 
+## for Worksite
+cask 'slack'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vagrant'
+
 
 # Homebrew Cask Fonts
 cask 'font-ricty-diminished'

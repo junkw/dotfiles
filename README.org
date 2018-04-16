@@ -17,9 +17,7 @@ cd /path/to/local/repo
 rake
 
 brew tap Homebrew/bundle
-brew bundle -v
-
-git lfs install
+EMACS=$(brew --prefix emacs-mac)/bin/emacs; brew bundle -v
 fc-cache -vf
 
 GMAIL=xxxx@gmail.com rake after

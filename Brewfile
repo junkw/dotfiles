@@ -3,7 +3,6 @@ cask_args appdir: '/Applications'
 
 # Add repositories
 tap 'homebrew/services'
-tap 'homebrew/homebrew-php'
 
 tap 'caskroom/cask'
 tap 'caskroom/homebrew-versions'
@@ -67,12 +66,6 @@ brew 'wget'
 brew 'isync'
 brew 'msmtp'
 brew 'mu', args: ['with-emacs', 'HEAD']
-
-brew 'php71'
-brew 'php-code-sniffer'
-brew 'php-cs-fixer'
-brew 'phpctags'
-brew 'phpmd'
 
 # Homebrew Cask apps
 cask 'alfred'

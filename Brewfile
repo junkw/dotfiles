@@ -59,6 +59,7 @@ brew 'ssh-copy-id'
 brew 'svn'
 brew 'terminal-notifier'
 brew 'the_silver_searcher'
+brew 'tidy-html5'
 brew 'tmux'
 brew 'unar'
 brew 'universal-ctags', args: ['HEAD']

@@ -99,6 +99,7 @@ if [[ -d $NODEBREW_ROOT ]]; then
 fi
 
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
+export ELECTRON_CACHE=$HOME/Library/Caches/electron/
 
 # GnuPG
 export GNUPGHOME=$XDG_CONFIG_HOME/gnupg

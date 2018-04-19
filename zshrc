@@ -3,11 +3,12 @@
 #
 ## zplug
 #
-init_zplug=$HOME/.zplug/init.zsh
+export ZPLUG_HOME=$XDG_DATA_HOME/zplug
+init_zplug=$ZPLUG_HOME/init.zsh
 
 # Bootstrap
 if [[ ! -r $init_zplug ]]; then
-  git clone https://github.com/zplug/zplug $HOME/.zplug
+  git clone https://github.com/zplug/zplug $ZPLUG_HOME
 fi
 
 source $init_zplug
@@ -39,7 +40,7 @@ zplug load
 init_prezto=$HOME/.zprezto/init.zsh
 
 if [[ ! -r $init_prezto ]]; then
-    ln -s $HOME/.zplug/repos/sorin-ionescu/prezto $HOME/.zprezto
+    ln -s $ZPLUG_HOME/repos/sorin-ionescu/prezto $HOME/.zprezto
 fi
 
 source $init_prezto

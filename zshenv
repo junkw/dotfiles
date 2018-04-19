@@ -1,10 +1,28 @@
 # -*- mode: sh; coding: utf-8; indent-tabs-mode: nil -*-
 
-# Locale
+#
+## Locale
+#
 export LANG=ja_JP.UTF-8
 export LC_ALL=ja_JP.UTF-8
 
-# Paths
+
+#
+## Paths
+#
+
+# XDG Base Directory
+if [[ -z $XDG_CONFIG_HOME ]]; then
+    export XDG_CONFIG_HOME=$HOME/.config
+fi
+if [[ -z $XDG_CACHE_HOME ]]; then
+    export XDG_CACHE_HOME=$HOME/.cache
+fi
+if [[ -z $XDG_DATA_HOME ]]; then
+    export XDG_DATA_HOME=$HOME/.local/share
+fi
+
+# PATH
 typeset -T SUDO_PATH sudo_path
 typeset -T INFOPATH infopath
 typeset -gxU path fpath manpath sudo_path infopath
@@ -16,7 +34,6 @@ path=({/usr/{local/{,opt/{apr,apr-util,gettext,gpg-agent,icu4c,libxml2,openssl,s
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
       $HOME/{.nodebrew/current/,}bin(N-/)
-      /usr/local/opt/php71/bin(N-/)
       /usr/local/share/git-core/contrib/diff-highlight(N-/)
       $path)
 
@@ -34,16 +51,10 @@ manpath=(/usr/{local/,}share/man
 infopath=(/usr/local/share/info{/emacs,}(N-/)
           /usr/share/info)
 
-# XDG Base Directory
-if [[ -z $XDG_CONFIG_HOME ]]; then
-    export XDG_CONFIG_HOME=$HOME/.config
-fi
-if [[ -z $XDG_CACHE_HOME ]]; then
-    export XDG_CACHE_HOME=$HOME/.cache
-fi
-if [[ -z $XDG_DATA_HOME ]]; then
-    export XDG_DATA_HOME=$HOME/.local/share
-fi
+
+#
+## Apps
+#
 
 # Homebrew
 export HOMEBREW_MAKE_JOBS=4
@@ -59,14 +70,24 @@ if [[ `which brew` ]]; then
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH
 fi
 
+# PHPBrew
+export PHPBREW_HOME=$XDG_DATA_HOME/phpbrew
+export PHPBREW_ROOT=$PHPBREW_HOME
+init_phpbrew=$PHPBREW_HOME/bashrc
+
+if [[ -d $PHPBREW_HOME && -r $init_phpbrew ]]; then
+    export PHPBREW_LOOKUP_PREFIX=/usr/local/opt:/usr/local
+
+    source $init_phpbrew
+fi
+
 # Java
-if [[ -s /usr/libexec/java_home ]]; then
+if [[ -x /usr/libexec/java_home ]]; then
     export JAVA_HOME=`/usr/libexec/java_home`
 fi
 
 # Node.js
 export NODE_PATH=$HOME/.nodebrew/current/lib/node_modules
-
 
 # GnuPG
 export GNUPGHOME=$XDG_CONFIG_HOME/gnupg

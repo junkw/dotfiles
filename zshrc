@@ -6,7 +6,7 @@
 init_zplug=$HOME/.zplug/init.zsh
 
 # Bootstrap
-if [[ ! -s $init_zplug ]]; then
+if [[ ! -r $init_zplug ]]; then
   git clone https://github.com/zplug/zplug $HOME/.zplug
 fi
 
@@ -38,7 +38,7 @@ zplug load
 #
 init_prezto=$HOME/.zprezto/init.zsh
 
-if [[ ! -s $init_prezto ]]; then
+if [[ ! -r $init_prezto ]]; then
     ln -s $HOME/.zplug/repos/sorin-ionescu/prezto $HOME/.zprezto
 fi
 

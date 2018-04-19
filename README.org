@@ -6,8 +6,11 @@
 
    - macOS High Sierra
    - Xcode
-   - Homebrew
    - Zsh
+     - [[https://github.com/zplug/zplug][zplug]]
+   - [[https://brew.sh][Homebrew]]
+   - [[http://phpbrew.github.io/phpbrew/][PHPBrew]]
+   - [[https://github.com/hokaccha/nodebrew][Nodebrew]]
 
 ** Installation
 

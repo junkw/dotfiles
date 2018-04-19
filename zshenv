@@ -22,6 +22,9 @@ if [[ -z $XDG_DATA_HOME ]]; then
     export XDG_DATA_HOME=$HOME/.local/share
 fi
 
+# nodebrew
+export NODEBREW_ROOT=$XDG_DATA_HOME/nodebrew
+
 # PATH
 typeset -T SUDO_PATH sudo_path
 typeset -T INFOPATH infopath
@@ -33,7 +36,8 @@ path=({/usr/{local/{,opt/{apr,apr-util,gettext,gpg-agent,icu4c,libxml2,openssl,s
       $sudo_path
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
-      $HOME/{.nodebrew/current/,}bin(N-/)
+      $HOME/bin(N-/)
+      $NODEBREW_ROOT/{,current/bin}(N-/)
       /usr/local/share/git-core/contrib/diff-highlight(N-/)
       $path)
 
@@ -87,7 +91,9 @@ if [[ -x /usr/libexec/java_home ]]; then
 fi
 
 # Node.js
-export NODE_PATH=$HOME/.nodebrew/current/lib/node_modules
+if [[ -d $NODEBREW_ROOT ]]; then
+    export NODE_PATH=$NODEBREW_ROOT/current/lib/node_modules
+fi
 
 # GnuPG
 export GNUPGHOME=$XDG_CONFIG_HOME/gnupg

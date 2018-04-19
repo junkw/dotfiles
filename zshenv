@@ -98,6 +98,8 @@ if [[ -d $NODEBREW_ROOT ]]; then
     export NODE_PATH=$NODEBREW_ROOT/current/lib/node_modules
 fi
 
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
+
 # GnuPG
 export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
 

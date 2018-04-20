@@ -25,6 +25,9 @@ if [[ -z $XDG_RUNTIME_DIR ]]; then
     export XDG_RUNTIME_DIR=/private/tmp
 fi
 
+# zplug
+export ZPLUG_HOME=$XDG_DATA_HOME/zplug
+
 # nodebrew
 export NODEBREW_ROOT=$XDG_DATA_HOME/nodebrew
 
@@ -51,8 +54,8 @@ manpath=(/usr/{local/,}share/man
          /usr/local/opt/gnu-tar/libexec/gnuman(N-/)
          /Applications/Xcode.app/Contents/Developer/usr/share/man(N-/)
          /opt/X11/share/man(N-/)
-         $HOME/.nodebrew/current/share/man(N-/)
-         $HOME/.zplug/doc/man(N-/)
+         $NODEBREW_ROOT/current/share/man(N-/)
+         $ZPLUG_HOME/doc/man(N-/)
          $manpath)
 
 infopath=(/usr/local/share/info{/emacs,}(N-/)

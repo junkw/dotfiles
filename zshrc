@@ -3,7 +3,6 @@
 #
 ## zplug
 #
-export ZPLUG_HOME=$XDG_DATA_HOME/zplug
 init_zplug=$ZPLUG_HOME/init.zsh
 
 # Bootstrap

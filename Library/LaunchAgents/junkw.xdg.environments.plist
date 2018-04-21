@@ -10,10 +10,12 @@
       <string>setenv</string>
       <string>XDG_CONFIG_HOME</string>
       <string>/Users/junkw/.config</string>
-      <string>XDG_CACHE_HOME</string>
-      <string>/Users/junkw/.cache</string>
       <string>XDG_DATA_HOME</string>
       <string>/Users/junkw/.local/share</string>
+      <string>XDG_CACHE_HOME</string>
+      <string>/Users/junkw/.cache</string>
+      <string>XDG_RUNTIME_DIR</string>
+      <string>/private/tmp</string>
       <string>DVDCSS_CACHE</string>
       <string>/Users/junkw/.cache/mpv/dvdcss</string>
     </array>

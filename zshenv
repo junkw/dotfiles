@@ -26,10 +26,10 @@ if [[ -z $XDG_RUNTIME_DIR ]]; then
 fi
 
 # zplug
-export ZPLUG_HOME=$XDG_DATA_HOME/zplug
+export ZPLUG_HOME=$HOME/opt/zplug
 
 # nodebrew
-export NODEBREW_ROOT=$XDG_DATA_HOME/nodebrew
+export NODEBREW_ROOT=$HOME/opt/nodebrew
 
 # PATH
 typeset -T SUDO_PATH sudo_path
@@ -81,7 +81,7 @@ if [[ `which brew` ]]; then
 fi
 
 # PHPBrew
-export PHPBREW_HOME=$XDG_DATA_HOME/phpbrew
+export PHPBREW_HOME=$HOME/opt/phpbrew
 export PHPBREW_ROOT=$PHPBREW_HOME
 init_phpbrew=$PHPBREW_HOME/bashrc
 
@@ -120,6 +120,7 @@ export VISUAL=vim
 
 export LESSHISTFILE=-
 export LESS="-R"
+
 if [[ `src-hilite-lesspipe.sh` ]]; then
     export LESSOPEN="| src-hilite-lesspipe.sh %s"
 fi

@@ -54,7 +54,7 @@ task :link_zshrc do
 end
 
 task :clone_tmux_colors_solarized do
-  sh "git clone https://github.com/seebi/tmux-colors-solarized.git #{Dir.home}/.local/share/tmux-colors-solarized"
+  sh "git clone https://github.com/seebi/tmux-colors-solarized.git #{Dir.home}/opt/tmux-colors-solarized"
 end
 
 task :install_hunspell_dicts do

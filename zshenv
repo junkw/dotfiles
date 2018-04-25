@@ -43,6 +43,7 @@ path=({/usr/{local/{,opt/{apr,apr-util,gettext,gpg-agent,icu4c,libxml2,openssl,s
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
       $HOME/bin(N-/)
+      $HOME/opt/composer/vendor/bin/(N-/)
       $NODEBREW_ROOT/{,current/bin}(N-/)
       /usr/local/share/git-core/contrib/diff-highlight(N-/)
       $path)

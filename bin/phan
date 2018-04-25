@@ -1,3 +1,0 @@
-#!/bin/sh
-
-$(phpbrew path bin)/php ${PHAN_BIN:-$HOME/bin/phan.phar} --progress-bar "$@"

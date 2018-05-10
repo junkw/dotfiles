@@ -88,6 +88,8 @@
 	tags = tag
 	uncommit = reset --mixed HEAD~1
 	update = !git pull-all
+	update-submodule = submodule update --init --recursive
+	update-all = !git pull-all; git update-submodule
 	unstage = reset HEAD --
 	ver-contains = tag --contains
 

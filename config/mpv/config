@@ -17,35 +17,35 @@ volume-max=100
 #
 
 # SEE https://freetime.mikeconnelly.com/archives/5371
-vo=opengl-cb
-hls-bitrate=max 						# Use max quality for HLS streams
+vo=gpu
+hls-bitrate=max                        # Use max quality for HLS streams
 icc-profile-auto
-dither-depth=auto						# Enable dithering
-target-prim=bt.2020					# Target Rec.2020 (wide color gamut)
-hwdec=auto								# Enable hardware decoding if available.
-no-hidpi-window-scale					# Used on 5K iMac to prevent OSX scaling
+dither-depth=auto                      # Enable dithering
+target-prim=bt.2020                    # Target Rec.2020 (wide color gamut)
+hwdec=videotoolbox                     # Enable hardware decoding
+no-hidpi-window-scale                  # Used on 5K iMac to prevent OSX scaling
 fullscreen
 
 # Upscaling
 # Chroma subsampling means that chroma information is encoded at lower resolution than luma
 # In MPV, chroma is upscaled to luma resolution (video size) and then the converted RGB is upscaled to target resolution (screen size)
-geometry=3840x2160						# Force 4k resolution output
-scale=ewa_lanczossharp 				# Luma upscale
-dscale=sinc 							# Luma downscale
-cscale=ewa_lanczossharp				# Chroma upscale
+geometry=3840x2160                     # Force 4k resolution output
+scale=ewa_lanczossharp                 # Luma upscale
+dscale=sinc                            # Luma downscale
+cscale=ewa_lanczossharp                # Chroma upscale
 
 # Debanding
 # For opengl-hq, debanding is enabled by default
-# deband=no 							# Deactivate debanding
-deband-iterations=1 					# Deband steps (More = Better quality, but higher GPU cost)
-deband-threshold=70 					# Deband strength (More = Less banding, but more detail loss)
-deband-range=16 						# Deband range (More = Less banding, but higher GPU cost)
-deband-grain=5 						# Dynamic Grain (More = More dynamic grain)
+# deband=no                            # Deactivate debanding
+deband-iterations=1                    # Deband steps (More = Better quality, but higher GPU cost)
+deband-threshold=70                    # Deband strength (More = Less banding, but more detail loss)
+deband-range=16                        # Deband range (More = Less banding, but higher GPU cost)
+deband-grain=5                         # Dynamic Grain (More = More dynamic grain)
 
 # Interpolation
-interpolation=yes						# Enables motion interpolation
-video-sync=display-resample			# Required if you enable interpolation
-tscale=sinc							# Interpolation
+interpolation=yes                      # Enables motion interpolation
+video-sync=display-resample            # Required if you enable interpolation
+tscale=sinc                            # Interpolation
 temporal-dither
 
 [uhd]
@@ -76,9 +76,9 @@ deinterlace=yes
 glsl-shaders="~~/shaders/compute/ravu-3x-r4-yuv.hook"
 glsl-shaders-append="~~/shaders/gather/ravu-r4-yuv.hook"
 # Anti-Ringing
-scale-antiring=0.7 					# Luma upscale deringing (Higher = Less ringing, but more detail loss)
-dscale-antiring=0.7 					# Luma downscale deringing (Higher = Less ringing, but more detail loss)
-cscale-antiring=0.7 					# Chroma upscale deringing (Higher = Less ringing, but more detail loss)
+scale-antiring=0.7                     # Luma upscale deringing (Higher = Less ringing, but more detail loss)
+dscale-antiring=0.7                    # Luma downscale deringing (Higher = Less ringing, but more detail loss)
+cscale-antiring=0.7                    # Chroma upscale deringing (Higher = Less ringing, but more detail loss)
 
 [sdtv-pal]
 # 352x576 (PAL Broadcast)
@@ -91,6 +91,6 @@ deinterlace=yes
 glsl-shaders="~~/shaders/gather/ravu-r4-yuv.hook"
 glsl-shaders-append="~~/shaders/gather/ravu-r4-yuv.hook"
 # Anti-Ringing
-scale-antiring=0.7 					# Luma upscale deringing (Higher = Less ringing, but more detail loss)
-dscale-antiring=0.7 					# Luma downscale deringing (Higher = Less ringing, but more detail loss)
-cscale-antiring=0.7 					# Chroma upscale deringing (Higher = Less ringing, but more detail loss)
+scale-antiring=0.7                     # Luma upscale deringing (Higher = Less ringing, but more detail loss)
+dscale-antiring=0.7                    # Luma downscale deringing (Higher = Less ringing, but more detail loss)
+cscale-antiring=0.7                    # Chroma upscale deringing (Higher = Less ringing, but more detail loss)

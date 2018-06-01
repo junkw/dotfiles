@@ -96,7 +96,7 @@ if [[ `which mbsync` && `which mu` ]]; then
 fi
 
 if [[ `which phan` ]]; then
-   alias phan_deamon="phan --daemonize-tcp-port 4846 --quick"
+    alias phand="phan --daemonize-tcp-port 4846 --quick"
 fi
 
 if [[ `which tmux` ]]; then

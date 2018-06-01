@@ -83,11 +83,22 @@ bindkey '^xcr' peco-delete-history
 #
 ## Aliases
 #
-alias ls="exa --group-directories-first --color-scale"
-alias fetchmail="mbsync -a -c $XDG_CONFIG_HOME/mbsync/config"
-alias mulazyindex="mu index --lazy-check --nocleanup --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
-alias muindex="mu index --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
-alias mureindex="mu index --rebuild --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
-alias phan_deamon="phan --daemonize-tcp-port 4846 --quick"
-alias syncmail="fetchmail && mulazyindex"
-alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"
+if [[ `which exa` ]]; then
+    alias ls="exa --group-directories-first --color-scale"
+fi
+
+if [[ `which mbsync` && `which mu` ]]; then
+    alias fetchmail="mbsync -a -c $XDG_CONFIG_HOME/mbsync/config"
+    alias mulazyindex="mu index --lazy-check --nocleanup --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
+    alias muindex="mu index --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
+    alias mureindex="mu index --rebuild --muhome $XDG_CACHE_HOME/mu -m $XDG_DATA_HOME/gmail"
+    alias syncmail="fetchmail && mulazyindex"
+fi
+
+if [[ `which phan` ]]; then
+   alias phan_deamon="phan --daemonize-tcp-port 4846 --quick"
+fi
+
+if [[ `which tmux` ]]; then
+    alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"
+fi

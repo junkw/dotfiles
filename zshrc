@@ -99,6 +99,10 @@ if [[ `which phan` ]]; then
     alias phand="phan --daemonize-tcp-port 4846 --quick"
 fi
 
+if [[ `which phpbrew` ]]; then
+    alias phpbrew_allupdate="phpbrew self-update && phpbrew known --update"
+fi
+
 if [[ `which tmux` ]]; then
     alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"
 fi

@@ -65,6 +65,9 @@ brew 'unar'
 brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
 
+## for Private
+brew 'clamav'
+
 ## for Worksite
 brew 'isync'
 brew 'msmtp'

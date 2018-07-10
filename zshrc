@@ -85,6 +85,7 @@ bindkey '^xcr' peco-delete-history
 #
 if [[ `which exa` ]]; then
     alias ls="exa --group-directories-first --color-scale"
+    alias ll="exa -alh --group-directories-first --color-scale --git"
 fi
 
 if [[ `which mbsync` && `which mu` ]]; then

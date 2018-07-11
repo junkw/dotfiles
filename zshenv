@@ -48,6 +48,7 @@ path=({/usr/{local/{,opt/{apr,apr-util,gettext,gpg-agent,icu4c,libxml2,openssl,s
       $HOME/bin(N-/)
       $COMPOSER_HOME/vendor/bin/(N-/)
       $NODEBREW_ROOT/{,current/bin}(N-/)
+      $HOME/opt/npm/bin/(N-/)
       /usr/local/share/git-core/contrib/diff-highlight(N-/)
       $path)
 

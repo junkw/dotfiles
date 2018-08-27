@@ -12,6 +12,7 @@ tap 'homebrew/cask-versions'
 tap 'railwaycat/emacsmacport'
 tap 'universal-ctags/universal-ctags'
 
+tap 'junkw/homebrew-mu', 'https://gist.github.com/b0deca767f5db22f2f165ae88cd8e0e9.git'
 
 # Install requirements and dependencies packages
 cask 'java' unless system '/usr/libexec/java_home --failfast'
@@ -71,7 +72,7 @@ brew 'clamav'
 ## for Worksite
 brew 'isync'
 brew 'msmtp'
-brew 'mu', args: ['HEAD']
+brew 'junkw/homebrew-mu/mu', args: ['with-emacs-mac', 'HEAD']
 brew 'packer'
 brew 'putty'
 

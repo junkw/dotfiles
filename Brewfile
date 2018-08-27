@@ -71,7 +71,7 @@ brew 'clamav'
 ## for Worksite
 brew 'isync'
 brew 'msmtp'
-brew 'mu', args: ['with-emacs', 'HEAD']
+brew 'mu', args: ['HEAD']
 brew 'packer'
 brew 'putty'
 

@@ -12,6 +12,9 @@
 [credential]
 	helper = osxkeychain
 
+[help]
+	autocorrect = 1
+
 [pager]
 	log = diff-highlight | less
 	show = diff-highlight | less

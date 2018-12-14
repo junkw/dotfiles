@@ -41,7 +41,7 @@ typeset -gxU path fpath manpath sudo_path infopath
 
 sudo_path=({/usr/local{,/opt/icu4c},/usr,}/sbin(N-/))
 
-path=({/usr/{local/{,opt/{apr,apr-util,gettext,gpg-agent,icu4c,libxml2,openssl,sqlite,texinfo}/},},/}bin(N-/)
+path=({/usr/{local/{,opt/{apr,apr-util,curl,gettext,gpg-agent,icu4c,libxml2,openssl,sqlite,texinfo}/},},/}bin(N-/)
       $sudo_path
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)

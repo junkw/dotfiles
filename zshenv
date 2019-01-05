@@ -53,6 +53,8 @@ path=({/usr/{local/{,opt/{apr,apr-util,curl,gettext,gpg-agent,icu4c,libxml2,open
       $path)
 
 fpath=(/usr/local/share/zsh/functions(N-/)
+       ${HOME}/opt/phpbrew/completion/zsh(N-/)
+       ${HOME}/opt/nodebrew/completions/zsh(N-/)
        $fpath)
 
 manpath=(/usr/{local/,}share/man

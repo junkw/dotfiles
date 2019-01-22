@@ -38,7 +38,7 @@ bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft=
 bind -n WheelDownPane select-pane -t= \; send-keys -M
 
 # Copy
-bind-key -t emacs-copy [ begin-selection
-bind-key -t emacs-copy M-w copy-pipe "reattach-to-user-namespace pbcopy"
-unbind -t emacs-copy Enter
-bind-key -t emacs-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+set-option -g default-command "exec reattach-to-user-namespace -l $SHELL"
+bind-key -T copy-mode [ send-keys -X begin-selection
+bind-key -T copy-mode M-w send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+bind-key -T copy-mode Enter send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"

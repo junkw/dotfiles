@@ -1,8 +1,0 @@
-[submodule "config/mpv/shaders"]
-	path = config/mpv/shaders
-	url = https://github.com/bjin/mpv-prescalers.git
-	ignore = dirty
-[submodule "config/mpv/scripts"]
-	path = config/mpv/scripts
-	url = https://github.com/wiiaboo/mpv-scripts.git
-	ignore = dirty

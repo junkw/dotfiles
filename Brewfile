@@ -23,7 +23,6 @@ brew 'git-lfs'
 brew 'zsh', args: ['without-etcdir']
 
 brew 'dbus', restart_service: true
-brew 'ffmpeg', args: ['with-fdk-aac', 'with-openh264', 'with-x265', 'with-libbluray', 'HEAD']
 brew 'texinfo'
 
 
@@ -35,6 +34,7 @@ brew 'doxygen'
 brew 'editorconfig'
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-modules', 'with-modern-icon', 'with-xml2']
 brew 'exa'
+brew 'ffmpeg', args: ['with-fdk-aac', 'with-openh264', 'with-x265', 'with-libbluray', 'HEAD']
 brew 'fd'
 brew 'flow'
 brew 'git-when-merged'
@@ -45,7 +45,6 @@ brew 'gnupg'
 brew 'hunspell'
 brew 'jq'
 brew 'mas'
-brew 'mpv', args: ['with-bundle', 'with-libaacs', 'with-libbluray', 'with-libdvdnav', 'with-libdvdread', 'HEAD']
 brew 'p7zip'
 brew 'pandoc'
 brew 'peco'
@@ -89,6 +88,7 @@ cask 'dropbox'
 cask 'google-chrome'
 cask 'google-backup-and-sync'
 cask 'google-japanese-ime'
+cask 'iina'
 cask 'karabiner-elements'
 cask 'makemkv'
 cask 'onyx'

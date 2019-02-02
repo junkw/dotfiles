@@ -34,7 +34,7 @@ brew 'doxygen'
 brew 'editorconfig'
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-gnutls', 'with-imagemagick', 'with-modules', 'with-modern-icon', 'with-xml2']
 brew 'exa'
-brew 'ffmpeg', args: ['with-fdk-aac', 'with-openh264', 'with-x265', 'with-libbluray', 'HEAD']
+brew 'ffmpeg', args: ['HEAD']
 brew 'fd'
 brew 'flow'
 brew 'git-when-merged'

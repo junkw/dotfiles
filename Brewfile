@@ -111,3 +111,6 @@ cask 'font-fontawesome'
 cask 'font-source-code-pro'
 cask 'font-source-han-code-jp'
 cask 'font-ricty-diminished'
+
+cask 'font-ipafont'
+cask 'font-ipaexfont'

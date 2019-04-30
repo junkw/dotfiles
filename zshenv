@@ -120,14 +120,3 @@ export DICPATH=$HOME/Library/Spelling/
 
 # mpv
 export DVDCSS_CACHE=$XDG_CACHE_HOME/mpv/dvdcss
-
-# Pager
-export EDITOR=vim
-export VISUAL=vim
-
-export LESSHISTFILE=-
-export LESS="-R"
-
-if [[ `src-hilite-lesspipe.sh` ]]; then
-    export LESSOPEN="| src-hilite-lesspipe.sh %s"
-fi

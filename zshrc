@@ -1,6 +1,20 @@
 # -*- mode: sh; coding: utf-8; indent-tabs-mode: nil -*-
 
 #
+## Pager
+#
+export EDITOR=vim
+export VISUAL=vim
+
+export LESSHISTFILE=-
+export LESS=" -R "
+
+if [[ `which src-hilite-lesspipe.sh` ]]; then
+    export LESSOPEN="| src-hilite-lesspipe.sh %s"
+fi
+
+
+#
 ## zplug
 #
 init_zplug=$ZPLUG_HOME/init.zsh
@@ -83,6 +97,8 @@ bindkey '^xcr' peco-delete-history
 #
 ## Aliases
 #
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+
 if [[ `which exa` ]]; then
     alias ls="exa --group-directories-first --color-scale"
     alias ll="exa -alh --group-directories-first --color-scale --git"

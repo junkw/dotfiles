@@ -60,6 +60,19 @@ source $init_prezto
 
 
 #
+## PHPBrew
+#
+export PHPBREW_HOME=$HOME/opt/phpbrew
+export PHPBREW_ROOT=$PHPBREW_HOME
+export PHPBREW_LOOKUP_PREFIX=/usr/local/opt:/usr/local
+init_phpbrew=$PHPBREW_HOME/bashrc
+
+if [[ -d $PHPBREW_HOME && -r $init_phpbrew ]]; then
+    source $init_phpbrew
+fi
+
+
+#
 ## Options
 #
 setopt print_eight_bit

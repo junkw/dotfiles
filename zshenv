@@ -87,17 +87,6 @@ if [[ `which brew` ]]; then
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH
 fi
 
-# PHPBrew
-export PHPBREW_HOME=$HOME/opt/phpbrew
-export PHPBREW_ROOT=$PHPBREW_HOME
-init_phpbrew=$PHPBREW_HOME/bashrc
-
-if [[ -d $PHPBREW_HOME && -r $init_phpbrew ]]; then
-    export PHPBREW_LOOKUP_PREFIX=/usr/local/opt:/usr/local
-
-    source $init_phpbrew
-fi
-
 # Java
 if [[ -x /usr/libexec/java_home ]]; then
     export JAVA_HOME=`/usr/libexec/java_home`

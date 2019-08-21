@@ -73,7 +73,7 @@
 	cleanup = !git gc --aggressive; git fsck --full
 	conflicts = diff --name-only --diff-filter=U
 	deep-cleanup = !git repack -a -f --depth=250 --window=250; git prune; git fsck --full
-	discard = checkout --
+	discard = restore --
 	fetch-all = fetch --all --prune --tags
 	fetch-upstream = fetch --tags upstream
 	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"

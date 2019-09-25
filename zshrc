@@ -7,7 +7,7 @@ export EDITOR=vim
 export VISUAL=vim
 
 export LESSHISTFILE=-
-export LESS=" -R "
+export LESS=" -g -i -J -m -N -R -X --underline-special --SILENT "
 
 if [[ `which src-hilite-lesspipe.sh` ]]; then
     export LESSOPEN="| src-hilite-lesspipe.sh %s"
@@ -110,8 +110,6 @@ bindkey '^xcr' peco-delete-history
 #
 ## Aliases
 #
-alias less='less -m -N -g -i -J -X --underline-special --SILENT '
-
 if [[ `which exa` ]]; then
     alias ls="exa --group-directories-first --color-scale"
     alias ll="exa -alh --group-directories-first --color-scale --git"

@@ -65,9 +65,12 @@ brew 'wget'
 brew 'clamav'
 
 ## for Worksite
+brew 'gmime'
+brew 'xapian'
+
 brew 'isync'
 brew 'msmtp'
-brew 'junkw/homebrew-mu/mu', args: ['with-emacs-mac', 'HEAD']
+brew 'mu', args: ['ignore-dependencies', 'with-emacs', 'HEAD']
 brew 'packer'
 brew 'putty'
 

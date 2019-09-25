@@ -10,7 +10,7 @@ tap 'railwaycat/emacsmacport'
 tap 'universal-ctags/universal-ctags'
 
 
-# Install requirements and dependencies packages
+# Install requirements and dependencies
 cask 'java' unless system '/usr/libexec/java_home --failfast'
 cask 'xquartz'
 

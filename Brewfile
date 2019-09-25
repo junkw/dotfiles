@@ -9,8 +9,6 @@ tap 'homebrew/cask'
 tap 'railwaycat/emacsmacport'
 tap 'universal-ctags/universal-ctags'
 
-tap 'junkw/homebrew-mu', 'https://gist.github.com/b0deca767f5db22f2f165ae88cd8e0e9.git'
-
 
 # Install requirements and dependencies packages
 cask 'java' unless system '/usr/libexec/java_home --failfast'

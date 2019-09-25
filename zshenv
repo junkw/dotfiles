@@ -106,6 +106,3 @@ export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
 # Hunspell
 export DICTIONARY=en_US
 export DICPATH=$HOME/Library/Spelling/
-
-# mpv
-export DVDCSS_CACHE=$XDG_CACHE_HOME/mpv/dvdcss

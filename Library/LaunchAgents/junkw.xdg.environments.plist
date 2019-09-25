@@ -16,8 +16,6 @@
       <string>/Users/junkw/.cache</string>
       <string>XDG_RUNTIME_DIR</string>
       <string>/private/tmp</string>
-      <string>DVDCSS_CACHE</string>
-      <string>/Users/junkw/.cache/mpv/dvdcss</string>
     </array>
     <key>RunAtLoad</key>
     <true/>

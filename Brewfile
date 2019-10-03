@@ -65,6 +65,7 @@ brew 'wget'
 brew 'clamav'
 
 ## for Worksite
+brew 'libiconv'
 brew 'gmime'
 brew 'xapian'
 

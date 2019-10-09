@@ -4,7 +4,7 @@
 
 ** Requirements
 
-   - macOS High Sierra
+   - macOS Catalina
    - Xcode
    - Zsh
      - [[https://github.com/zplug/zplug][zplug]]

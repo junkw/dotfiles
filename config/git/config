@@ -3,14 +3,18 @@
 	email = don.t.be.trapped.by.dogma@gmail.com
 
 [core]
-	whitespace = trailing-space
+	commitGraph = true
 	quotepath = false
+	whitespace = trailing-space
 
 [color]
 	ui = auto
 
 [credential]
 	helper = osxkeychain
+
+[gc]
+	writeCommitGraph = true
 
 [help]
 	autocorrect = 1

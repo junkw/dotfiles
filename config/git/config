@@ -19,6 +19,21 @@
 [help]
 	autocorrect = 1
 
+[protocol]
+	version = 2
+
+
+[push]
+	default = simple
+	followTags = true
+
+[rebase]
+	autostash = true
+
+[rerere]
+	enabled = true
+
+
 [pager]
 	log = diff-highlight | less
 	show = diff-highlight | less
@@ -45,30 +60,13 @@
 	cmd = ediff.sh $LOCAL $REMOTE $MERGED $BASE
 	trustExitCode = true
 
-[push]
-	default = simple
-	followTags = true
 
-[rebase]
-	autostash = true
-
-[rerere]
-	enabled = true
+[magit]
+	hideCampaign = true
 
 [svn]
 	pushmergeinfo = true
 
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge --skip %f
-	required = true
-	process = git-lfs filter-process
-
-[url "git@github.com:"]
-	insteadOf = gh:
-
-[magit]
-	hideCampaign = true
 
 [alias]
 	branches = branch -a
@@ -99,6 +97,18 @@
 	update-all = !git pull-all; git update-submodule
 	unstage = reset HEAD --
 	ver-contains = tag --contains
+
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip %f
+	required = true
+	process = git-lfs filter-process
+
+
+[url "git@github.com:"]
+	insteadOf = gh:
+
 
 [includeIf "gitdir:~/Code/worksite/"]
 	path = ~/.config/git/config-worksite

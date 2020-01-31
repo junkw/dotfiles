@@ -99,6 +99,7 @@ cask 'qlstephen'
 cask 'quicklook-csv'
 cask 'quicklook-json'
 cask 'suspicious-package'
+cask 'yacreader'
 
 ## for Worksite
 cask 'slack'

@@ -77,7 +77,7 @@
 	deep-cleanup = !git repack -a -f --depth=250 --window=250; git prune; git fsck --full
 	discard = restore --
 	fetch-all = fetch --all --prune --tags
-	fetch-upstream = fetch --tags upstream
+	fetch-upstream = fetch --prune --tags upstream
 	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 	graph = log --graph --remotes --branches --tags --decorate --pretty=graph-format
 	lfs-checkout = !git checkout && git lfs pull

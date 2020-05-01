@@ -24,6 +24,7 @@ brew 'texinfo'
 
 # Homebrew packages
 brew 'atool'
+brew 'clamav'
 brew 'cmigemo'
 brew 'cscope'
 brew 'doxygen'
@@ -61,16 +62,14 @@ brew 'unar'
 brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
 
-## for Private
-brew 'clamav'
-
 ## for Worksite
+brew 'composer'
 brew 'libiconv'
-brew 'gmime'
-brew 'xapian'
 
 brew 'isync'
 brew 'msmtp'
+brew 'gmime'
+brew 'xapian'
 brew 'mu', args: ['ignore-dependencies', 'HEAD']
 brew 'packer'
 brew 'putty'

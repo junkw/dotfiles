@@ -41,7 +41,7 @@ typeset -gxU path fpath manpath sudo_path infopath
 
 sudo_path=({/usr/local{,/opt/icu4c},/usr,}/sbin(N-/))
 
-path=({/usr/{local/{,opt/{apr,apr-util,curl,gettext,gpg-agent,icu4c,libxml2,openssl,sqlite,texinfo}/},},/}bin(N-/)
+path=({/usr/{local/{,opt/{apr,apr-util,icu4c,libxml2,openssl,sqlite,texinfo}/},},/}bin(N-/)
       $sudo_path
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
@@ -83,8 +83,8 @@ if [[ `which brew` ]]; then
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/libxml2/lib/pkgconfig:$PKG_CONFIG_PATH
-    export PKG_CONFIG_PATH=$brew_prefix_path/opt/sqlite/lib/pkgconfig:$PKG_CONFIG_PATH
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH
+    export PKG_CONFIG_PATH=$brew_prefix_path/opt/sqlite/lib/pkgconfig:$PKG_CONFIG_PATH
 fi
 
 # Java

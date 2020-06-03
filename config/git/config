@@ -23,6 +23,10 @@
 	version = 2
 
 
+[pull]
+	rebase = false
+	ff = only
+
 [push]
 	default = simple
 	followTags = true

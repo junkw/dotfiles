@@ -24,6 +24,7 @@ EMACS=$(brew --prefix emacs-mac)/bin/emacs; brew bundle -v
 fc-cache -vf
 
 GMAIL=xxxx@gmail.com rake after
+mu init --muhome=$XDG_CACHE_HOME/mu/ --maildir=$XDG_DATA_HOME/gmail/ --my-address=$GMAIL
 
 export SHELL=/usr/local/bin/zsh
 echo $SHELL | sudo tee -a /etc/shells

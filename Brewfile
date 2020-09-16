@@ -11,7 +11,7 @@ tap 'universal-ctags/universal-ctags'
 
 
 # Install requirements and dependencies
-cask 'java' unless system '/usr/libexec/java_home --failfast'
+cask 'openjdk'
 cask 'xquartz'
 
 brew 'git'

@@ -19,6 +19,9 @@
 [help]
 	autocorrect = 1
 
+[http]
+	postBuffer = 524288000
+
 [protocol]
 	version = 2
 

@@ -34,6 +34,7 @@ brew 'exa'
 brew 'ffmpeg', args: ['HEAD']
 brew 'fd'
 brew 'flow'
+brew 'gibo'
 brew 'git-when-merged'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'

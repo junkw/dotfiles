@@ -10,6 +10,7 @@ config/fontforge/
 config/gnupg/private-keys*
 config/gnupg/*.gpg
 config/gnupg/*_seed
-config/karabiner
+config/karabiner/assets
+config/karabiner/automatic_backups/
 config/mbsync/config
 config/subversion/

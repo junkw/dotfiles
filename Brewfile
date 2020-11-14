@@ -31,7 +31,7 @@ brew 'doxygen'
 brew 'editorconfig'
 brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-imagemagick', 'with-modules', 'with-modern-icon', 'with-natural-title-bar', 'with-xml2']
 brew 'exa'
-brew 'ffmpeg', args: ['HEAD']
+brew 'ffmpeg'
 brew 'fd'
 brew 'flow'
 brew 'gibo'

@@ -51,6 +51,7 @@
 	graph-format = format:%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(blue)%an%Creset %C(green)%ar%Creset
 
 [diff]
+	algorithm = histogram
 	colorMoved = true
 	compactionHeuristic = true
 	indentHeuristic = true

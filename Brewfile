@@ -29,7 +29,7 @@ brew 'cmigemo'
 brew 'cscope'
 brew 'doxygen'
 brew 'editorconfig'
-brew 'emacs-mac', args: ['with-dbus', 'with-emacs-sexy-icon', 'with-glib', 'with-imagemagick', 'with-natural-title-bar']
+brew 'emacs-mac', args: ['with-dbus', 'with-emacs-sexy-icon', 'with-mac-metal', 'with-glib', 'with-imagemagick', 'with-natural-title-bar']
 brew 'exa'
 brew 'ffmpeg'
 brew 'fd'

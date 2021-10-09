@@ -90,8 +90,8 @@
 	graph = log --graph --remotes --branches --tags --decorate --pretty=graph-format
 	lfs-checkout = !git checkout && git lfs pull
 	lfs-pull = !git pull && git lfs pull
-	pull-all = !git fetch-all && git pull origin master
-	pull-upstream = !git fetch-upstream && git merge upstream/master
+	pull-all = pull --all --prune --tags
+	pull-upstream = !git fetch-upstream && git merge $(git symbolic-ref --short refs/remotes/upstream/HEAD)
 	push-all = push --tags origin
 	refuge = stash save --include-untracked
 	remotes = remote -v

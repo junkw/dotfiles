@@ -71,7 +71,7 @@ brew 'isync'
 brew 'msmtp'
 brew 'gmime'
 brew 'xapian'
-brew 'mu', args: ['ignore-dependencies', 'HEAD']
+brew 'mu', args: ['ignore-dependencies']
 brew 'packer'
 brew 'putty'
 

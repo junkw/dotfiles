@@ -9,6 +9,9 @@ tap 'homebrew/cask'
 tap 'railwaycat/emacsmacport'
 tap 'universal-ctags/universal-ctags'
 
+## for Worksite
+tap 'shivammathur/php'
+
 
 # Install requirements and dependencies
 cask 'openjdk'
@@ -63,15 +66,15 @@ brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
 
 ## for Worksite
-brew 'composer'
-brew 'libiconv'
+brew 'shivammathur/php/php@7.3'
+brew 'composer', args: ['ignore-dependencies']
 
 brew 'isync'
 brew 'msmtp'
 brew 'gmime'
 brew 'xapian'
 brew 'mu', args: ['ignore-dependencies']
-brew 'packer'
+
 brew 'putty'
 
 

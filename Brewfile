@@ -85,10 +85,8 @@ cask 'basictex'
 cask 'betterzip'
 cask 'firefox'
 cask 'dash'
-cask 'dropbox'
 cask 'google-chrome'
 cask 'google-drive'
-cask 'google-japanese-ime'
 cask 'iina'
 cask 'karabiner-elements'
 cask 'notion'
@@ -102,11 +100,16 @@ cask 'quicklook-json'
 cask 'suspicious-package'
 cask 'yacreader'
 
+## Intel CPU or Apple Silicon
+cask 'dropbox'
+# cask 'maestral'
+
+cask 'google-japanese-ime'
+
 ## for Worksite
+cask 'docker'
 cask 'slack'
-cask 'virtualbox'
-cask 'virtualbox-extension-pack'
-cask 'vagrant'
+cask 'utm'
 
 
 # Homebrew Cask Fonts

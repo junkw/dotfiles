@@ -67,6 +67,8 @@ brew 'universal-ctags', args: ['HEAD']
 brew 'wget'
 
 ## for Worksite
+brew 'awscli'
+
 brew 'shivammathur/php/php@7.3'
 brew 'composer', args: ['ignore-dependencies']
 
@@ -88,6 +90,7 @@ cask 'firefox'
 cask 'dash'
 cask 'google-chrome'
 cask 'google-drive'
+cask 'handbrake'
 cask 'iina'
 cask 'karabiner-elements'
 cask 'notion'
@@ -108,9 +111,12 @@ cask 'dropbox'
 cask 'google-japanese-ime'
 
 ## for Worksite
+cask 'forticlient-vpn'
 cask 'docker'
 cask 'slack'
 cask 'utm'
+cask 'zoom'
+cask 'microsoft-teams'
 
 
 # Homebrew Cask Fonts

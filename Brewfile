@@ -8,6 +8,7 @@ tap 'homebrew/cask'
 
 tap 'railwaycat/emacsmacport'
 tap 'universal-ctags/universal-ctags'
+tap 'iandol/adobe-fonts'
 
 ## for Worksite
 tap 'shivammathur/php'

@@ -111,12 +111,11 @@ cask 'dropbox'
 cask 'google-japanese-ime'
 
 ## for Worksite
-cask 'forticlient-vpn'
 cask 'docker'
+cask 'microsoft-teams'
 cask 'slack'
 cask 'utm'
 cask 'zoom'
-cask 'microsoft-teams'
 
 
 # Homebrew Cask Fonts

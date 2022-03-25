@@ -49,6 +49,7 @@ brew 'mas'
 brew 'p7zip'
 brew 'pandoc'
 brew 'peco'
+brew 'php'
 brew 'pinentry-mac'
 brew 'plantuml'
 brew 'reattach-to-user-namespace'
@@ -70,7 +71,7 @@ brew 'wget'
 brew 'awscli'
 
 brew 'shivammathur/php/php@7.3'
-brew 'composer', args: ['ignore-dependencies']
+brew 'composer'
 
 brew 'isync'
 brew 'msmtp'

@@ -88,6 +88,7 @@ cask 'basictex'
 cask 'betterzip'
 cask 'firefox'
 cask 'dash'
+cask 'dropbox'
 cask 'google-chrome'
 cask 'google-drive'
 cask 'handbrake'
@@ -105,9 +106,6 @@ cask 'suspicious-package'
 cask 'yacreader'
 
 ## Intel CPU or Apple Silicon
-cask 'dropbox'
-# cask 'maestral'
-
 cask 'google-japanese-ime'
 
 ## for Worksite

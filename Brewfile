@@ -111,6 +111,7 @@ cask 'google-japanese-ime'
 
 ## for Worksite
 cask 'docker'
+cask 'microsoft-edge'
 cask 'microsoft-teams'
 cask 'slack'
 cask 'utm'

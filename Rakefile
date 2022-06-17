@@ -79,7 +79,7 @@ end
 
 task :set_mbsync_config do
   mailaddress = ENV['GMAIL']
-  mail_dir    = "#{Dir.home}/.local/share/gmail"
+  mail_dir    = "#{Dir.home}/.local/share/mail"
   config_file = ".config/mbsync/config"
 
   FileUtils.mkdir_p(mail_dir)

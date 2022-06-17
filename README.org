@@ -4,7 +4,7 @@
 
 ** Requirements
 
-   - macOS Catalina
+   - macOS Monterey
    - Xcode
    - Zsh
      - [[https://github.com/zplug/zplug][zplug]]
@@ -19,12 +19,13 @@ git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
 cd /path/to/local/repo
 rake
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew tap Homebrew/bundle
 EMACS=$(brew --prefix emacs-mac)/bin/emacs; brew bundle -v
 fc-cache -vf
 
 GMAIL=xxxx@gmail.com rake after
-mu init --muhome=$XDG_CACHE_HOME/mu/ --maildir=$XDG_DATA_HOME/gmail/ --my-address=$GMAIL
+mu init --muhome=$XDG_CACHE_HOME/mu/ --maildir=$XDG_DATA_HOME/mail/ --my-address=$GMAIL
 
 export SHELL=/usr/local/bin/zsh
 echo $SHELL | sudo tee -a /etc/shells

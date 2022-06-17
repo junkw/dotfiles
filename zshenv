@@ -83,7 +83,7 @@ if [[ `which brew` ]]; then
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/libffi/lib/pkgconfig:$PKG_CONFIG_PATH
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/libxml2/lib/pkgconfig:$PKG_CONFIG_PATH
-    export PKG_CONFIG_PATH=$brew_prefix_path/opt/openssl/lib/pkgconfig:$PKG_CONFIG_PATH
+    export PKG_CONFIG_PATH=$brew_prefix_path/opt/openssl@1.1/lib/pkgconfig:$PKG_CONFIG_PATH
     export PKG_CONFIG_PATH=$brew_prefix_path/opt/sqlite/lib/pkgconfig:$PKG_CONFIG_PATH
 fi
 

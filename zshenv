@@ -11,59 +11,61 @@ export LC_ALL=ja_JP.UTF-8
 ## Paths
 #
 
+unsetopt GLOBAL_RCS
+
 # XDG Base Directory
-if [[ -z $XDG_CONFIG_HOME ]]; then
-    export XDG_CONFIG_HOME=$HOME/.config
+if [[ -z ${XDG_CONFIG_HOME} ]]; then
+    export XDG_CONFIG_HOME=${HOME}/.config
 fi
-if [[ -z $XDG_DATA_HOME ]]; then
-    export XDG_DATA_HOME=$HOME/.local/share
+if [[ -z ${XDG_DATA_HOME} ]]; then
+    export XDG_DATA_HOME=${HOME}/.local/share
 fi
-if [[ -z $XDG_CACHE_HOME ]]; then
-    export XDG_CACHE_HOME=$HOME/.cache
+if [[ -z ${XDG_CACHE_HOME} ]]; then
+    export XDG_CACHE_HOME=${HOME}/.cache
 fi
-if [[ -z $XDG_RUNTIME_DIR ]]; then
+if [[ -z ${XDG_RUNTIME_DIR} ]]; then
     export XDG_RUNTIME_DIR=/private/tmp
 fi
 
 # zplug
-export ZPLUG_HOME=$HOME/opt/zplug
+export ZPLUG_HOME=${HOME}/opt/zplug
 
 # composer
-export COMPOSER_HOME=$HOME/opt/composer
+export COMPOSER_HOME=${HOME}/opt/composer
 
 # nodebrew
-export NODEBREW_ROOT=$HOME/opt/nodebrew
+export NODEBREW_ROOT=${HOME}/opt/nodebrew
 
 # PATH
 typeset -T SUDO_PATH sudo_path
 typeset -T INFOPATH infopath
 typeset -gxU path fpath manpath sudo_path infopath
 
-sudo_path=({/usr/local{,/opt/icu4c},/usr,}/sbin(N-/))
+sudo_path=({/usr/local,/usr,}/sbin(N-/))
 
-path=({/usr/{local/{,opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,sqlite,texinfo}/},},/}bin(N-/)
-      $sudo_path
+path=(${HOME}/bin(N-/)
+      {/usr/{local/{,opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,sqlite,texinfo}/},},/}bin(N-/)
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
-      $HOME/bin(N-/)
-      $COMPOSER_HOME/vendor/bin/(N-/)
-      $NODEBREW_ROOT/{,current/bin}(N-/)
-      $HOME/opt/npm/bin/(N-/)
+      ${COMPOSER_HOME}/vendor/bin/(N-/)
+      ${NODEBREW_ROOT}/{,current/bin}(N-/)
+      ${HOME}/opt/npm/bin/(N-/)
       /usr/local/share/git-core/contrib/diff-highlight(N-/)
-      $path)
+      ${sudo_path}
+      ${path})
 
 fpath=(/usr/local/share/zsh/functions(N-/)
        ${HOME}/opt/phpbrew/completion/zsh(N-/)
        ${HOME}/opt/nodebrew/completions/zsh(N-/)
-       $fpath)
+       ${fpath})
 
 manpath=(/usr/{local/,}share/man
          /usr/local/opt/gnu-tar/libexec/gnuman(N-/)
          /Applications/Xcode.app/Contents/Developer/usr/share/man(N-/)
          /opt/X11/share/man(N-/)
-         $NODEBREW_ROOT/current/share/man(N-/)
-         $ZPLUG_HOME/doc/man(N-/)
-         $manpath)
+         ${NODEBREW_ROOT}/current/share/man(N-/)
+         ${ZPLUG_HOME}/doc/man(N-/)
+         ${manpath})
 
 infopath=(/usr/local/share/info{/emacs,}(N-/)
           /usr/share/info)
@@ -86,8 +88,12 @@ if [[ `which brew` ]]; then
     export PKG_CONFIG_PATH=${brew_prefix_path}/opt/openssl@1.1/lib/pkgconfig:${PKG_CONFIG_PATH}
     export PKG_CONFIG_PATH=${brew_prefix_path}/opt/sqlite/lib/pkgconfig:${PKG_CONFIG_PATH}
 
-    export LDFLAGS="-L/${brew_prefix_path}/opt/icu4c/lib"
-    export CPPFLAGS="-I/${brew_prefix_path}/opt/icu4c/include"
+    export OPENSSL_PREFIX=$(brew --prefix openssl@1.1)
+    export OPENSSL_CFLAGS="-I${OPENSSL_PREFIX}/include"
+    export OPENSSL_LIBS="-L${OPENSSL_PREFIX}/lib -lcrypto -lssl"
+
+    export LDFLAGS="-L${brew_prefix_path}/opt/icu4c/lib"
+    export CPPFLAGS="-I${brew_prefix_path}/opt/icu4c/include"
 fi
 
 # Java
@@ -96,16 +102,16 @@ if [[ -x /usr/libexec/java_home ]]; then
 fi
 
 # Node.js
-if [[ -d $NODEBREW_ROOT ]]; then
-    export NODE_PATH=$NODEBREW_ROOT/current/lib/node_modules
+if [[ -d ${NODEBREW_ROOT} ]]; then
+    export NODE_PATH=${NODEBREW_ROOT}/current/lib/node_modules
 fi
 
-export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
-export ELECTRON_CACHE=$HOME/Library/Caches/electron/
+export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/config
+export ELECTRON_CACHE=${HOME}/Library/Caches/electron/
 
 # GnuPG
-export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
+export GNUPGHOME=${XDG_CONFIG_HOME}/gnupg
 
 # Hunspell
 export DICTIONARY=en_US
-export DICPATH=$HOME/Library/Spelling/
+export DICPATH=${HOME}/Library/Spelling/

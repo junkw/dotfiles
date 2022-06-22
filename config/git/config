@@ -2,6 +2,9 @@
 	name = Jumpei KAWAMI
 	email = don.t.be.trapped.by.dogma@gmail.com
 
+[init]
+	defaultBranch = main
+
 [core]
 	commitGraph = true
 	quotepath = false

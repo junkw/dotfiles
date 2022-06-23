@@ -108,6 +108,7 @@ cask 'microsoft-edge'
 cask 'microsoft-teams'
 cask 'slack'
 cask 'utm'
+cask 'webex'
 cask 'zoom'
 
 

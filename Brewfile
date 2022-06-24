@@ -73,6 +73,7 @@ brew 'xapian'
 brew 'mu', args: ['ignore-dependencies']
 
 brew 'putty'
+brew 'telnet'
 
 
 # Homebrew Cask apps

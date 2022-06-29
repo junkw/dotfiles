@@ -84,7 +84,6 @@ cask 'betterzip'
 cask 'firefox'
 cask 'dash'
 cask 'dropbox'
-cask 'google-chrome'
 cask 'google-drive'
 cask 'handbrake'
 cask 'iina'
@@ -104,13 +103,12 @@ cask 'yacreader'
 cask 'google-japanese-ime'
 
 ## for Worksite
+cask 'google-chrome'
 cask 'docker'
 cask 'microsoft-edge'
-cask 'microsoft-teams'
 cask 'slack'
 cask 'utm'
 cask 'webex'
-cask 'zoom'
 
 
 # Homebrew Cask Fonts

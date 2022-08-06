@@ -9,19 +9,19 @@
    - Zsh
      - [[https://github.com/zplug/zplug][zplug]]
    - [[https://brew.sh][Homebrew]]
-   - [[http://phpbrew.github.io/phpbrew/][PHPBrew]]
-   - [[https://github.com/hokaccha/nodebrew][Nodebrew]]
 
 ** Installation
 
-#+BEGIN_SRC sh
+#+begin_src sh
 git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
 cd /path/to/local/repo
 rake
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew doctor
 brew tap Homebrew/bundle
-EMACS=$(brew --prefix emacs-mac)/bin/emacs; brew bundle -v
+brew bundle -v
+brew link --force texinfo
 fc-cache -vf
 
 GMAIL=xxxx@gmail.com rake after
@@ -31,4 +31,37 @@ export SHELL=/usr/local/bin/zsh
 echo $SHELL | sudo tee -a /etc/shells
 chsh -s $SHELL
 exec $SHELL -l
-#+END_SRC
+#+end_src
+
+*** BasicTeX
+
+#+begin_src sh
+sudo tlmgr update --self --all
+sudo tlmgr install collection-langjapanese collection-luatex collection-latexextra
+sudo tlmgr paper a4
+#+end_src
+
+*** [[https://github.com/hokaccha/nodebrew][Nodebrew]]
+
+#+begin_src sh
+curl -L git.io/nodebrew | perl - setup
+nodebrew install-binary stable
+nodebrew use stable && exec $SHELL -l
+npm install -g csslint
+npm install -g jshint
+npm install -g tern
+npm install -g vmd
+#+end_src
+
+*** [[http://phpbrew.github.io/phpbrew/][PHPBrew]]
+
+*** QuickLook
+
+#+begin_src sh
+defaults write org.n8gray.QLColorCode textEncoding UTF-8
+defaults write org.n8gray.QLColorCode font RictyDiminishedDiscord-Reqular
+defaults write org.n8gray.QLColorCode fontSizePoints 10
+defaults write org.n8gray.QLColorCode extraHLFlags '-l'
+qlmanage -r cache
+qlmanage -r
+#+end_src

@@ -1,0 +1,11 @@
+{
+  "filters": {
+  },
+  "rules": {
+    "preset-ja-technical-writing": true,
+    "preset-ja-spacing": true,
+    "ja-no-orthographic-variants": true,
+    "@textlint-ja/textlint-rule-no-dropping-i": true,
+    "prefer-tari-tari": true
+  }
+}

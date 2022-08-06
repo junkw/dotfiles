@@ -38,6 +38,10 @@ task :link_libmmbd do
   FileUtils.ln_sf("/Applications/MakeMKV.app/Contents/lib/libmmbd.dylib", "#{Dir.home}/lib/libbdplus.dylib")
 end
 
+task :link_textlintrc do
+  FileUtils.ln_sf("#{Dir.pwd}/textlintrc", "#{Dir.home}/.textlintrc")
+end
+
 task :link_vimrc do
   FileUtils.ln_sf("#{Dir.pwd}/vimrc", "#{Dir.home}/.vimrc")
 end
@@ -100,7 +104,7 @@ task :setup_virtualbox do
   sh("launchctl load #{Dir.home}/Library/LaunchAgents/#{plist}")
 end
 
-task :link => [:link_bin, :link_xdg_config_home, :link_ctags, :link_vimrc, :link_zshrc]
+task :link => [:link_bin, :link_xdg_config_home, :link_ctags, :link_textlintrc, :link_vimrc, :link_zshrc]
 task :install => [:make_dir, :link, :clone_tmux_colors_solarized, :install_hunspell_dicts]
 task :setup_mac => [:link_launch_agents, :load_launch_agents, :set_macos_config]
 task :default => [:install, :setup_mac]

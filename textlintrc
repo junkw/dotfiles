@@ -1,9 +1,17 @@
 {
+  "plugins": {
+    "@textlint/markdown": true,
+    "html": true,
+    "org": true
+  },
   "filters": {
+    "comments": true
   },
   "rules": {
     "preset-ja-technical-writing": true,
-    "preset-ja-spacing": true,
+    "preset-ja-spacing": {
+      "textlint-rule-ja-space-between-half-and-full-width": false
+    },
     "ja-no-orthographic-variants": true,
     "@textlint-ja/textlint-rule-no-dropping-i": true,
     "prefer-tari-tari": true

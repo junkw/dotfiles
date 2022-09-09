@@ -12,12 +12,12 @@ tap 'iandol/adobe-fonts'
 
 
 # Install requirements and dependencies
-cask 'openjdk'
 cask 'xquartz'
 
 brew 'git'
 brew 'git-lfs'
-brew 'zsh', args: ['without-etcdir']
+brew 'openjdk'
+brew 'zsh'
 
 brew 'dbus', restart_service: true
 brew 'texinfo'
@@ -38,7 +38,7 @@ brew 'gibo'
 brew 'git-when-merged'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'gnu-tar'
-brew 'grep', args: ['with-default-names']
+brew 'grep'
 brew 'gnupg'
 brew 'hunspell'
 brew 'jq'

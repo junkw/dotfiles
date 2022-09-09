@@ -21,8 +21,8 @@ Account   gmail
 
 # Local
 MaildirStore gmail-local
-Path         ~/.local/share/gmail/
-Inbox        ~/.local/share/gmail/inbox
+Path         ~/.local/share/mail/
+Inbox        ~/.local/share/mail/inbox
 
 # Chanels
 Channel  gmail-inbox

@@ -22,12 +22,13 @@ brew doctor
 brew tap Homebrew/bundle
 brew bundle -v
 brew link --force texinfo
+sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 fc-cache -vf
 
 GMAIL=xxxx@gmail.com rake after
 mu init --muhome=$XDG_CACHE_HOME/mu/ --maildir=$XDG_DATA_HOME/mail/ --my-address=$GMAIL
 
-export SHELL=/usr/local/bin/zsh
+export SHELL=/opt/homebrew/bin/zsh
 echo $SHELL | sudo tee -a /etc/shells
 chsh -s $SHELL
 exec $SHELL -l
@@ -37,8 +38,8 @@ exec $SHELL -l
 
 #+begin_src sh
 sudo tlmgr update --self --all
-sudo tlmgr install collection-langjapanese collection-luatex collection-latexextra
 sudo tlmgr paper a4
+sudo tlmgr install collection-langjapanese
 #+end_src
 
 *** [[https://github.com/hokaccha/nodebrew][Nodebrew]]
@@ -94,10 +95,13 @@ composer require --dev "phpstan/phpstan"
 *** QuickLook
 
 #+begin_src sh
+sudo xattr -cr ~/Library/QuickLook/QLStephen.qlgenerator
+
 defaults write org.n8gray.QLColorCode textEncoding UTF-8
 defaults write org.n8gray.QLColorCode font RictyDiminishedDiscord-Reqular
 defaults write org.n8gray.QLColorCode fontSizePoints 10
 defaults write org.n8gray.QLColorCode extraHLFlags '-l'
+
 qlmanage -r cache
 qlmanage -r
 #+end_src

@@ -28,7 +28,7 @@ source $init_zplug
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # Plugins
-zplug "sorin-ionescu/prezto", use:false
+zplug "sorin-ionescu/prezto"
 
 export ENHANCD_DIR=$XDG_CACHE_HOME/enhancd
 zplug "b4b4r07/enhancd", use:init.sh, lazy:true
@@ -45,18 +45,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
-
-
-#
-## Prezto
-#
-init_prezto=$HOME/.zprezto/init.zsh
-
-if [[ ! -r $init_prezto ]]; then
-    ln -s $ZPLUG_HOME/repos/sorin-ionescu/prezto $HOME/.zprezto
-fi
-
-source $init_prezto
 
 
 #

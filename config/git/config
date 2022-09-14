@@ -83,9 +83,9 @@
 	branches = branch -a
 	cached = diff --cached
 	changelog = log --pretty=changelog-format --no-merges --cherry --abbrev-commit --date-order
-	cleanup = !git gc --aggressive; git fsck --full
+	cleanup = !git gc --aggressive --prune=now && git fsck --full
 	conflicts = diff --name-only --diff-filter=U
-	deep-cleanup = !git repack -a -f --depth=250 --window=250; git prune; git fsck --full
+	deep-cleanup = !git reset-reflog && git cleanup
 	discard = restore --
 	fetch-all = fetch --all --prune --tags
 	fetch-upstream = fetch --prune --tags upstream
@@ -98,6 +98,7 @@
 	push-all = push --tags origin
 	refuge = stash save --include-untracked
 	remotes = remote -v
+	reset-reflog = reflog expire --expire=now --all
 	show-parent-branch = !git show-branch | grep '*' | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -1 | awk -F'[]~^[]' '{print $2}'
 	staged = cached
 	stashes = stash list

@@ -50,7 +50,6 @@ path=(${HOME}/bin(N-/)
       /Library/TeX/texbin(N-/)
       ${COMPOSER_HOME}/vendor/bin/(N-/)
       ${NODEBREW_ROOT}/{,current/bin}(N-/)
-      ${HOME}/opt/npm/bin/(N-/)
       /usr/local/share/git-core/contrib/diff-highlight(N-/)
       ${sudo_path}
       ${path})

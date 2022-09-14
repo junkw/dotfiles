@@ -46,28 +46,27 @@ sudo tlmgr install collection-langjapanese
 
 #+begin_src sh
 curl -L git.io/nodebrew | perl - setup
+exec $SHELL -l
 nodebrew install-binary stable
 nodebrew use stable && exec $SHELL -l
 
-npm install -g npm-check-updates
-
-npm install -g csslint
-npm install -g jshint
-npm install -g tern
-npm install -g vmd
-
-npm install -g textlint
-npm install -g textlint-plugin-html
-npm install -g textlint-plugin-org
-npm install -g traverse
-npm install -g textlint-filter-rule-comments
-npm install -g textlint-filter-rule-allowlist
-npm install -g textlint-rule-preset-ja-technical-writing
-npm install -g textlint-rule-preset-ja-spacing
-npm install -g textlint-rule-ja-no-orthographic-variants
-npm install -g @textlint-ja/textlint-rule-no-dropping-i
-npm install -g textlint-rule-prefer-tari-tari
-npm install -g textlint-rule-ginger
+npm install -g npm-check-updates \
+  traverse \
+  csslint \
+  jshint \
+  tern \
+  vmd \
+  textlint \
+  textlint-plugin-html \
+  textlint-plugin-org \
+  textlint-filter-rule-comments \
+  textlint-filter-rule-allowlist \
+  textlint-rule-preset-ja-technical-writing \
+  textlint-rule-preset-ja-spacing \
+  textlint-rule-ja-no-orthographic-variants \
+  @textlint-ja/textlint-rule-no-dropping-i \
+  textlint-rule-prefer-tari-tari \
+  textlint-rule-ginger
 #+end_src
 
 *** [[http://phpbrew.github.io/phpbrew/][PHPBrew]]

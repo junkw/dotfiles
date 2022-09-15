@@ -76,6 +76,9 @@ brew 'mu', args: ['ignore-dependencies']
 brew 'putty'
 brew 'telnet'
 
+brew 'php@7.4'
+brew 'composer', args: ['ignore-dependencies']
+brew 'phpstan'
 
 # Homebrew Cask apps
 cask 'alfred'

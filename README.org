@@ -55,7 +55,6 @@ npm install -g npm-check-updates \
   csslint \
   jshint \
   tern \
-  vmd \
   textlint \
   textlint-plugin-html \
   textlint-plugin-org \
@@ -66,7 +65,8 @@ npm install -g npm-check-updates \
   textlint-rule-ja-no-orthographic-variants \
   @textlint-ja/textlint-rule-no-dropping-i \
   textlint-rule-prefer-tari-tari \
-  textlint-rule-ginger
+  textlint-rule-ginger \
+  textlint-rule-write-good
 #+end_src
 
 *** QuickLook

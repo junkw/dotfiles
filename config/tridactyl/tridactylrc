@@ -1,0 +1,7 @@
+" Disable tridactyl on these sites
+
+blacklistadd calendar.google.com
+blacklistadd github.com
+blacklistadd hootsuite.com
+blacklistadd mail.google.com
+blacklistadd twitter.com

@@ -45,6 +45,7 @@ sudo_path=({/usr/local,/usr,}/sbin(N-/))
 
 path=(${HOME}/bin(N-/)
       /opt/homebrew/bin(N-/)
+      /opt/homebrew/opt/php@7.4/bin(N-/)
       {/usr/{local/{,opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,sqlite,texinfo}/},},/}bin(N-/)
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)

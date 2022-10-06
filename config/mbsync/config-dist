@@ -13,7 +13,7 @@ PassCmd         "security find-internet-password -w -a __GMAIL__ -s imap.gmail.c
 AuthMechs       LOGIN
 SSLType         IMAPS
 SSLVersion      TLSv1.2
-CertificateFile /usr/local/etc/openssl/cert.pem
+CertificateFile /opt/homebrew/etc/openssl/cert.pem
 
 # Remote
 IMAPStore gmail-remote

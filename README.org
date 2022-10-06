@@ -19,10 +19,14 @@ rake
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew doctor
+
 brew tap Homebrew/bundle
 brew bundle -v
+
 brew link --force texinfo
+brew link php@7.4
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+ln -sf /opt/homebrew/etc/openssl@1.1 /opt/homebrew/etc/openssl
 fc-cache -vf
 
 GMAIL=xxxx@gmail.com rake after

@@ -1,0 +1,18 @@
+# Global
+defaults
+protocol smtp
+auth on
+tls on
+tls_starttls on
+tls_trust_file /opt/homebrew/etc/openssl/cert.pem
+logfile ~/Library/Logs/msmtp.log
+
+# Gmail
+account gmail
+host smtp.gmail.com
+port 587
+from __GMAIL__
+user __GMAIL__
+passwordeval security find-internet-password -w -a __GMAIL__ -s smtp.gmail.com
+
+account default : gmail

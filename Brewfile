@@ -25,6 +25,7 @@ brew 'texinfo'
 
 
 # Homebrew packages
+brew '1password-cli'
 brew 'atool'
 brew 'clamav'
 brew 'cmigemo'

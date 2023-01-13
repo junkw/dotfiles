@@ -13,8 +13,6 @@ tap 'iandol/adobe-fonts'
 
 
 # Install requirements and dependencies
-cask 'xquartz'
-
 brew 'git'
 brew 'git-lfs'
 brew 'openjdk'
@@ -23,6 +21,8 @@ brew 'zsh'
 brew 'dbus', restart_service: true
 brew 'texinfo'
 
+cask 'xquartz'
+cask '1password'
 
 # Homebrew packages
 brew '1password-cli'

@@ -23,9 +23,9 @@ brew 'texinfo'
 
 cask 'xquartz'
 cask '1password'
+cask '1password-cli'
 
 # Homebrew packages
-brew '1password-cli'
 brew 'atool'
 brew 'clamav'
 brew 'cmigemo'

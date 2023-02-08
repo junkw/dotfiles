@@ -61,6 +61,14 @@ fi
 
 
 #
+## 1Password
+#
+if [[ `which op` ]]; then
+    eval "$(op completion zsh)"; compdef _op op
+fi
+
+
+#
 ## Options
 #
 setopt print_eight_bit

@@ -27,6 +27,14 @@ if [[ -z ${XDG_RUNTIME_DIR} ]]; then
     export XDG_RUNTIME_DIR=/private/tmp
 fi
 
+# Homebrew
+brew_prefix_path=/opt/homebrew
+
+if [[ ! -e ${brew_prefix_path} ]]; then
+    brew_prefix_path=/usr/local
+fi
+
+
 # zplug
 export ZPLUG_HOME=${HOME}/opt/zplug
 
@@ -44,30 +52,32 @@ typeset -gxU path fpath manpath sudo_path infopath
 sudo_path=({/usr/local,/usr,}/sbin(N-/))
 
 path=(${HOME}/bin(N-/)
-      /opt/homebrew/bin(N-/)
-      {/usr/{local/{,opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,sqlite,texinfo}/},},/}bin(N-/)
+      ${brew_prefix_path}/bin(N-/)
+      ${brew_prefix_path}/opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,sqlite,texinfo}/bin(N-/)
+      ${brew_prefix_path}/share/git-core/contrib/diff-highlight(N-/)
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
       ${COMPOSER_HOME}/vendor/bin/(N-/)
       ${NODEBREW_ROOT}/{,current/bin}(N-/)
-      /usr/local/share/git-core/contrib/diff-highlight(N-/)
+      {/usr/local,/usr,}/bin(N-/)
       ${sudo_path}
       ${path})
 
-fpath=(/usr/local/share/zsh/functions(N-/)
+fpath=(${brew_prefix_path}/share/zsh/functions(N-/)
        ${HOME}/opt/phpbrew/completion/zsh(N-/)
        ${HOME}/opt/nodebrew/completions/zsh(N-/)
        ${fpath})
 
-manpath=(/usr/{local/,}share/man
-         /usr/local/opt/gnu-tar/libexec/gnuman(N-/)
+manpath=(/usr/share/man
+         ${brew_prefix_path}/share/man(N-/)
+         ${brew_prefix_path}/opt/gnu-tar/libexec/gnuman(N-/)
          /Applications/Xcode.app/Contents/Developer/usr/share/man(N-/)
          /opt/X11/share/man(N-/)
          ${NODEBREW_ROOT}/current/share/man(N-/)
          ${ZPLUG_HOME}/doc/man(N-/)
          ${manpath})
 
-infopath=(/usr/local/share/info{/emacs,}(N-/)
+infopath=(${brew_prefix_path}/share/info{/emacs,}(N-/)
           /usr/share/info)
 
 
@@ -80,8 +90,6 @@ export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 if [[ `which brew` ]]; then
-    brew_prefix_path=$(brew --prefix)
-
     export PKG_CONFIG_PATH=${brew_prefix_path}/opt/icu4c/lib/pkgconfig:${PKG_CONFIG_PATH}
     export PKG_CONFIG_PATH=${brew_prefix_path}/opt/libffi/lib/pkgconfig:${PKG_CONFIG_PATH}
     export PKG_CONFIG_PATH=${brew_prefix_path}/opt/libxml2/lib/pkgconfig:${PKG_CONFIG_PATH}

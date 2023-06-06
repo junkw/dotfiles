@@ -92,6 +92,8 @@
 	fetch-upstream = fetch --prune --tags upstream
 	fixup = "!f() { TARGET=$(git rev-parse "$1"); git commit --fixup=$TARGET ${@:2} && EDITOR=true git rebase -i --autostash --autosquash $TARGET^; }; f"
 	graph = log --graph --remotes --branches --tags --decorate --pretty=graph-format
+	in-branch = branch --contains
+	in-tag = tag --contains
 	lfs-checkout = !git checkout && git lfs pull
 	lfs-pull = !git pull && git lfs pull
 	pull-all = pull --all --prune --tags
@@ -109,7 +111,6 @@
 	update-submodule = submodule update --init --recursive
 	update-all = !git pull-all; git update-submodule
 	unstage = reset HEAD --
-	ver-contains = tag --contains
 
 
 [filter "lfs"]

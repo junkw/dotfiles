@@ -118,7 +118,7 @@ cask 'webex'
 
 # Homebrew Cask Fonts
 cask 'font-fontawesome'
-cask 'font-source-code-pro'
+cask 'homebrew/cask-fonts/font-source-code-pro'
 cask 'font-source-han-code-jp'
 cask 'font-ricty-diminished'
 

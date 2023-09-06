@@ -4,7 +4,7 @@
 
 ** Requirements
 
-   - macOS Monterey
+   - macOS latest version
    - Xcode
    - Zsh
      - [[https://github.com/zplug/zplug][zplug]]

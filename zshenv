@@ -49,7 +49,7 @@ typeset -T SUDO_PATH sudo_path
 typeset -T INFOPATH infopath
 typeset -gxU path fpath manpath sudo_path infopath
 
-sudo_path=(${brew_prefix_path}/bin(N-/)
+sudo_path=(${brew_prefix_path}/sbin(N-/)
            {/usr/local,/usr,}/sbin(N-/))
 
 path=(${HOME}/bin(N-/)

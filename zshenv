@@ -72,6 +72,7 @@ fpath=(${brew_prefix_path}/share/zsh/functions(N-/)
 manpath=(/usr/share/man
          ${brew_prefix_path}/share/man(N-/)
          ${brew_prefix_path}/opt/gnu-tar/libexec/gnuman(N-/)
+         ${brew_prefix_path}/opt/gnu-sed/libexec/gnuman(N-/)
          /Applications/Xcode.app/Contents/Developer/usr/share/man(N-/)
          /opt/X11/share/man(N-/)
          ${NODEBREW_ROOT}/current/share/man(N-/)

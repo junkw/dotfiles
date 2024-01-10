@@ -38,7 +38,7 @@ brew 'fd'
 brew 'flow'
 brew 'gibo'
 brew 'git-when-merged'
-brew 'gnu-sed', args: ['with-default-names']
+brew 'gnu-sed'
 brew 'gnu-tar'
 brew 'grep'
 brew 'gnupg'

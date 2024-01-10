@@ -48,19 +48,6 @@ zplug load
 
 
 #
-## PHPBrew
-#
-export PHPBREW_ROOT=$HOME/opt/phpbrew
-export PHPBREW_HOME=$PHPBREW_ROOT
-export PHPBREW_LOOKUP_PREFIX=/usr/local/opt:$HOME/opt:/usr/local
-init_phpbrew=$PHPBREW_HOME/bashrc
-
-if [[ -d $PHPBREW_ROOT && -r $init_phpbrew ]]; then
-    source $init_phpbrew
-fi
-
-
-#
 ## 1Password
 #
 if [[ `which op` ]]; then
@@ -122,10 +109,6 @@ fi
 
 if [[ `which phan` ]]; then
     alias phand="phan --daemonize-tcp-port 4846 --quick"
-fi
-
-if [[ `which phpbrew` ]]; then
-    alias phpbrew_allupdate="phpbrew self-update && phpbrew known --update"
 fi
 
 if [[ `which tmux` ]]; then

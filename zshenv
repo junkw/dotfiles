@@ -65,7 +65,6 @@ path=(${HOME}/bin(N-/)
       ${path})
 
 fpath=(${brew_prefix_path}/share/zsh/functions(N-/)
-       ${HOME}/opt/phpbrew/completion/zsh(N-/)
        ${HOME}/opt/nodebrew/completions/zsh(N-/)
        ${fpath})
 

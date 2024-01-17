@@ -31,9 +31,6 @@ fi
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
-# History
-export HISTFILE=$HOME/.zhistory
-
 # Prompt
 zstyle ':prezto:module:prompt' theme 'sorin'
 

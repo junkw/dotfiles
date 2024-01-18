@@ -54,7 +54,7 @@ sudo_path=(${brew_prefix_path}/sbin(N-/)
 
 path=(${HOME}/bin(N-/)
       ${brew_prefix_path}/bin(N-/)
-      ${brew_prefix_path}/opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,sqlite,texinfo}/bin(N-/)
+      ${brew_prefix_path}/opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,sqlite,texinfo,unzip}/bin(N-/)
       ${brew_prefix_path}/share/git-core/contrib/diff-highlight(N-/)
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)

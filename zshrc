@@ -114,3 +114,5 @@ fi
 if [[ `which tmux` ]]; then
     alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/config"
 fi
+
+alias of="open -a Finder ./"

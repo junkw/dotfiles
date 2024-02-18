@@ -8,7 +8,6 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 
 tap 'railwaycat/emacsmacport'
-tap 'universal-ctags/universal-ctags'
 tap 'iandol/adobe-fonts'
 
 

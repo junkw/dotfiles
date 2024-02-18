@@ -83,8 +83,8 @@ bindkey '^r' peco-select-history
 
 function peco-delete-history() {
     BUFFER=$(cat ${HISTFILE} | tail -r | peco --query "$LBUFFER")
-    ID=$(grep ${BUFFER} ${HISTFILE} | sed -e "s/: \(.*\);\(.*\)/\1/")
-    sed -i "" -e "/${ID}/d" $HISTFILE
+    ID=$(grep ${BUFFER} ${HISTFILE} | gsed "s/: \(.*\);\(.*\)/\1/")
+    gsed -i "/${ID}/d" $HISTFILE
     BUFFER=""
     zle clear-screen
 }

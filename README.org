@@ -55,7 +55,7 @@ nodebrew install-binary stable
 nodebrew use stable && exec $SHELL -l
 
 npm install -g npm-check-updates \
-  @emacs-eask/cli
+  @emacs-eask/cli \
   traverse \
   csslint \
   jshint \

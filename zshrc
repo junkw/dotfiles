@@ -96,7 +96,6 @@ bindkey '^xcr' peco-delete-history
 ## Aliases
 #
 if [[ `which eza` ]]; then
-    alias ls="eza --group-directories-first --color-scale"
     alias ll="eza -alh --group-directories-first --color-scale --git"
 fi
 

@@ -44,6 +44,9 @@ export COMPOSER_HOME=${HOME}/opt/composer
 # nodebrew
 export NODEBREW_ROOT=${HOME}/opt/nodebrew
 
+# Python
+export PYTHONPATH=$XDG_DATA_HOME/python/venv/lib/python3.12/site-packages
+
 # PATH
 typeset -T SUDO_PATH sudo_path
 typeset -T INFOPATH infopath
@@ -54,11 +57,11 @@ sudo_path=(${brew_prefix_path}/sbin(N-/)
 
 path=(${HOME}/bin(N-/)
       ${brew_prefix_path}/bin(N-/)
-      ${brew_prefix_path}/opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,sqlite,texinfo,unzip}/bin(N-/)
+      ${brew_prefix_path}/opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,python,sqlite,texinfo,unzip}/bin(N-/)
       ${brew_prefix_path}/share/git-core/contrib/diff-highlight(N-/)
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
-      ${COMPOSER_HOME}/vendor/bin/(N-/)
+      ${COMPOSER_HOME}/vendor/bin(N-/)
       ${NODEBREW_ROOT}/{,current/bin}(N-/)
       {/usr/local,/usr,}/bin(N-/)
       ${sudo_path}

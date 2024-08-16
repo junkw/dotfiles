@@ -58,6 +58,7 @@ npm install -g npm-check-updates \
   @emacs-eask/cli \
   traverse \
   csslint \
+  intelephense \
   jshint \
   tern \
   textlint \

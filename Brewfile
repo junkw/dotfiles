@@ -16,6 +16,7 @@ brew 'git-lfs'
 brew 'openjdk'
 brew 'zsh'
 
+brew 'cmake'
 brew 'dbus', restart_service: true
 brew 'texinfo'
 

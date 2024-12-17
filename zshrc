@@ -31,7 +31,7 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "sorin-ionescu/prezto"
 
 export ENHANCD_DIR=$XDG_CACHE_HOME/enhancd
-zplug "b4b4r07/enhancd", use:init.sh, lazy:true
+zplug "b4b4r07/enhancd", use:init.sh
 
 # Install plugins
 if ! zplug check --verbose; then

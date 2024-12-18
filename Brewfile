@@ -7,6 +7,7 @@ tap 'homebrew/services'
 tap 'homebrew/cask'
 
 tap 'railwaycat/emacsmacport'
+tap 'noborus/tap'
 tap 'iandol/adobe-fonts'
 
 
@@ -44,6 +45,7 @@ brew 'gnupg'
 brew 'hunspell'
 brew 'jq'
 brew 'mas'
+brew 'ov'
 brew 'p7zip'
 brew 'pandoc'
 brew 'peco'

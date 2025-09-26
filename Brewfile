@@ -97,13 +97,10 @@ cask 'macwinzipper'
 cask 'notion'
 cask 'notion-calendar'
 cask 'onyx'
-cask 'qlcolorcode'
-cask 'qlimagesize'
 cask 'qlmarkdown'
-cask 'qlstephen'
 cask 'quicklook-csv'
-cask 'quicklook-json'
 cask 'suspicious-package'
+cask 'syntax-highlight', args: ['no-quarantine']
 cask 'yacreader'
 
 ## Intel CPU or Apple Silicon

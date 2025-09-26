@@ -3,7 +3,6 @@ cask_args appdir: '/Applications'
 
 
 # Add repositories
-tap 'homebrew/services'
 tap 'homebrew/cask'
 
 tap 'railwaycat/emacsmacport'

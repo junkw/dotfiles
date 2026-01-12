@@ -12,7 +12,6 @@ task :make_dir do
                "#{Dir.home}/bin",
                "#{Dir.home}/Code",
                "#{Dir.home}/Documents/org",
-               "#{Dir.home}/lib",
                "#{Dir.home}/opt"]
   FileUtils.mkdir_p(home_dirs)
 end
@@ -31,11 +30,6 @@ task :link_launch_agents do
 
   FileUtils.mkdir_p(usr_launch_agents_path)
   FileUtils.ln_sf("#{Dir.pwd}/Library/LaunchAgents/junkw.xdg.environments.plist", "#{usr_launch_agents_path}")
-end
-
-task :link_libmmbd do
-  FileUtils.ln_sf("/Applications/MakeMKV.app/Contents/lib/libmmbd.dylib", "#{Dir.home}/lib/libaacs.dylib")
-  FileUtils.ln_sf("/Applications/MakeMKV.app/Contents/lib/libmmbd.dylib", "#{Dir.home}/lib/libbdplus.dylib")
 end
 
 task :link_textlintrc do
@@ -89,19 +83,6 @@ task :set_mbsync_config do
   FileUtils.mkdir_p(mail_dir)
   FileUtils.cp("#{Dir.pwd}/config/mbsync/config-dist", "#{Dir.home}/#{config_file}")
   sh "/usr/bin/sed -i '' -e 's/__GMAIL__/#{mailaddress}/g' #{Dir.home}/#{config_file}"
-end
-
-task :setup_virtualbox do
-  vm_dir  = "#{Dir.home}/VirtualBox\ VMs"
-  log_dir = "#{Dir.home}/Library/Logs/VirtualBox"
-
-  FileUtils.mkdir_p(vm_dir)
-  FileUtils.mkdir_p(log_dir)
-
-  plist = 'org.virtualbox.environments.plist'
-
-  sh("sed -e \"s/__USER__/#{ENV['USER']}/g\" #{Dir.pwd}/Library/LaunchAgents/#{plist} > #{Dir.home}/Library/LaunchAgents/#{plist}")
-  sh("launchctl load #{Dir.home}/Library/LaunchAgents/#{plist}")
 end
 
 task :link => [:link_bin, :link_xdg_config_home, :link_ctags, :link_textlintrc, :link_vimrc, :link_zshrc]

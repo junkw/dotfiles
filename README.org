@@ -13,20 +13,22 @@
 ** Installation
 
 #+begin_src sh
-git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
-cd /path/to/local/repo
+mkdir -p ~/etc/conf.d/
+cd ~/etc/conf.d
+git clone https://github.com/junkw/dotfiles.git
+cd dotfiles
 rake
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew update
 brew doctor
 
 brew tap Homebrew/bundle
 brew bundle -v
 
 brew link --force texinfo
-brew link php@7.4
 sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-ln -sf /opt/homebrew/etc/openssl@1.1 /opt/homebrew/etc/openssl
+ln -sf /opt/homebrew/etc/openssl@3 /opt/homebrew/etc/openssl
 fc-cache -vf
 
 GMAIL=xxxx@gmail.com rake after
@@ -74,18 +76,4 @@ npm install -g npm-check-updates \
   textlint-rule-prefer-tari-tari \
   textlint-rule-ginger \
   textlint-rule-write-good
-#+end_src
-
-*** QuickLook
-
-#+begin_src sh
-sudo xattr -cr ~/Library/QuickLook/QLStephen.qlgenerator
-
-defaults write org.n8gray.QLColorCode textEncoding UTF-8
-defaults write org.n8gray.QLColorCode font RictyDiminishedDiscord-Reqular
-defaults write org.n8gray.QLColorCode fontSizePoints 10
-defaults write org.n8gray.QLColorCode extraHLFlags '-l'
-
-qlmanage -r cache
-qlmanage -r
 #+end_src

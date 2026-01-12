@@ -77,7 +77,7 @@ brew 'mu', args: ['ignore-dependencies']
 brew 'putty'
 brew 'telnet'
 
-brew 'php@7.4'
+brew 'php'
 brew 'composer', args: ['ignore-dependencies']
 brew 'phpstan'
 
@@ -102,9 +102,6 @@ cask 'quicklook-csv'
 cask 'suspicious-package'
 cask 'syntax-highlight', args: ['no-quarantine']
 cask 'yacreader'
-
-## Intel CPU or Apple Silicon
-cask 'google-japanese-ime'
 
 ## for Worksite
 cask 'google-chrome'

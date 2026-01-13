@@ -90,6 +90,8 @@ infopath=(${brew_prefix_path}/share/info{/emacs,}(N-/)
 #
 
 # Homebrew
+eval "$(${brew_prefix_path}/bin/brew shellenv zsh)"
+
 export HOMEBREW_MAKE_JOBS=4
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 

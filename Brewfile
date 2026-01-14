@@ -5,7 +5,8 @@ cask_args appdir: '/Applications'
 # Add repositories
 tap 'homebrew/cask'
 
-tap 'railwaycat/emacsmacport'
+#tap 'railwaycat/emacsmacport'
+tap 'd12frosted/emacs-plus'
 tap 'noborus/tap'
 tap 'iandol/adobe-fonts'
 
@@ -30,7 +31,8 @@ brew 'clamav'
 brew 'cmigemo'
 brew 'doxygen'
 brew 'editorconfig'
-brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-imagemagick', 'with-jansson', 'with-libxml2', 'with-rsvg', 'with-mac-metal', 'with-native-comp', 'with-natural-title-bar', 'with-starter', 'with-emacs-sexy-icon', 'with-xwidgets', 'with-unlimited-select']
+#brew 'emacs-mac', args: ['with-dbus', 'with-glib', 'with-imagemagick', 'with-jansson', 'with-libxml2', 'with-rsvg', 'with-mac-metal', 'with-native-comp', 'with-natural-title-bar', 'with-starter', 'with-emacs-sexy-icon', 'with-xwidgets', 'with-unlimited-select']
+brew 'emacs-plus@31', args: ['with-compress-install', 'with-dbus', 'with-xwidgets']
 brew 'eza'
 brew 'ffmpeg'
 brew 'fd'

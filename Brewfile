@@ -64,7 +64,7 @@ brew 'the_silver_searcher'
 brew 'tidy-html5'
 brew 'tmux'
 brew 'unar'
-brew 'universal-ctags', args: ['HEAD']
+brew 'universal-ctags'
 brew 'wget'
 
 ## for Worksite
@@ -102,7 +102,7 @@ cask 'onyx'
 cask 'qlmarkdown'
 cask 'quicklook-csv'
 cask 'suspicious-package'
-cask 'syntax-highlight', args: ['no-quarantine']
+cask 'syntax-highlight'
 cask 'yacreader'
 
 ## for Worksite
@@ -117,7 +117,7 @@ cask 'webex'
 # Homebrew Cask Fonts
 cask 'font-fontawesome'
 cask 'font-ricty-diminished'
-cask 'homebrew/cask-fonts/font-source-code-pro'
+cask 'font-source-code-pro'
 cask 'font-source-han-code-jp'
 cask 'font-udev-gothic'
 

@@ -23,7 +23,6 @@ rake
 brew update
 brew doctor
 
-brew tap Homebrew/bundle
 brew bundle -v
 
 brew link --force texinfo
@@ -43,6 +42,7 @@ exec $SHELL -l
 *** BasicTeX
 
 #+begin_src sh
+eval "$(/usr/libexec/path_helper)"
 sudo tlmgr update --self --all
 sudo tlmgr paper a4
 sudo tlmgr install collection-langjapanese

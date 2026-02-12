@@ -62,10 +62,10 @@ brew 'svn'
 brew 'terminal-notifier'
 brew 'the_silver_searcher'
 brew 'tidy-html5'
-brew 'tmux'
 brew 'unar'
 brew 'universal-ctags'
 brew 'wget'
+brew 'zellij'
 
 ## for Worksite
 brew 'awscli'

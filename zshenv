@@ -57,7 +57,7 @@ sudo_path=(${brew_prefix_path}/sbin(N-/)
 
 path=(${HOME}/bin(N-/)
       ${brew_prefix_path}/bin(N-/)
-      ${brew_prefix_path}/opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl@1.1,python,sqlite,texinfo,unzip}/bin(N-/)
+      ${brew_prefix_path}/opt/{apr,apr-util,icu4c,libxml2,openjdk,openssl,python,sqlite,texinfo,unzip}/bin(N-/)
       ${brew_prefix_path}/share/git-core/contrib/diff-highlight(N-/)
       /opt/X11/bin(N-/)
       /Library/TeX/texbin(N-/)
@@ -99,10 +99,10 @@ if [[ `which brew` ]]; then
     export PKG_CONFIG_PATH=${brew_prefix_path}/opt/icu4c/lib/pkgconfig:${PKG_CONFIG_PATH}
     export PKG_CONFIG_PATH=${brew_prefix_path}/opt/libffi/lib/pkgconfig:${PKG_CONFIG_PATH}
     export PKG_CONFIG_PATH=${brew_prefix_path}/opt/libxml2/lib/pkgconfig:${PKG_CONFIG_PATH}
-    export PKG_CONFIG_PATH=${brew_prefix_path}/opt/openssl@1.1/lib/pkgconfig:${PKG_CONFIG_PATH}
+    export PKG_CONFIG_PATH=${brew_prefix_path}/opt/openssl/lib/pkgconfig:${PKG_CONFIG_PATH}
     export PKG_CONFIG_PATH=${brew_prefix_path}/opt/sqlite/lib/pkgconfig:${PKG_CONFIG_PATH}
 
-    export OPENSSL_PREFIX=$(brew --prefix openssl@1.1)
+    export OPENSSL_PREFIX=$(brew --prefix openssl)
     export OPENSSL_CFLAGS="-I${OPENSSL_PREFIX}/include"
     export OPENSSL_LIBS="-L${OPENSSL_PREFIX}/lib -lcrypto -lssl"
 
